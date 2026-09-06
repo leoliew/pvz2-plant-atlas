@@ -4,12 +4,23 @@ import plants from '../plants_egypt.json';
 import './styles.css';
 
 const pageSize = 4;
+const DEFAULT_WORLD = 'Ancient Egypt';
+
+function getWorld(plant) {
+  if (plant.world) return plant.world;
+  if (/Ancient Egypt|Player's House|Start of the game/i.test(plant.unlock || '')) return DEFAULT_WORLD;
+  return 'Other worlds';
+}
+
+const WORLD_ORDER = ['Ancient Egypt', 'Pirate Seas', 'Wild West', 'Frostbite Caves', 'Lost City', 'Far Future', 'Dark Ages', 'Jurassic Marsh', 'Big Wave Beach', 'Modern Day', 'Premium & special', 'Mint family', 'Other worlds'];
+// Keep the catalog data-driven while preserving the in-game world order.
+const worlds = WORLD_ORDER.filter((world) => plants.some((plant) => getWorld(plant) === world));
 
 function Image({ plant, className = '' }) {
   return (
     <img
       className={className}
-      src={`images/${plant.file}`}
+      src={`/images/${plant.file}`}
       data-fallback={plant.img}
       onError={(event) => {
         const fallback = event.currentTarget.dataset.fallback;
@@ -60,12 +71,12 @@ function PlantCard({ plant, index }) {
   );
 }
 
-function Cover({ total }) {
+function Cover({ total, world }) {
   return <section className="page cover-page">
     <div className="eyebrow">A bilingual field guide · 双语植物手册</div>
     <h1>Plants vs. Zombies <i>2</i></h1>
-    <h2>My Plant Book: <span>Ancient Egypt</span></h2>
-    <p className="cover-zh">我的植物图鉴 · 古埃及</p>
+    <h2>My Plant Book: <span>{world}</span></h2>
+    <p className="cover-zh">我的植物图鉴 · {world === DEFAULT_WORLD ? '古埃及' : world}</p>
     <div className="cover-plants">{plants.slice(0, 6).map((plant) => <Image key={plant.en} plant={plant} />)}</div>
     <div className="cover-note">Learn English with your favourite plants! <span>和你最喜欢的植物一起学英语！</span></div>
     <div className="cover-footer">DEMO EDITION · {total} plants · ages 5–8</div>
@@ -82,19 +93,25 @@ function Pyramids() { return <div className="pyramids" aria-hidden="true"><i /><
 
 function App() {
   const [query, setQuery] = useState('');
+  const [world, setWorld] = useState(worlds[0] || DEFAULT_WORLD);
   const [showGuide, setShowGuide] = useState(true);
-  const filtered = useMemo(() => plants.filter((plant) => `${plant.en} ${plant.zh}`.toLowerCase().includes(query.toLowerCase().trim())), [query]);
+  const filtered = useMemo(() => plants.filter((plant) => {
+    const inWorld = getWorld(plant) === world;
+    const matchesQuery = `${plant.en} ${plant.zh}`.toLowerCase().includes(query.toLowerCase().trim());
+    return inWorld && matchesQuery;
+  }), [query, world]);
   const pages = Array.from({ length: Math.ceil(filtered.length / pageSize) }, (_, page) => filtered.slice(page * pageSize, page * pageSize + pageSize));
   return <>
     <div className="toolbar">
       <div className="brand">PVZ2 <span>PLANT BOOK</span></div>
+      <label className="world-select"><span>🌍</span><select value={world} onChange={(event) => setWorld(event.target.value)} aria-label="Choose world"><option disabled value="">Choose world</option>{worlds.map((item) => <option key={item} value={item}>{item}</option>)}</select></label>
       <label className="search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search plants / 搜索植物" /></label>
       <div className="toolbar-actions"><button className={showGuide ? 'active' : ''} onClick={() => setShowGuide((value) => !value)}>Guide / 图例</button><button className="print-button" onClick={() => window.print()}>Print A4 ↗</button></div>
     </div>
     <main className="book">
-      {!query && <Cover total={plants.length} />}
+      {!query && <Cover total={filtered.length} world={world} />}
       {!query && showGuide && <Legend />}
-      {pages.length ? pages.map((page, pageIndex) => <section className="page cards-page" key={pageIndex}><div className="page-header"><div>Plants vs. Zombies 2 <span>· Ancient Egypt / 古埃及</span></div><b>{pageIndex + (query ? 1 : 3)} / {pages.length + (query ? 0 : showGuide ? 2 : 1)}</b></div><div className="cards-grid">{page.map((plant, index) => <PlantCard key={plant.en} plant={plant} index={index} />)}</div><div className="page-footer">Data & art: Plants vs. Zombies Wiki · 沿虚线裁下即为单词卡</div></section>) : <div className="empty">No plants found · 没有找到植物</div>}
+      {pages.length ? pages.map((page, pageIndex) => <section className="page cards-page" key={pageIndex}><div className="page-header"><div>Plants vs. Zombies 2 <span>· {world}</span></div><b>{pageIndex + (query ? 1 : showGuide ? 3 : 2)} / {pages.length + (query ? 0 : showGuide ? 2 : 1)}</b></div><div className="cards-grid">{page.map((plant, index) => <PlantCard key={plant.en} plant={plant} index={index} />)}</div><div className="page-footer">Data & art: Plants vs. Zombies Wiki · 沿虚线裁下即为单词卡</div></section>) : <div className="empty">No plants found · 没有找到植物</div>}
     </main>
   </>;
 }
