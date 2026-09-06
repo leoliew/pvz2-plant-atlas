@@ -11,6 +11,18 @@ function getWorldBackground(code) {
   return `/images/backgrounds/${resolveWorldBackgroundFile(code)}.webp`;
 }
 
+const FAMILY_NONE_ICON = '/images/families/None_familyicon.webp';
+const FAMILY_ALL_ICON = '/images/families/All_familyicon.webp';
+
+function normalizeFamily(family) {
+  if (!family || family === 'Nope' || family === 'None') return null;
+  return family;
+}
+
+function getFamilyIcon(family) {
+  return `/images/families/${family}_familyicon.webp`;
+}
+
 function getWorld(plant) {
   if (plant.world) return plant.world;
   if (/Ancient Egypt|Player's House|Start of the game/i.test(plant.unlock || '')) return DEFAULT_WORLD;
@@ -62,12 +74,13 @@ function Stat({ icon, label, zh, value, accent }) {
 }
 
 function PlantCard({ plant, index }) {
+  const family = normalizeFamily(plant.family);
   return (
     <article className="plant-card" style={{ '--accent': plant.color, '--delay': `${index * 45}ms` }}>
       <div className="plant-art">
         <img className="plant-bg" src={getWorldBackground(plant.obtain_world_code)} alt="" aria-hidden="true" loading="lazy" />
         <Image plant={plant} className="plant-sprite" />
-        <span className="plant-tag">{plant.family}</span>
+        {family && <img className="family-badge" src={getFamilyIcon(family)} alt={plant.family_zh || family} title={plant.family_zh || family} loading="lazy" />}
         <Sun value={plant.sun} />
         <div className="plant-label">
           <b>{plant.en}</b>
@@ -114,16 +127,34 @@ function Intro({ total, world, showGuide, featuredPlants }) {
 
 function Pyramids() { return <div className="pyramids" aria-hidden="true"><i /><i /><i /><i /></div>; }
 
+const familyOptions = (() => {
+  const seen = new Map();
+  let hasNone = false;
+  plants.forEach((plant) => {
+    const code = normalizeFamily(plant.family);
+    if (!code) { hasNone = true; return; }
+    if (!seen.has(code)) seen.set(code, plant.family_zh || code);
+  });
+  const options = [...seen.entries()]
+    .map(([code, zh]) => ({ code, zh, icon: getFamilyIcon(code) }))
+    .sort((a, b) => a.zh.localeCompare(b.zh, 'zh'));
+  if (hasNone) options.push({ code: 'none', zh: '无家族', icon: FAMILY_NONE_ICON });
+  return options;
+})();
+
 function App() {
   const [query, setQuery] = useState('');
   const [world, setWorld] = useState(worlds[0] || DEFAULT_WORLD);
+  const [family, setFamily] = useState('');
   const [showGuide, setShowGuide] = useState(true);
   const worldPlants = useMemo(() => plants.filter((plant) => getWorld(plant) === world), [world]);
   const filtered = useMemo(() => plants.filter((plant) => {
     const inWorld = getWorld(plant) === world;
     const matchesQuery = `${plant.en} ${plant.zh}`.toLowerCase().includes(query.toLowerCase().trim());
-    return inWorld && matchesQuery;
-  }), [query, world]);
+    const plantFamily = normalizeFamily(plant.family);
+    const matchesFamily = !family || (family === 'none' ? !plantFamily : plantFamily === family);
+    return inWorld && matchesQuery && matchesFamily;
+  }), [query, world, family]);
   const pages = Array.from({ length: Math.ceil(filtered.length / pageSize) }, (_, page) => filtered.slice(page * pageSize, page * pageSize + pageSize));
   return <>
     <div className="toolbar">
@@ -131,6 +162,21 @@ function App() {
       <label className="world-select"><span>🌍</span><select value={world} onChange={(event) => setWorld(event.target.value)} aria-label="Choose world"><option disabled value="">Choose world</option>{worlds.map((item) => <option key={item} value={item}>{item}</option>)}</select></label>
       <label className="search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search plants / 搜索植物" /></label>
       <div className="toolbar-actions"><button className={showGuide ? 'active' : ''} onClick={() => setShowGuide((value) => !value)}>Guide / 图例</button><a className="print-link" href="/PvZ2_Plants_Ancient_Egypt_A4_Print.html">Print layout ↗</a><button className="print-button" onClick={() => window.print()}>Print A4 ↗</button></div>
+    </div>
+    <div className="family-bar">
+      <fieldset className="family-field">
+        <legend>Family <span>家族</span></legend>
+        <div className="family-picker">
+          <button type="button" className={`family-option family-option--all${family === '' ? ' active' : ''}`} onClick={() => setFamily('')} title="All / 全部">
+            <img src={FAMILY_ALL_ICON} alt="All" loading="lazy" />
+          </button>
+          {familyOptions.map((option) => (
+            <button key={option.code} type="button" className={`family-option${family === option.code ? ' active' : ''}`} onClick={() => setFamily(option.code)} title={option.zh}>
+              <img src={option.icon} alt={option.zh} loading="lazy" />
+            </button>
+          ))}
+        </div>
+      </fieldset>
     </div>
     <main className="book">
       {!query && <Intro total={filtered.length} world={world} showGuide={showGuide} featuredPlants={worldPlants} />}
