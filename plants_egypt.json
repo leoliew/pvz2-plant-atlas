@@ -1,0 +1,101 @@
+[
+  {
+    "en": "Peashooter", "zh": "豌豆射手", "file": "peashooter.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4f/PeashooterAlmanac.png/revision/latest?cb=20230711010718",
+    "sun": 100, "recharge": "5 s", "recharge_zh": "快", "toughness": 300, "damage": "20", "range": "Straight", "range_zh": "直线",
+    "family": "Appease-mint", "unlock": "Start of the game", "unlock_zh": "游戏开始",
+    "sentence": "I shoot green peas at zombies!", "sentence_zh": "我向僵尸发射绿色的豌豆！",
+    "words": [["pea", "豌豆"], ["shoot", "射击"], ["green", "绿色"]],
+    "color": "#4CAF50"
+  },
+  {
+    "en": "Sunflower", "zh": "向日葵", "file": "sunflower.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f6/SunflowerAlmanac.png/revision/latest?cb=20230712083342",
+    "sun": 50, "recharge": "5 s", "recharge_zh": "快", "toughness": 300, "damage": "—", "range": "Makes 50 sun", "range_zh": "产生 50 阳光",
+    "family": "Enlighten-mint", "unlock": "Player's House - Day 1", "unlock_zh": "玩家小屋 第1天",
+    "sentence": "I make sun so you can plant more!", "sentence_zh": "我生产阳光，让你种更多植物！",
+    "words": [["sun", "太阳/阳光"], ["flower", "花"], ["yellow", "黄色"]],
+    "color": "#FFC107"
+  },
+  {
+    "en": "Wall-nut", "zh": "坚果", "file": "wallnut.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/5/56/Wall-nutAlmanac.png/revision/latest?cb=20230710024109",
+    "sun": 50, "recharge": "20 s", "recharge_zh": "慢", "toughness": 4000, "damage": "—", "range": "Blocks zombies", "range_zh": "阻挡僵尸",
+    "family": "Reinforce-mint", "unlock": "Player's House - Day 2", "unlock_zh": "玩家小屋 第2天",
+    "sentence": "I am a strong wall. Zombies cannot pass!", "sentence_zh": "我是一堵坚固的墙，僵尸过不去！",
+    "words": [["wall", "墙"], ["nut", "坚果"], ["strong", "强壮的"]],
+    "color": "#8D6E63"
+  },
+  {
+    "en": "Potato Mine", "zh": "土豆地雷", "file": "potatomine.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/PotatoMineAlmanac.png/revision/latest?cb=20230710024310",
+    "sun": 25, "recharge": "20 s", "recharge_zh": "慢", "toughness": 300, "damage": "1800", "range": "One tile (boom!)", "range_zh": "一格（爆炸！）",
+    "family": "Bombard-mint", "unlock": "Player's House - Day 3", "unlock_zh": "玩家小屋 第3天",
+    "sentence": "Wait 14 seconds... then BOOM!", "sentence_zh": "等 14 秒……然后砰！",
+    "words": [["potato", "土豆"], ["boom", "砰（爆炸声）"], ["wait", "等待"]],
+    "color": "#A1887F"
+  },
+  {
+    "en": "Cabbage-pult", "zh": "卷心菜投手", "file": "cabbagepult.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d9/Cabbage-pultAlmanac.png/revision/latest?cb=20230710024502",
+    "sun": 100, "recharge": "5 s", "recharge_zh": "快", "toughness": 300, "damage": "40", "range": "Lobbed (over walls)", "range_zh": "抛射（越过障碍）",
+    "family": "Arma-mint", "unlock": "Player's House - Day 4", "unlock_zh": "玩家小屋 第4天",
+    "sentence": "I throw big cabbages high in the sky!", "sentence_zh": "我把大卷心菜高高地扔到空中！",
+    "words": [["cabbage", "卷心菜"], ["throw", "投掷"], ["high", "高的"]],
+    "color": "#66BB6A"
+  },
+  {
+    "en": "Bloomerang", "zh": "回旋镖射手", "file": "bloomerang.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/3/36/BloomerangAlmanac.png/revision/latest?cb=20230710024421",
+    "sun": 175, "recharge": "5 s", "recharge_zh": "快", "toughness": 300, "damage": "20 × 2 hits", "range": "Hits 3 zombies", "range_zh": "可打中 3 个僵尸",
+    "family": "Spear-mint", "unlock": "Ancient Egypt - Day 2", "unlock_zh": "古埃及 第2天",
+    "sentence": "My boomerang flies out and comes back!", "sentence_zh": "我的回旋镖飞出去，又飞回来！",
+    "words": [["boomerang", "回旋镖"], ["fly", "飞"], ["back", "回来"]],
+    "color": "#7CB342"
+  },
+  {
+    "en": "Iceberg Lettuce", "zh": "冰冻生菜", "file": "iceberglettuce.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/0/00/IcebergLettuceAlmanac.png/revision/latest?cb=20230710031136",
+    "sun": 0, "recharge": "20 s", "recharge_zh": "慢", "toughness": 300, "damage": "Freeze 10 s", "range": "On contact", "range_zh": "接触触发",
+    "family": "Winter-mint", "unlock": "Ancient Egypt - Day 5", "unlock_zh": "古埃及 第5天",
+    "sentence": "Step on me and you freeze like ice!", "sentence_zh": "踩到我，你就会像冰一样冻住！",
+    "words": [["ice", "冰"], ["cold", "冷的"], ["freeze", "冻结"]],
+    "color": "#4FC3F7"
+  },
+  {
+    "en": "Grave Buster", "zh": "墓碑吞噬者", "file": "gravebuster.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/GraveBusterAlmanac.png/revision/latest?cb=20230710031224",
+    "sun": 0, "recharge": "10 s", "recharge_zh": "中", "toughness": 300, "damage": "Eats a grave", "range": "On a gravestone", "range_zh": "种在墓碑上",
+    "family": "Contain-mint", "unlock": "Ancient Egypt - Day 9", "unlock_zh": "古埃及 第9天",
+    "sentence": "Yum! I eat gravestones in 4 seconds.", "sentence_zh": "好吃！我 4 秒就能吃掉墓碑。",
+    "words": [["grave", "墓碑"], ["eat", "吃"], ["stone", "石头"]],
+    "color": "#9575CD"
+  },
+  {
+    "en": "Bonk Choy", "zh": "菜问", "file": "bonkchoy.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/7/78/BonkChoyAlmanac.png/revision/latest?cb=20230710031357",
+    "sun": 150, "recharge": "5 s", "recharge_zh": "快", "toughness": 300, "damage": "15 (very fast)", "range": "Front & back", "range_zh": "前后一格",
+    "family": "Enforce-mint", "unlock": "Ancient Egypt - Day 13", "unlock_zh": "古埃及 第13天",
+    "sentence": "Punch! Punch! I hit zombies in front and behind!", "sentence_zh": "拳！拳！我打前面和后面的僵尸！",
+    "words": [["punch", "出拳"], ["front", "前面"], ["behind", "后面"]],
+    "color": "#43A047"
+  },
+  {
+    "en": "Repeater", "zh": "双发射手", "file": "repeater.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/1/17/RepeaterAlmanac.png/revision/latest?cb=20230710031432",
+    "sun": 200, "recharge": "5 s", "recharge_zh": "快", "toughness": 300, "damage": "20 × 2 peas", "range": "Straight", "range_zh": "直线",
+    "family": "Appease-mint", "unlock": "Ancient Egypt - Day 19", "unlock_zh": "古埃及 第19天",
+    "sentence": "Two peas at a time! Double the fun!", "sentence_zh": "一次两颗豌豆！双倍快乐！",
+    "words": [["two", "二"], ["double", "双倍"], ["again", "再一次"]],
+    "color": "#2E7D32"
+  },
+  {
+    "en": "Twin Sunflower", "zh": "双胞向日葵", "file": "twinsunflower.png",
+    "img": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7c/TwinSunflowerAlmanac.png/revision/latest?cb=20240820023021",
+    "sun": 125, "recharge": "10 s", "recharge_zh": "中", "toughness": 300, "damage": "—", "range": "Makes 100 sun", "range_zh": "产生 100 阳光",
+    "family": "Enlighten-mint", "unlock": "Ancient Egypt - Day 24", "unlock_zh": "古埃及 第24天",
+    "sentence": "We are twins! We make twice the sun!", "sentence_zh": "我们是双胞胎！我们生产两倍的阳光！",
+    "words": [["twin", "双胞胎"], ["twice", "两倍"], ["happy", "开心的"]],
+    "color": "#FFB300"
+  }
+]

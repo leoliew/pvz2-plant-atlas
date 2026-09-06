@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>PvZ2 Seed Packets · Ancient Egypt (A4 Print)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ---------- tokens ---------- */
+:root {
+  --papyrus: #FBF4E4;   /* card paper */
+  --sand:    #E9D9AE;   /* rules, chips */
+  --ink:     #33261A;   /* text */
+  --ink-2:   #7A6247;   /* secondary text */
+  --sun:     #FFC021;   /* sun badge */
+  --sun-rim: #E08A00;
+  --en: "Fredoka", "Arial Rounded MT Bold", "Varela Round", "Nunito", sans-serif;
+  --zh: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+}
+@page { size: A4 portrait; margin: 0; }
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body { margin: 0; padding: 0; background: #e3e0d8; }
+body { font-family: var(--en), var(--zh); color: var(--ink); line-height: 1.15; }
+.zh, [lang="zh"] { font-family: var(--zh); }
+svg.i { width: 1em; height: 1em; vertical-align: -0.12em; fill: currentColor; }
+
+/* ---------- page ---------- */
+.page {
+  width: 210mm; height: 297mm; background: #fff; position: relative; overflow: hidden;
+  padding: 8mm 9mm 7mm; margin: 0 auto 8mm;
+  display: flex; flex-direction: column;
+  page-break-after: always; break-after: page;
+}
+.page:last-child { page-break-after: auto; break-after: auto; }
+@media print { .page { margin: 0; } html, body { background: #fff; } }
+
+.hdr { display: flex; align-items: baseline; justify-content: space-between; height: 8mm; margin-bottom: 3.5mm; }
+.hdr .t { font-size: 13pt; font-weight: 700; letter-spacing: .01em; }
+.hdr .t .zh { font-weight: 600; font-size: 11.5pt; margin-left: 1.5mm; color: var(--ink-2); }
+.hdr .p { font-size: 9.5pt; color: var(--ink-2); font-weight: 600; }
+.ftr { position: absolute; left: 0; right: 0; bottom: 2.6mm; text-align: center; font-size: 7pt; color: #A8977C; }
+
+.grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 5mm 6mm; }
+
+/* ---------- seed packet card ---------- */
+.card {
+  --c: #5DA33B;
+  position: relative; display: flex; flex-direction: column;
+  background: var(--papyrus); border: 0.7mm solid var(--c); border-radius: 4.5mm; overflow: hidden;
+  outline: 0.25mm dashed #C9BFA8; outline-offset: 1.6mm;   /* cut guide */
+}
+.ribbon {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 2mm;
+  background: var(--c); color: #fff; padding: 2mm 4mm 2.2mm;
+}
+.ribbon .en { font-size: 21pt; font-weight: 700; line-height: 1; letter-spacing: .005em; white-space: nowrap; }
+.ribbon .zh { font-size: 14pt; font-weight: 600; white-space: nowrap; }
+
+.body { display: grid; grid-template-columns: 42mm 1fr; gap: 3mm; padding: 3mm 3.5mm 0; }
+.pic { position: relative; height: 56mm; border-radius: 3.5mm; background: #fff; border: 0.4mm solid var(--sand);
+       display: flex; align-items: center; justify-content: center; }
+.pic img { max-width: 88%; max-height: 88%; object-fit: contain; }
+/* signature: the seed-packet sun badge */
+.sunbadge {
+  position: absolute; left: -2.5mm; bottom: -2.5mm; width: 17mm; height: 17mm;
+  display: flex; align-items: center; justify-content: center;
+}
+.sunbadge svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sunbadge .n { position: relative; font-size: 14.5pt; font-weight: 700; color: #5A3A00; line-height: 1; }
+.sunbadge .n.z { font-size: 12pt; }
+
+.stats { display: flex; flex-direction: column; justify-content: space-between; }
+.stat {
+  display: grid; grid-template-columns: 6.5mm 1fr auto; align-items: center; column-gap: 1.5mm;
+  background: #fff; border: 0.4mm solid var(--sand); border-radius: 2.8mm; padding: 1.4mm 2.2mm 1.4mm 1.8mm;
+}
+.stat .ic { color: var(--c); font-size: 14pt; line-height: 0; text-align: center; }
+.stat .k { font-size: 10.5pt; font-weight: 600; line-height: 1; }
+.stat .k .zh { display: block; font-size: 8pt; color: var(--ink-2); margin-top: .7mm; font-weight: 500; }
+.stat .v { font-size: 15pt; font-weight: 700; color: var(--c); white-space: nowrap; line-height: 1; }
+.stat .v.s { font-size: 11pt; }
+.stat .v .zh { font-size: 9.5pt; font-weight: 600; color: var(--ink-2); margin-left: .8mm; }
+.range { display: flex; align-items: center; gap: 1.5mm; font-size: 10pt; font-weight: 600; color: var(--ink); padding: 0 1mm; }
+.range .ic { color: var(--c); font-size: 13pt; line-height: 0; }
+.range .zh { font-weight: 500; color: var(--ink-2); font-size: 9pt; }
+
+.say { margin: 3mm 3.5mm 0; padding: 2.6mm 3.5mm 2.8mm; background: #fff; border-left: 1.6mm solid var(--c); border-radius: 0 3mm 3mm 0; }
+.say .en { font-size: 15pt; font-weight: 600; line-height: 1.2; color: var(--ink); }
+.say .zh { font-size: 10.5pt; color: var(--ink-2); margin-top: 1mm; }
+
+.words { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2mm; padding: 2.8mm 3.5mm 3.2mm; margin-top: auto; }
+.word { background: var(--c); color: #fff; border-radius: 2.8mm; text-align: center; padding: 1.6mm 1mm 1.5mm; }
+.word .en { font-size: 14pt; font-weight: 700; line-height: 1; }
+.word .zh { font-size: 8.5pt; margin-top: 1mm; opacity: .95; }
+
+/* legend card */
+.legend { --c: #7A6247; }
+.legend .lb { padding: 3mm 3.5mm 0; display: flex; flex-direction: column; gap: 2mm; }
+.legend .row { display: grid; grid-template-columns: 8mm 24mm 1fr; align-items: center; column-gap: 2mm;
+               background: #fff; border: 0.4mm solid var(--sand); border-radius: 2.8mm; padding: 1.8mm 2.5mm; }
+.legend .row .ic { font-size: 16pt; line-height: 0; text-align: center; color: var(--c); }
+.legend .row .ic.sun { color: var(--sun-rim); }
+.legend .row .k { font-size: 11pt; font-weight: 700; line-height: 1; }
+.legend .row .k .zh { display: block; font-size: 8.5pt; font-weight: 500; color: var(--ink-2); margin-top: .8mm; }
+.legend .row .d { font-size: 9.5pt; line-height: 1.2; }
+.legend .row .d .zh { display: block; font-size: 8.5pt; color: var(--ink-2); margin-top: .5mm; }
+.legend .tip { margin: 3mm 3.5mm 3.2mm; padding: 2.5mm 3.5mm; background: #fff; border-left: 1.6mm solid var(--c); border-radius: 0 3mm 3mm 0; font-size: 10.5pt; font-weight: 600; line-height: 1.25; }
+.legend .tip .zh { display: block; font-size: 9.5pt; font-weight: 500; color: var(--ink-2); margin-top: 1mm; }
+</style></head>
+<body>
+
+<!-- icon sheet -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 17.5a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM12.9 7h-1.8v5.6l4.6 2.8.9-1.5-3.7-2.2z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21.3 3.6 13a5.3 5.3 0 0 1 7.5-7.5l.9.9.9-.9a5.3 5.3 0 0 1 7.5 7.5z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 2 4 14h6l-1.5 8L20 10h-6z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 10.5h11.2L10 6.3 12.1 4.2 20 12l-7.9 7.8-2.1-2.1 4.2-4.2H3z"/></symbol>
+  <symbol id="i-sunbadge" viewBox="0 0 64 64">
+    <g fill="#FFC021" stroke="#E08A00" stroke-width="2" stroke-linejoin="round">
+      <path d="M32 2l5 8.5 9.4-3.2-.3 9.9 9.9.3-3.2 9.4L62 32l-8.5 5 3.2 9.4-9.9-.3-.3 9.9-9.4-3.2L32 62l-5-8.5-9.4 3.2.3-9.9-9.9.3 3.2-9.4L2 32l8.5-5-3.2-9.4 9.9.3.3-9.9 9.4 3.2z"/>
+      <circle cx="32" cy="32" r="19" fill="#FFD75E"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ======================= PAGE 1 ======================= -->
+<section class="page">
+  <div class="hdr"><div class="t">Plants vs. Zombies 2 · Ancient Egypt<span class="zh">古埃及 · 植物种子卡</span></div><div class="p">1 / 3</div></div>
+  <div class="grid">
+
+    <article class="card" style="--c:#4CAF50">
+      <div class="ribbon"><div class="en">Peashooter</div><div class="zh">豌豆射手</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/4/4f/PeashooterAlmanac.png/revision/latest?cb=20230711010718" alt="Peashooter">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">100</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">5s<span class="zh">快</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">300</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Damage<span class="zh">攻击</span></div><div class="v">20</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>Straight <span class="zh">直线一排</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">I shoot green peas at zombies!</div><div class="zh">我向僵尸发射绿色的豌豆！</div></div>
+      <div class="words">
+        <div class="word"><div class="en">pea</div><div class="zh">豌豆</div></div>
+        <div class="word"><div class="en">shoot</div><div class="zh">射击</div></div>
+        <div class="word"><div class="en">green</div><div class="zh">绿色</div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--c:#F2A900">
+      <div class="ribbon"><div class="en">Sunflower</div><div class="zh">向日葵</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/f/f6/SunflowerAlmanac.png/revision/latest?cb=20230712083342" alt="Sunflower">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">50</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">5s<span class="zh">快</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">300</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Makes sun<span class="zh">产阳光</span></div><div class="v">+50</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>Every 24s <span class="zh">每 24 秒一次</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">I make sun so you can plant more!</div><div class="zh">我生产阳光，让你种更多植物！</div></div>
+      <div class="words">
+        <div class="word"><div class="en">sun</div><div class="zh">太阳</div></div>
+        <div class="word"><div class="en">flower</div><div class="zh">花</div></div>
+        <div class="word"><div class="en">yellow</div><div class="zh">黄色</div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--c:#8D6E63">
+      <div class="ribbon"><div class="en">Wall-nut</div><div class="zh">坚果</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/5/56/Wall-nutAlmanac.png/revision/latest?cb=20230710024109" alt="Wall-nut">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">50</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">20s<span class="zh">慢</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">4000</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Damage<span class="zh">攻击</span></div><div class="v">0</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>Blocks <span class="zh">挡住僵尸</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">I am a strong wall. Zombies cannot pass!</div><div class="zh">我是一堵坚固的墙，僵尸过不去！</div></div>
+      <div class="words">
+        <div class="word"><div class="en">wall</div><div class="zh">墙</div></div>
+        <div class="word"><div class="en">nut</div><div class="zh">坚果</div></div>
+        <div class="word"><div class="en">strong</div><div class="zh">强壮的</div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--c:#A0785A">
+      <div class="ribbon"><div class="en">Potato Mine</div><div class="zh">土豆地雷</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/PotatoMineAlmanac.png/revision/latest?cb=20230710024310" alt="Potato Mine">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">25</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">20s<span class="zh">慢</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">300</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Damage<span class="zh">攻击</span></div><div class="v">1800</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>One tile <span class="zh">一格爆炸</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">Wait 14 seconds... then BOOM!</div><div class="zh">等 14 秒……然后砰！</div></div>
+      <div class="words">
+        <div class="word"><div class="en">potato</div><div class="zh">土豆</div></div>
+        <div class="word"><div class="en">boom</div><div class="zh">砰</div></div>
+        <div class="word"><div class="en">wait</div><div class="zh">等待</div></div>
+      </div>
+    </article>
+
+  </div>
+  <div class="ftr">Data &amp; art: Plants vs. Zombies Wiki (PvZ2 international) · 沿虚线裁下即为单词卡</div>
+</section>
+
+<!-- ======================= PAGE 2 ======================= -->
+<section class="page">
+  <div class="hdr"><div class="t">Plants vs. Zombies 2 · Ancient Egypt<span class="zh">古埃及 · 植物种子卡</span></div><div class="p">2 / 3</div></div>
+  <div class="grid">
+
+    <article class="card" style="--c:#5DA33B">
+      <div class="ribbon"><div class="en">Cabbage-pult</div><div class="zh">卷心菜投手</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/d/d9/Cabbage-pultAlmanac.png/revision/latest?cb=20230710024502" alt="Cabbage-pult">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">100</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">5s<span class="zh">快</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">300</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Damage<span class="zh">攻击</span></div><div class="v">40</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>Lobbed <span class="zh">抛过障碍</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">I throw big cabbages high in the sky!</div><div class="zh">我把大卷心菜高高地扔到空中！</div></div>
+      <div class="words">
+        <div class="word"><div class="en">cabbage</div><div class="zh">卷心菜</div></div>
+        <div class="word"><div class="en">throw</div><div class="zh">投掷</div></div>
+        <div class="word"><div class="en">high</div><div class="zh">高的</div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--c:#7CB342">
+      <div class="ribbon"><div class="en">Bloomerang</div><div class="zh">回旋镖射手</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/3/36/BloomerangAlmanac.png/revision/latest?cb=20230710024421" alt="Bloomerang">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">175</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">5s<span class="zh">快</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">300</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Damage<span class="zh">攻击</span></div><div class="v s">20 ×2</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>Hits 3 <span class="zh">可打 3 个僵尸</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">My boomerang flies out and comes back!</div><div class="zh">我的回旋镖飞出去，又飞回来！</div></div>
+      <div class="words">
+        <div class="word"><div class="en">fly</div><div class="zh">飞</div></div>
+        <div class="word"><div class="en">back</div><div class="zh">回来</div></div>
+        <div class="word"><div class="en">three</div><div class="zh">三</div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--c:#2F9FD6">
+      <div class="ribbon"><div class="en">Iceberg Lettuce</div><div class="zh">冰冻生菜</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/0/00/IcebergLettuceAlmanac.png/revision/latest?cb=20230710031136" alt="Iceberg Lettuce">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">0</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">20s<span class="zh">慢</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">300</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Freeze<span class="zh">冰冻</span></div><div class="v">10s</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>On touch <span class="zh">被踩到时</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">Step on me and you freeze like ice!</div><div class="zh">踩到我，你就会像冰一样冻住！</div></div>
+      <div class="words">
+        <div class="word"><div class="en">ice</div><div class="zh">冰</div></div>
+        <div class="word"><div class="en">cold</div><div class="zh">冷的</div></div>
+        <div class="word"><div class="en">freeze</div><div class="zh">冻结</div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--c:#8E6BC7">
+      <div class="ribbon"><div class="en">Grave Buster</div><div class="zh">墓碑吞噬者</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/GraveBusterAlmanac.png/revision/latest?cb=20230710031224" alt="Grave Buster">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">0</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">10s<span class="zh">中</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">300</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Eats grave<span class="zh">吃墓碑</span></div><div class="v">4s</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>On a grave <span class="zh">种在墓碑上</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">Yum! I eat gravestones in 4 seconds.</div><div class="zh">好吃！我 4 秒就能吃掉墓碑。</div></div>
+      <div class="words">
+        <div class="word"><div class="en">grave</div><div class="zh">墓碑</div></div>
+        <div class="word"><div class="en">eat</div><div class="zh">吃</div></div>
+        <div class="word"><div class="en">yum</div><div class="zh">好吃</div></div>
+      </div>
+    </article>
+
+  </div>
+  <div class="ftr">Data &amp; art: Plants vs. Zombies Wiki (PvZ2 international) · 沿虚线裁下即为单词卡</div>
+</section>
+
+<!-- ======================= PAGE 3 ======================= -->
+<section class="page">
+  <div class="hdr"><div class="t">Plants vs. Zombies 2 · Ancient Egypt<span class="zh">古埃及 · 植物种子卡</span></div><div class="p">3 / 3</div></div>
+  <div class="grid">
+
+    <article class="card" style="--c:#3E9B45">
+      <div class="ribbon"><div class="en">Bonk Choy</div><div class="zh">菜问</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/7/78/BonkChoyAlmanac.png/revision/latest?cb=20230710031357" alt="Bonk Choy">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">150</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">5s<span class="zh">快</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">300</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Damage<span class="zh">攻击</span></div><div class="v s">15 fast</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>Front &amp; back <span class="zh">前后一格</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">Punch! I hit zombies in front and behind!</div><div class="zh">出拳！我打前面和后面的僵尸！</div></div>
+      <div class="words">
+        <div class="word"><div class="en">punch</div><div class="zh">出拳</div></div>
+        <div class="word"><div class="en">front</div><div class="zh">前面</div></div>
+        <div class="word"><div class="en">behind</div><div class="zh">后面</div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--c:#2E7D32">
+      <div class="ribbon"><div class="en">Repeater</div><div class="zh">双发射手</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/1/17/RepeaterAlmanac.png/revision/latest?cb=20230710031432" alt="Repeater">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">200</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">5s<span class="zh">快</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">300</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Damage<span class="zh">攻击</span></div><div class="v s">20 ×2</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>Straight <span class="zh">直线一排</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">Two peas at a time! Double the fun!</div><div class="zh">一次两颗豌豆！双倍快乐！</div></div>
+      <div class="words">
+        <div class="word"><div class="en">two</div><div class="zh">二</div></div>
+        <div class="word"><div class="en">double</div><div class="zh">双倍</div></div>
+        <div class="word"><div class="en">again</div><div class="zh">再一次</div></div>
+      </div>
+    </article>
+
+    <article class="card" style="--c:#EF8A00">
+      <div class="ribbon"><div class="en">Twin Sunflower</div><div class="zh">双胞向日葵</div></div>
+      <div class="body">
+        <div class="pic"><img src="https://static.wikia.nocookie.net/plantsvszombies/images/7/7c/TwinSunflowerAlmanac.png/revision/latest?cb=20240820023021" alt="Twin Sunflower">
+          <div class="sunbadge"><svg><use href="#i-sunbadge"/></svg><div class="n">125</div></div></div>
+        <div class="stats">
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="v">10s<span class="zh">中</span></div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="v">300</div></div>
+          <div class="stat"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Makes sun<span class="zh">产阳光</span></div><div class="v">+100</div></div>
+          <div class="range"><span class="ic"><svg class="i"><use href="#i-arrow"/></svg></span>Every 24s <span class="zh">每 24 秒一次</span></div>
+        </div>
+      </div>
+      <div class="say"><div class="en">We are twins! We make twice the sun!</div><div class="zh">我们是双胞胎！我们生产两倍的阳光！</div></div>
+      <div class="words">
+        <div class="word"><div class="en">twin</div><div class="zh">双胞胎</div></div>
+        <div class="word"><div class="en">twice</div><div class="zh">两倍</div></div>
+        <div class="word"><div class="en">happy</div><div class="zh">开心的</div></div>
+      </div>
+    </article>
+
+    <article class="card legend">
+      <div class="ribbon"><div class="en">How to read</div><div class="zh">怎么看种子卡</div></div>
+      <div class="lb">
+        <div class="row"><div class="ic sun"><svg class="i"><use href="#i-sunbadge"/></svg></div><div class="k">Sun cost<span class="zh">阳光</span></div><div class="d">The sun you pay to plant it.<span class="zh">种它要花多少阳光。</span></div></div>
+        <div class="row"><div class="ic"><svg class="i"><use href="#i-clock"/></svg></div><div class="k">Recharge<span class="zh">冷却</span></div><div class="d">How long until you can plant another.<span class="zh">再种一个要等多久。</span></div></div>
+        <div class="row"><div class="ic"><svg class="i"><use href="#i-heart"/></svg></div><div class="k">Toughness<span class="zh">生命</span></div><div class="d">How many bites it can take.<span class="zh">能被僵尸咬多少下。</span></div></div>
+        <div class="row"><div class="ic"><svg class="i"><use href="#i-bolt"/></svg></div><div class="k">Damage<span class="zh">攻击</span></div><div class="d">How hard it hits a zombie.<span class="zh">打僵尸有多疼。</span></div></div>
+        <div class="row"><div class="ic"><svg class="i"><use href="#i-arrow"/></svg></div><div class="k">Range<span class="zh">范围</span></div><div class="d">Where it can reach.<span class="zh">它能打到哪里。</span></div></div>
+      </div>
+      <div class="tip">Read the sentence out loud, then find the 3 words inside it!<span class="zh">大声读英文句子，再在句子里找出下面 3 个单词！</span></div>
+    </article>
+
+  </div>
+  <div class="ftr">Data &amp; art: Plants vs. Zombies Wiki (PvZ2 international) · 沿虚线裁下即为单词卡</div>
+</section>
+
+</body></html>

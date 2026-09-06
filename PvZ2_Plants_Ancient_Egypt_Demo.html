@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>PvZ2 Plant Book · Ancient Egypt (Demo)</title>
+<style>
+@page { size: A4 landscape; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #ddd; }
+body {
+  font-family: "Fredoka", "Baloo 2", "Nunito", "Arial Rounded MT Bold", "Varela Round",
+               "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Noto Sans SC",
+               "Source Han Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  color: #3E2723;
+}
+.page {
+  width: 297mm; height: 210mm; position: relative; overflow: hidden;
+  background: #FBF1D8; page-break-after: always; break-after: page;
+  margin: 0 auto 8mm auto;
+}
+@media print { .page { margin: 0; } html, body { background: #FBF1D8; } }
+.pyramids { position: absolute; left: 0; right: 0; bottom: 0; height: 40mm; pointer-events: none; }
+.pyramids svg { width: 100%; height: 100%; display: block; }
+.pageno {
+  position: absolute; bottom: 4mm; left: 50%; transform: translateX(-50%);
+  background: #5D4037; color: #fff; font-weight: 700; font-size: 10pt;
+  padding: 2px 12px; border-radius: 999px;
+}
+.cover { text-align: center; padding-top: 18mm; }
+.cover .title { font-size: 40pt; font-weight: 800; color: #7CB342; letter-spacing: .5px; }
+.cover .sub { font-size: 26pt; font-weight: 800; color: #5D4037; margin-top: 4mm; }
+.cover .zh { font-size: 20pt; color: #3E2723; margin-top: 3mm; }
+.cover .strip { display: flex; justify-content: center; align-items: flex-end; gap: 4mm; margin: 12mm 12mm 0 12mm; }
+.cover .strip img { height: 32mm; width: auto; }
+.cover .strip .n { font-size: 8pt; font-weight: 700; color: #5D4037; margin-top: 1mm; text-align: center; }
+.cover .tag { margin-top: 8mm; font-size: 16pt; font-weight: 700; color: #5D4037; }
+.cover .tagzh { font-size: 13pt; margin-top: 1mm; }
+.cover .demo { position: absolute; bottom: 12mm; left: 0; right: 0; font-size: 10pt; color: #8D6E63; }
+.legend { padding: 14mm 24mm; }
+.legend h1 { margin: 0; text-align: center; font-size: 26pt; color: #5D4037; }
+.legend h2 { margin: 1mm 0 8mm; text-align: center; font-size: 15pt; font-weight: 500; }
+.legend .row {
+  display: grid; grid-template-columns: 22mm 60mm 1fr; align-items: center; gap: 4mm;
+  background: #fff; border: 2px solid #E8CF97; border-radius: 6mm; padding: 4mm 6mm; margin-bottom: 4mm;
+}
+.legend .row .ic { font-size: 26pt; text-align: center; }
+.legend .row .k { font-size: 17pt; font-weight: 800; color: #5D4037; }
+.legend .row .kz { font-size: 12pt; }
+.legend .row .d { font-size: 13pt; }
+.legend .row .dz { font-size: 11pt; color: #6D4C41; }
+.plant { display: grid; grid-template-columns: 100mm 1fr; gap: 8mm; padding: 10mm 12mm 14mm; height: 100%; }
+.card {
+  background: #fff; border: 2mm solid var(--c); border-radius: 9mm; position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6mm 6mm 26mm;
+}
+.card img { max-width: 100%; max-height: 120mm; object-fit: contain; filter: drop-shadow(0 4px 4px rgba(0,0,0,.18)); }
+.card .ribbon {
+  position: absolute; left: 5mm; right: 5mm; bottom: 5mm; background: var(--c); color: #fff;
+  border-radius: 5mm; text-align: center; padding: 3mm 2mm;
+}
+.card .ribbon .en { font-size: 20pt; font-weight: 800; line-height: 1.1; }
+.card .ribbon .zh { font-size: 13pt; margin-top: 1mm; }
+.info { display: flex; flex-direction: column; }
+.head { display: flex; justify-content: space-between; align-items: flex-start; }
+.head .en { font-size: 36pt; font-weight: 800; color: var(--c); line-height: 1; }
+.head .zh { font-size: 19pt; margin-top: 2mm; }
+.head .meta { text-align: right; font-size: 9.5pt; color: #6D4C41; line-height: 1.5; padding-top: 2mm; }
+.head .meta b { display: inline-block; background: #E8CF97; color: #5D4037; border-radius: 999px; padding: 1px 8px; margin-bottom: 1mm; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 6mm; }
+.stat {
+  background: #fff; border: 2px solid #E8CF97; border-radius: 5mm; padding: 3mm 4mm;
+  display: grid; grid-template-columns: 14mm 1fr auto; align-items: center; gap: 3mm; min-height: 22mm;
+}
+.stat .ic { font-size: 24pt; text-align: center; line-height: 1; }
+.stat .k { font-size: 13pt; font-weight: 800; color: #5D4037; }
+.stat .kz { font-size: 9.5pt; color: #8D6E63; }
+.stat .v { font-size: 18pt; font-weight: 800; color: var(--c); text-align: right; white-space: nowrap; }
+.stat .v.small { font-size: 12.5pt; }
+.range { margin-top: 4mm; font-size: 12pt; }
+.range b { color: #5D4037; }
+.bubble { margin-top: 5mm; background: var(--c); color: #fff; border-radius: 6mm; padding: 5mm 6mm; position: relative; }
+.bubble:after { content: ""; position: absolute; left: 10mm; bottom: -4mm; border: 4mm solid transparent; border-top-color: var(--c); border-bottom: 0; }
+.bubble .en { font-size: 18pt; font-weight: 800; line-height: 1.2; }
+.bubble .zh { font-size: 13pt; margin-top: 2mm; opacity: .95; }
+.words { margin-top: 8mm; }
+.words .t { font-size: 13pt; font-weight: 700; color: #5D4037; margin-bottom: 2.5mm; }
+.words .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+.word { background: #fff; border: 2px solid var(--c); border-radius: 4mm; text-align: center; padding: 3mm 2mm; }
+.word .en { font-size: 16pt; font-weight: 800; color: var(--c); }
+.word .zh { font-size: 11pt; margin-top: 1mm; }
+</style></head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="page cover">
+  <div class="title">Plants vs. Zombies 2</div>
+  <div class="sub">My Plant Book: Ancient Egypt</div>
+  <div class="zh">我的植物图鉴 · 古埃及</div>
+  <div class="strip">
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/4/4f/PeashooterAlmanac.png/revision/latest?cb=20230711010718" alt="Peashooter"><div class="n">Peashooter</div></div>
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/f/f6/SunflowerAlmanac.png/revision/latest?cb=20230712083342" alt="Sunflower"><div class="n">Sunflower</div></div>
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/5/56/Wall-nutAlmanac.png/revision/latest?cb=20230710024109" alt="Wall-nut"><div class="n">Wall-nut</div></div>
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/PotatoMineAlmanac.png/revision/latest?cb=20230710024310" alt="Potato Mine"><div class="n">Potato Mine</div></div>
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/d/d9/Cabbage-pultAlmanac.png/revision/latest?cb=20230710024502" alt="Cabbage-pult"><div class="n">Cabbage-pult</div></div>
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/3/36/BloomerangAlmanac.png/revision/latest?cb=20230710024421" alt="Bloomerang"><div class="n">Bloomerang</div></div>
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/0/00/IcebergLettuceAlmanac.png/revision/latest?cb=20230710031136" alt="Iceberg Lettuce"><div class="n">Iceberg Lettuce</div></div>
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/GraveBusterAlmanac.png/revision/latest?cb=20230710031224" alt="Grave Buster"><div class="n">Grave Buster</div></div>
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/7/78/BonkChoyAlmanac.png/revision/latest?cb=20230710031357" alt="Bonk Choy"><div class="n">Bonk Choy</div></div>
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/1/17/RepeaterAlmanac.png/revision/latest?cb=20230710031432" alt="Repeater"><div class="n">Repeater</div></div>
+    <div><img src="https://static.wikia.nocookie.net/plantsvszombies/images/7/7c/TwinSunflowerAlmanac.png/revision/latest?cb=20240820023021" alt="Twin Sunflower"><div class="n">Twin Sunflower</div></div>
+  </div>
+  <div class="tag">Learn English with your favourite plants!</div>
+  <div class="tagzh">和你最喜欢的植物一起学英语！</div>
+  <div class="demo">DEMO · 11 plants · ages 5-8</div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+</section>
+
+<!-- ============ LEGEND ============ -->
+<section class="page legend">
+  <h1>How to read a plant card</h1>
+  <h2>怎么看植物卡片</h2>
+  <div class="row"><div class="ic">☀️</div><div><div class="k">Sun Cost</div><div class="kz">阳光消耗</div></div><div><div class="d">How much sun you need to plant it.</div><div class="dz">种它需要多少阳光。</div></div></div>
+  <div class="row"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却时间</div></div><div><div class="d">How long you wait before planting another one.</div><div class="dz">再种一个要等多久。</div></div></div>
+  <div class="row"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命值</div></div><div><div class="d">How much damage it can take.</div><div class="dz">它能承受多少伤害。</div></div></div>
+  <div class="row"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击力</div></div><div><div class="d">How hard it hits zombies.</div><div class="dz">它打僵尸有多疼。</div></div></div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">2 / 13</div>
+</section>
+
+<!-- ============ 1 PEASHOOTER ============ -->
+<section class="page" style="--c:#4CAF50">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/4/4f/PeashooterAlmanac.png/revision/latest?cb=20230711010718" alt="Peashooter">
+      <div class="ribbon"><div class="en">Peashooter</div><div class="zh">豌豆射手</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Peashooter</div><div class="zh">豌豆射手</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Start of the game<br>解锁：游戏开始</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">100</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">5 s · 快</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">300</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v">20</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>Straight &nbsp;/&nbsp; 直线</div>
+      <div class="bubble"><div class="en">I shoot green peas at zombies!</div><div class="zh">我向僵尸发射绿色的豌豆！</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">pea</div><div class="zh">豌豆</div></div>
+        <div class="word"><div class="en">shoot</div><div class="zh">射击</div></div>
+        <div class="word"><div class="en">green</div><div class="zh">绿色</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">3 / 13</div>
+</section>
+
+<!-- ============ 2 SUNFLOWER ============ -->
+<section class="page" style="--c:#FFC107">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/f/f6/SunflowerAlmanac.png/revision/latest?cb=20230712083342" alt="Sunflower">
+      <div class="ribbon"><div class="en">Sunflower</div><div class="zh">向日葵</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Sunflower</div><div class="zh">向日葵</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Player's House - Day 1<br>解锁：玩家小屋 第1天</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">50</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">5 s · 快</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">300</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v">—</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>Makes 50 sun &nbsp;/&nbsp; 产生 50 阳光</div>
+      <div class="bubble"><div class="en">I make sun so you can plant more!</div><div class="zh">我生产阳光，让你种更多植物！</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">sun</div><div class="zh">太阳 / 阳光</div></div>
+        <div class="word"><div class="en">flower</div><div class="zh">花</div></div>
+        <div class="word"><div class="en">yellow</div><div class="zh">黄色</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">4 / 13</div>
+</section>
+
+<!-- ============ 3 WALL-NUT ============ -->
+<section class="page" style="--c:#8D6E63">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/5/56/Wall-nutAlmanac.png/revision/latest?cb=20230710024109" alt="Wall-nut">
+      <div class="ribbon"><div class="en">Wall-nut</div><div class="zh">坚果</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Wall-nut</div><div class="zh">坚果</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Player's House - Day 2<br>解锁：玩家小屋 第2天</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">50</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">20 s · 慢</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">4000</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v">—</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>Blocks zombies &nbsp;/&nbsp; 阻挡僵尸</div>
+      <div class="bubble"><div class="en">I am a strong wall. Zombies cannot pass!</div><div class="zh">我是一堵坚固的墙，僵尸过不去！</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">wall</div><div class="zh">墙</div></div>
+        <div class="word"><div class="en">nut</div><div class="zh">坚果</div></div>
+        <div class="word"><div class="en">strong</div><div class="zh">强壮的</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">5 / 13</div>
+</section>
+
+<!-- ============ 4 POTATO MINE ============ -->
+<section class="page" style="--c:#A1887F">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/PotatoMineAlmanac.png/revision/latest?cb=20230710024310" alt="Potato Mine">
+      <div class="ribbon"><div class="en">Potato Mine</div><div class="zh">土豆地雷</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Potato Mine</div><div class="zh">土豆地雷</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Player's House - Day 3<br>解锁：玩家小屋 第3天</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">25</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">20 s · 慢</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">300</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v">1800</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>One tile (boom!) &nbsp;/&nbsp; 一格（爆炸！）</div>
+      <div class="bubble"><div class="en">Wait 14 seconds... then BOOM!</div><div class="zh">等 14 秒……然后砰！</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">potato</div><div class="zh">土豆</div></div>
+        <div class="word"><div class="en">boom</div><div class="zh">砰（爆炸声）</div></div>
+        <div class="word"><div class="en">wait</div><div class="zh">等待</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">6 / 13</div>
+</section>
+
+<!-- ============ 5 CABBAGE-PULT ============ -->
+<section class="page" style="--c:#66BB6A">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/d/d9/Cabbage-pultAlmanac.png/revision/latest?cb=20230710024502" alt="Cabbage-pult">
+      <div class="ribbon"><div class="en">Cabbage-pult</div><div class="zh">卷心菜投手</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Cabbage-pult</div><div class="zh">卷心菜投手</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Player's House - Day 4<br>解锁：玩家小屋 第4天</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">100</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">5 s · 快</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">300</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v">40</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>Lobbed (over walls) &nbsp;/&nbsp; 抛射（越过障碍）</div>
+      <div class="bubble"><div class="en">I throw big cabbages high in the sky!</div><div class="zh">我把大卷心菜高高地扔到空中！</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">cabbage</div><div class="zh">卷心菜</div></div>
+        <div class="word"><div class="en">throw</div><div class="zh">投掷</div></div>
+        <div class="word"><div class="en">high</div><div class="zh">高的</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">7 / 13</div>
+</section>
+
+<!-- ============ 6 BLOOMERANG ============ -->
+<section class="page" style="--c:#7CB342">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/3/36/BloomerangAlmanac.png/revision/latest?cb=20230710024421" alt="Bloomerang">
+      <div class="ribbon"><div class="en">Bloomerang</div><div class="zh">回旋镖射手</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Bloomerang</div><div class="zh">回旋镖射手</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Ancient Egypt - Day 2<br>解锁：古埃及 第2天</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">175</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">5 s · 快</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">300</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v small">20 × 2 hits</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>Hits 3 zombies &nbsp;/&nbsp; 可打中 3 个僵尸</div>
+      <div class="bubble"><div class="en">My boomerang flies out and comes back!</div><div class="zh">我的回旋镖飞出去，又飞回来！</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">boomerang</div><div class="zh">回旋镖</div></div>
+        <div class="word"><div class="en">fly</div><div class="zh">飞</div></div>
+        <div class="word"><div class="en">back</div><div class="zh">回来</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">8 / 13</div>
+</section>
+
+<!-- ============ 7 ICEBERG LETTUCE ============ -->
+<section class="page" style="--c:#4FC3F7">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/0/00/IcebergLettuceAlmanac.png/revision/latest?cb=20230710031136" alt="Iceberg Lettuce">
+      <div class="ribbon"><div class="en">Iceberg Lettuce</div><div class="zh">冰冻生菜</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Iceberg Lettuce</div><div class="zh">冰冻生菜</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Ancient Egypt - Day 5<br>解锁：古埃及 第5天</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">0</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">20 s · 慢</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">300</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v small">Freeze 10 s</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>On contact &nbsp;/&nbsp; 接触触发</div>
+      <div class="bubble"><div class="en">Step on me and you freeze like ice!</div><div class="zh">踩到我，你就会像冰一样冻住！</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">ice</div><div class="zh">冰</div></div>
+        <div class="word"><div class="en">cold</div><div class="zh">冷的</div></div>
+        <div class="word"><div class="en">freeze</div><div class="zh">冻结</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">9 / 13</div>
+</section>
+
+<!-- ============ 8 GRAVE BUSTER ============ -->
+<section class="page" style="--c:#9575CD">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/GraveBusterAlmanac.png/revision/latest?cb=20230710031224" alt="Grave Buster">
+      <div class="ribbon"><div class="en">Grave Buster</div><div class="zh">墓碑吞噬者</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Grave Buster</div><div class="zh">墓碑吞噬者</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Ancient Egypt - Day 9<br>解锁：古埃及 第9天</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">0</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">10 s · 中</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">300</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v small">Eats a grave</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>On a gravestone &nbsp;/&nbsp; 种在墓碑上</div>
+      <div class="bubble"><div class="en">Yum! I eat gravestones in 4 seconds.</div><div class="zh">好吃！我 4 秒就能吃掉墓碑。</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">grave</div><div class="zh">墓碑</div></div>
+        <div class="word"><div class="en">eat</div><div class="zh">吃</div></div>
+        <div class="word"><div class="en">stone</div><div class="zh">石头</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">10 / 13</div>
+</section>
+
+<!-- ============ 9 BONK CHOY ============ -->
+<section class="page" style="--c:#43A047">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/7/78/BonkChoyAlmanac.png/revision/latest?cb=20230710031357" alt="Bonk Choy">
+      <div class="ribbon"><div class="en">Bonk Choy</div><div class="zh">菜问</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Bonk Choy</div><div class="zh">菜问</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Ancient Egypt - Day 13<br>解锁：古埃及 第13天</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">150</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">5 s · 快</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">300</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v small">15 (very fast)</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>Front &amp; back &nbsp;/&nbsp; 前后一格</div>
+      <div class="bubble"><div class="en">Punch! Punch! I hit zombies in front and behind!</div><div class="zh">拳！拳！我打前面和后面的僵尸！</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">punch</div><div class="zh">出拳</div></div>
+        <div class="word"><div class="en">front</div><div class="zh">前面</div></div>
+        <div class="word"><div class="en">behind</div><div class="zh">后面</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">11 / 13</div>
+</section>
+
+<!-- ============ 10 REPEATER ============ -->
+<section class="page" style="--c:#2E7D32">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/1/17/RepeaterAlmanac.png/revision/latest?cb=20230710031432" alt="Repeater">
+      <div class="ribbon"><div class="en">Repeater</div><div class="zh">双发射手</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Repeater</div><div class="zh">双发射手</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Ancient Egypt - Day 19<br>解锁：古埃及 第19天</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">200</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">5 s · 快</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">300</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v small">20 × 2 peas</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>Straight &nbsp;/&nbsp; 直线</div>
+      <div class="bubble"><div class="en">Two peas at a time! Double the fun!</div><div class="zh">一次两颗豌豆！双倍快乐！</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">two</div><div class="zh">二</div></div>
+        <div class="word"><div class="en">double</div><div class="zh">双倍</div></div>
+        <div class="word"><div class="en">again</div><div class="zh">再一次</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">12 / 13</div>
+</section>
+
+<!-- ============ 11 TWIN SUNFLOWER ============ -->
+<section class="page" style="--c:#FFB300">
+  <div class="plant">
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/plantsvszombies/images/7/7c/TwinSunflowerAlmanac.png/revision/latest?cb=20240820023021" alt="Twin Sunflower">
+      <div class="ribbon"><div class="en">Twin Sunflower</div><div class="zh">双胞向日葵</div></div>
+    </div>
+    <div class="info">
+      <div class="head">
+        <div><div class="en">Twin Sunflower</div><div class="zh">双胞向日葵</div></div>
+        <div class="meta"><b>Ancient Egypt · 古埃及</b><br>Unlock: Ancient Egypt - Day 24<br>解锁：古埃及 第24天</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="ic">☀️</div><div><div class="k">Sun</div><div class="kz">阳光</div></div><div class="v">125</div></div>
+        <div class="stat"><div class="ic">⏱️</div><div><div class="k">Recharge</div><div class="kz">冷却</div></div><div class="v small">10 s · 中</div></div>
+        <div class="stat"><div class="ic">❤️</div><div><div class="k">Toughness</div><div class="kz">生命</div></div><div class="v">300</div></div>
+        <div class="stat"><div class="ic">⚡</div><div><div class="k">Damage</div><div class="kz">攻击</div></div><div class="v">—</div></div>
+      </div>
+      <div class="range"><b>Range 范围：</b>Makes 100 sun &nbsp;/&nbsp; 产生 100 阳光</div>
+      <div class="bubble"><div class="en">We are twins! We make twice the sun!</div><div class="zh">我们是双胞胎！我们生产两倍的阳光！</div></div>
+      <div class="words"><div class="t">Words to learn · 学单词</div><div class="grid">
+        <div class="word"><div class="en">twin</div><div class="zh">双胞胎</div></div>
+        <div class="word"><div class="en">twice</div><div class="zh">两倍</div></div>
+        <div class="word"><div class="en">happy</div><div class="zh">开心的</div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRatio="none"><polygon points="40,150 130,80 220,150" fill="#E8CF97"/><polygon points="170,150 300,45 430,150" fill="#E8CF97"/><polygon points="820,150 920,70 1020,150" fill="#E8CF97"/><polygon points="980,150 1040,100 1100,150" fill="#E8CF97"/><rect x="0" y="132" width="1122" height="18" fill="#E8CF97"/></svg></div>
+  <div class="pageno">13 / 13</div>
+</section>
+
+</body></html>
