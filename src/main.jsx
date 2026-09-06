@@ -1,4 +1,4 @@
-import { StrictMode, useMemo, useState } from 'react';
+import { StrictMode, useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import plants from '../plants_egypt.json';
 import './styles.css';
@@ -6,6 +6,7 @@ import { resolveWorldBackgroundFile } from './world-backgrounds.js';
 
 const pageSize = 4;
 const DEFAULT_WORLD = 'Ancient Egypt';
+const ALL_WORLDS = '__all__';
 
 function getWorldBackground(code) {
   return `/images/backgrounds/${resolveWorldBackgroundFile(code)}.webp`;
@@ -32,6 +33,29 @@ function getWorld(plant) {
 const WORLD_ORDER = ['Ancient Egypt', 'Pirate Seas', 'Wild West', 'Frostbite Caves', 'Lost City', 'Far Future', 'Dark Ages', 'Jurassic Marsh', 'Big Wave Beach', 'Modern Day', 'Premium & special', 'Mint family', 'Other worlds'];
 // Keep the catalog data-driven while preserving the in-game world order.
 const worlds = WORLD_ORDER.filter((world) => plants.some((plant) => getWorld(plant) === world));
+const worldOptions = [ALL_WORLDS, ...worlds];
+
+// Fields already shown on the card face or explicitly in the detail modal —
+// anything else falls through to the generic "More" section below.
+const DETAIL_HANDLED_KEYS = new Set([
+  'codename', 'id', 'file', 'img', 'pvzg_file', 'color', 'en', 'zh',
+  'sun', 'recharge', 'recharge_zh', 'toughness', 'damage', 'range', 'range_zh',
+  'sentence', 'sentence_zh', 'words', 'unlock',
+  'family', 'family_zh', 'obtain_world_code', 'world',
+  'unlock_zh', 'description', 'description_zh', 'plant_food', 'plant_food_zh',
+  // duplicates of description/description_zh and sentence/sentence_zh/words for every plant
+  'intro_en', 'intro_zh', 'learning_sentences',
+]);
+
+function humanizeKey(key) {
+  return key.replace(/_zh$/, ' (中文)').replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function stringifyField(value) {
+  if (Array.isArray(value)) return value.map((v) => (Array.isArray(v) ? v.join(' / ') : String(v))).join(', ');
+  if (value && typeof value === 'object') return JSON.stringify(value);
+  return String(value);
+}
 
 function Image({ plant, className = '' }) {
   const primary = plant.pvzg_file || plant.file;
@@ -73,7 +97,7 @@ function Stat({ icon, label, zh, value, accent }) {
   );
 }
 
-function PlantCard({ plant, index }) {
+function PlantCard({ plant, index, onOpen }) {
   const family = normalizeFamily(plant.family);
   return (
     <article className="plant-card" style={{ '--accent': plant.color, '--delay': `${index * 45}ms` }}>
@@ -97,8 +121,72 @@ function PlantCard({ plant, index }) {
         <div className="range"><span>➜</span><b>Range</b> {plant.range}<em>{plant.range_zh}</em></div>
         <div className="say"><b>{plant.sentence}</b><span>{plant.sentence_zh}</span></div>
         <div className="words">{plant.words.map(([en, zh]) => <span key={en}><b>{en}</b><small>{zh}</small></span>)}</div>
+        <button type="button" className="card-expand" onClick={() => onOpen(plant)}>
+          Details <span>· 详情</span>
+        </button>
       </div>
     </article>
+  );
+}
+
+function PlantDetailModal({ plant, onClose }) {
+  useEffect(() => {
+    if (!plant) return;
+    const onKey = (event) => event.key === 'Escape' && onClose();
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [plant, onClose]);
+
+  if (!plant) return null;
+  const family = normalizeFamily(plant.family);
+  const hasFood = plant.plant_food && plant.plant_food !== '—';
+  const extra = Object.entries(plant).filter(
+    ([key, value]) => !DETAIL_HANDLED_KEYS.has(key) && value != null && value !== '' && value !== '—'
+  );
+
+  return (
+    <div className="detail-modal-overlay" onClick={onClose} role="presentation">
+      <div
+        className="detail-modal"
+        style={{ '--accent': plant.color }}
+        role="dialog"
+        aria-modal="true"
+        aria-label={plant.en}
+        onClick={(event) => event.stopPropagation()}
+      >
+        <button type="button" className="detail-modal-close" onClick={onClose} aria-label="Close">×</button>
+        <div className="detail-head">
+          <Image plant={plant} />
+          <div className="detail-title"><b>{plant.en}</b><span>{plant.zh}</span></div>
+          {family && <img className="family-badge" src={getFamilyIcon(family)} alt={plant.family_zh || family} title={plant.family_zh || family} loading="lazy" />}
+        </div>
+        <div className="detail-unlock">
+          <div><span>◆</span>{plant.unlock}</div>
+          <div>{plant.unlock_zh}</div>
+        </div>
+        <div className="official-copy">
+          <p><b>About<small>简介</small></b><span>{plant.description}</span><em>{plant.description_zh}</em></p>
+          {hasFood && (
+            <p>
+              <b>Plant Food<small>叶绿素</small></b>
+              <span>{plant.plant_food}</span>
+              {plant.plant_food_zh !== '—' && <em>{plant.plant_food_zh}</em>}
+            </p>
+          )}
+        </div>
+        {extra.length > 0 && (
+          <div className="detail-more">
+            {extra.map(([key, value]) => (
+              <div key={key}><b>{humanizeKey(key)}</b><span>{stringifyField(value)}</span></div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -147,19 +235,22 @@ function App() {
   const [world, setWorld] = useState(worlds[0] || DEFAULT_WORLD);
   const [family, setFamily] = useState('');
   const [showGuide, setShowGuide] = useState(true);
-  const worldPlants = useMemo(() => plants.filter((plant) => getWorld(plant) === world), [world]);
+  const [detailPlant, setDetailPlant] = useState(null);
+  const isAllWorlds = world === ALL_WORLDS;
+  const worldPlants = useMemo(() => plants.filter((plant) => isAllWorlds || getWorld(plant) === world), [isAllWorlds, world]);
   const filtered = useMemo(() => plants.filter((plant) => {
-    const inWorld = getWorld(plant) === world;
+    const inWorld = isAllWorlds || getWorld(plant) === world;
     const matchesQuery = `${plant.en} ${plant.zh}`.toLowerCase().includes(query.toLowerCase().trim());
     const plantFamily = normalizeFamily(plant.family);
     const matchesFamily = !family || (family === 'none' ? !plantFamily : plantFamily === family);
     return inWorld && matchesQuery && matchesFamily;
-  }), [query, world, family]);
+  }), [query, world, family, isAllWorlds]);
+  const showIntro = !query && !isAllWorlds;
   const pages = Array.from({ length: Math.ceil(filtered.length / pageSize) }, (_, page) => filtered.slice(page * pageSize, page * pageSize + pageSize));
   return <>
     <div className="toolbar">
       <div className="brand">PVZ2 <span>PLANT BOOK</span></div>
-      <label className="world-select"><span>🌍</span><select value={world} onChange={(event) => setWorld(event.target.value)} aria-label="Choose world"><option disabled value="">Choose world</option>{worlds.map((item) => <option key={item} value={item}>{item}</option>)}</select></label>
+      <label className="world-select"><span>🌍</span><select value={world} onChange={(event) => setWorld(event.target.value)} aria-label="Choose world"><option disabled value="">Choose world</option>{worldOptions.map((item) => <option key={item} value={item}>{item === ALL_WORLDS ? 'All worlds / 全部世界' : item}</option>)}</select></label>
       <label className="search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search plants / 搜索植物" /></label>
       <div className="toolbar-actions"><button className={showGuide ? 'active' : ''} onClick={() => setShowGuide((value) => !value)}>Guide / 图例</button><a className="print-link" href="/PvZ2_Plants_Ancient_Egypt_A4_Print.html">Print layout ↗</a><button className="print-button" onClick={() => window.print()}>Print A4 ↗</button></div>
     </div>
@@ -179,9 +270,10 @@ function App() {
       </fieldset>
     </div>
     <main className="book">
-      {!query && <Intro total={filtered.length} world={world} showGuide={showGuide} featuredPlants={worldPlants} />}
-      {pages.length ? pages.map((page, pageIndex) => <section className="page cards-page" key={pageIndex}><div className="page-header"><div>Plants vs. Zombies 2 <span>· {world}</span></div><b>{pageIndex + (query ? 1 : 2)} / {pages.length + (query ? 0 : 1)}</b></div><div className="cards-grid">{page.map((plant, index) => <PlantCard key={plant.codename || plant.id || plant.en} plant={plant} index={index} />)}</div><div className="page-footer">Data & art: Plants vs. Zombies Wiki · 沿虚线裁下即为单词卡</div></section>) : <div className="empty">No plants found · 没有找到植物</div>}
+      {showIntro && <Intro total={filtered.length} world={world} showGuide={showGuide} featuredPlants={worldPlants} />}
+      {pages.length ? pages.map((page, pageIndex) => <section className="page cards-page" key={pageIndex}><div className="page-header"><div>Plants vs. Zombies 2 <span>· {isAllWorlds ? 'All worlds / 全部世界' : world}</span></div><b>{pageIndex + (showIntro ? 2 : 1)} / {pages.length + (showIntro ? 1 : 0)}</b></div><div className="cards-grid">{page.map((plant, index) => <PlantCard key={plant.codename || plant.id || plant.en} plant={plant} index={index} onOpen={setDetailPlant} />)}</div><div className="page-footer">Data & art: Plants vs. Zombies Wiki · 沿虚线裁下即为单词卡</div></section>) : <div className="empty">No plants found · 没有找到植物</div>}
     </main>
+    <PlantDetailModal plant={detailPlant} onClose={() => setDetailPlant(null)} />
   </>;
 }
 
