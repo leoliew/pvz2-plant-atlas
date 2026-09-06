@@ -32,6 +32,17 @@ WORLD_NAMES = {
     "": ("Premium & special", "特殊与高级"),
 }
 
+# Code -> almanac background filename (mirrors WORLD_NAMES' code keys and
+# src/world-backgrounds.js on the JS side). Unmapped or empty codes fall
+# back to "default" at copy time.
+WORLD_BACKGROUND_FILES = {
+    "beach": "beach", "boost": "boost", "cowboy": "cowboy", "dark": "dark", "dino": "dino",
+    "egypt": "egypt", "eighties": "eighties", "epic": "epic", "frontyard": "frontyard",
+    "future": "future", "ice": "iceage", "kongfu": "kongfu", "lod": "lod", "lostcity": "lostcity",
+    "market": "market", "mint": "mint", "modern": "modern", "pirate": "pirate", "sky": "sky",
+    "water": "beach_watered",
+}
+
 FAMILY_NAMES = {
     "Defence": ("Reinforce-mint", "防御家族"), "Shadow": ("Conceal-mint", "暗影家族"),
     "Peashooter": ("Appease-mint", "豌豆家族"), "Fire": ("Pepper-mint", "燃烧家族"),
@@ -138,7 +149,18 @@ def main() -> int:
         if not target.exists() or target.stat().st_size != image.stat().st_size:
             shutil.copy2(image, target)
             copied += 1
-    print(f"synced {len(records)} plants and {copied} artwork files")
+
+    bg_source_dir = root / "src/.vuepress/public/assets/image/almanac/backgrounds"
+    bg_target_dir = args.images / "backgrounds"
+    bg_target_dir.mkdir(parents=True, exist_ok=True)
+    bg_copied = 0
+    for image in bg_source_dir.glob("*.webp"):
+        target = bg_target_dir / image.name
+        if not target.exists() or target.stat().st_size != image.stat().st_size:
+            shutil.copy2(image, target)
+            bg_copied += 1
+
+    print(f"synced {len(records)} plants, {copied} artwork files, and {bg_copied} world backgrounds")
     return 0
 
 

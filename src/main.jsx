@@ -2,9 +2,14 @@ import { StrictMode, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import plants from '../plants_egypt.json';
 import './styles.css';
+import { resolveWorldBackgroundFile } from './world-backgrounds.js';
 
 const pageSize = 4;
 const DEFAULT_WORLD = 'Ancient Egypt';
+
+function getWorldBackground(code) {
+  return `/images/backgrounds/${resolveWorldBackgroundFile(code)}.webp`;
+}
 
 function getWorld(plant) {
   if (plant.world) return plant.world;
@@ -50,32 +55,35 @@ function Stat({ icon, label, zh, value, accent }) {
   return (
     <div className="stat" style={{ '--accent': accent }}>
       <span className="stat-icon">{icon}</span>
-      <span className="stat-label">{label}<small>{zh}</small></span>
       <strong>{value}</strong>
+      <span className="stat-label">{label}<small>{zh}</small></span>
     </div>
   );
 }
 
 function PlantCard({ plant, index }) {
   return (
-            <article className="plant-card" style={{ '--accent': plant.color, '--delay': `${index * 45}ms` }}>
-      <header className="card-ribbon">
-        <div><b>{plant.en}</b><span>{plant.zh}</span></div>
+    <article className="plant-card" style={{ '--accent': plant.color, '--delay': `${index * 45}ms` }}>
+      <div className="plant-art">
+        <img className="plant-bg" src={getWorldBackground(plant.obtain_world_code)} alt="" aria-hidden="true" loading="lazy" />
+        <Image plant={plant} className="plant-sprite" />
+        <span className="plant-tag">{plant.family}</span>
         <Sun value={plant.sun} />
-      </header>
-      <div className="card-body">
-        <div className="plant-art"><Image plant={plant} /></div>
-        <div className="card-copy">
-          <div className="card-meta">{plant.family}<span>{plant.unlock}</span></div>
-          <div className="stats">
-            <Stat icon="◷" label="Recharge" zh="冷却" value={`${plant.recharge} · ${plant.recharge_zh}`} accent={plant.color} />
-            <Stat icon="♥" label="Toughness" zh="生命" value={plant.toughness} accent={plant.color} />
-            <Stat icon="ϟ" label="Damage" zh="攻击" value={plant.damage} accent={plant.color} />
-          </div>
-          <div className="range"><span>➜</span><b>Range</b> {plant.range}<em>{plant.range_zh}</em></div>
-          <div className="say"><b>{plant.sentence}</b><span>{plant.sentence_zh}</span></div>
-          <div className="words">{plant.words.map(([en, zh]) => <span key={en}><b>{en}</b><small>{zh}</small></span>)}</div>
+        <div className="plant-label">
+          <b>{plant.en}</b>
+          <span>{plant.zh}</span>
         </div>
+      </div>
+      <div className="card-body">
+        <div className="card-unlock"><span>◆</span>{plant.unlock}</div>
+        <div className="stats">
+          <Stat icon="◷" label="Recharge" zh="冷却" value={`${plant.recharge} · ${plant.recharge_zh}`} accent={plant.color} />
+          <Stat icon="♥" label="Toughness" zh="生命" value={plant.toughness} accent={plant.color} />
+          <Stat icon="ϟ" label="Damage" zh="攻击" value={plant.damage} accent={plant.color} />
+        </div>
+        <div className="range"><span>➜</span><b>Range</b> {plant.range}<em>{plant.range_zh}</em></div>
+        <div className="say"><b>{plant.sentence}</b><span>{plant.sentence_zh}</span></div>
+        <div className="words">{plant.words.map(([en, zh]) => <span key={en}><b>{en}</b><small>{zh}</small></span>)}</div>
       </div>
     </article>
   );
