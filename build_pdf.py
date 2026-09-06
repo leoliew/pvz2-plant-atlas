@@ -9,7 +9,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.utils import ImageReader
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-IMG_DIR = os.path.join(HERE, "images")
+IMG_DIR = os.path.join(HERE, "public", "images")
 OUT = os.path.join(HERE, "PvZ2_Plants_Ancient_Egypt_Demo.pdf")
 
 # ---------- fonts ----------
@@ -133,7 +133,7 @@ def cover(c, plants):
     # plant thumbnails row
     n = len(plants); tw = (W - 2*M) / n
     for i, p in enumerate(plants):
-        path = os.path.join(IMG_DIR, p["file"])
+        path = os.path.join(IMG_DIR, p.get("pvzg_file") or p["file"])
         if os.path.exists(path):
             img, w, h = fit_image(path, tw - 10, 120)
             c.drawImage(img, M + i*tw + (tw - w)/2, 150, w, h, mask="auto")
@@ -174,7 +174,7 @@ def plant_page(c, p, page_no, total):
     # ---- left: image card ----
     lx, ly, lw, lh = M, 60, 300, H - 60 - 40
     rrect(c, lx, ly, lw, lh, 26, white, accent, 5)
-    path = os.path.join(IMG_DIR, p["file"])
+    path = os.path.join(IMG_DIR, p.get("pvzg_file") or p["file"])
     if os.path.exists(path):
         img, w, h = fit_image(path, lw - 40, lh - 120)
         c.drawImage(img, lx + (lw - w)/2, ly + 90 + (lh - 120 - h)/2, w, h, mask="auto")
@@ -226,8 +226,17 @@ def plant_page(c, p, page_no, total):
     text(c, rx, ry, "Range 范围: ", "CJK", 12, BROWN)
     text(c, rx + 88, ry, f"{p['range']}  /  {p['range_zh']}", "CJK", 12, INK)
 
+    # official bilingual descriptions
+    dy = ry - 22
+    text(c, rx, dy, "About · 简介", EN_BOLD, 10, accent)
+    text(c, rx + 70, dy, str(p.get("intro_en", p.get("description", "")))[:105], EN, 8, INK)
+    text(c, rx + 70, dy - 13, str(p.get("intro_zh", p.get("description_zh", "")))[:72], "CJK", 8, BROWN)
+    text(c, rx, dy - 31, "Plant Food · 叶绿素", EN_BOLD, 9, accent)
+    text(c, rx + 100, dy - 31, str(p.get("plant_food", ""))[:82], EN, 8, INK)
+    text(c, rx + 100, dy - 44, str(p.get("plant_food_zh", ""))[:55], "CJK", 8, BROWN)
+
     # sentence bubble
-    sy = ry - 20
+    sy = ry - 72
     sh = 84
     rrect(c, rx, sy - sh, rw, sh, 20, accent)
     # little tail

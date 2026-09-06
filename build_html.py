@@ -125,7 +125,7 @@ PYRAMIDS = """<div class="pyramids"><svg viewBox="0 0 1122 150" preserveAspectRa
 </svg></div>"""
 
 def img_tag(p, cls=""):
-    local = f"images/{p['file']}"
+    local = f"public/images/{p.get('pvzg_file') or p['file']}"
     remote = esc(p["img"])
     return f'<img class="{cls}" src="{local}" onerror="this.onerror=null;this.src=\'{remote}\'" alt="{esc(p["en"])}">'
 
