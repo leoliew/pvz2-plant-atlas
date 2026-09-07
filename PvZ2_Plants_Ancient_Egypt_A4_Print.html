@@ -14,6 +14,17 @@
 .print-toolbar .export-pdf{cursor:pointer;border:1px solid #e4bd59;background:#e4bd59;color:#382617;border-radius:999px;padding:9px 18px;font:700 14px var(--en),sans-serif}
 .print-toolbar .export-pdf:disabled{opacity:.65;cursor:wait}
 .print-toolbar .status{font-size:13px;color:#f5d995}
+.card .body{padding:2.5mm 3.2mm 0;display:flex;flex-direction:column;gap:2mm;flex:0 0 auto}
+.card .pic{flex:1;min-height:58mm}
+.say{margin:0;padding:2.2mm 2.6mm;background:#fff;border:.35mm solid var(--sand);border-radius:2.4mm;font-size:12pt;font-weight:700;line-height:1.35;color:var(--ink)}
+.say mark{padding:.15mm .7mm;border-radius:1.2mm;font-weight:800}
+.words{display:grid;grid-template-columns:repeat(3,1fr);gap:2mm;padding:0}
+.word{background:#fff;border:.45mm solid var(--wc,#c45c26);border-radius:2.4mm;text-align:center;padding:2.2mm 1mm;color:var(--wc,#c45c26)}
+.word .en{font-size:12.5pt;font-weight:800;line-height:1;text-transform:lowercase}
+.answer{margin:0 0 2.8mm;padding-top:2mm;border-top:.35mm dashed #c4b08a}
+.answer .hint{text-align:center;font-size:6.6pt;color:#a8977c;letter-spacing:.03em;margin-bottom:1.3mm}
+.answer .zh-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2mm}
+.answer .zh-row span{text-align:center;font-family:var(--zh);font-size:9pt;color:#8d7357}
 </style></head><body>
 <div class="print-toolbar">
   <label class="page-range">From / 从 <input type="number" id="export-from" min="1" value="1" inputmode="numeric"></label>

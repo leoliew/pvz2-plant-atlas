@@ -1,6 +1,7 @@
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import plants from '../plants_egypt.json';
+import { highlightSentence, WORD_COLORS } from './learning.js';
 import { resolveWorldBackgroundFile } from './world-backgrounds.js';
 
 const book = document.querySelector('#book');
@@ -36,24 +37,32 @@ function familyBadge(plant) {
   return `<img class="family-badge" src="/images/families/${esc(family)}_familyicon.webp" alt="${esc(plant.family_zh || family)}" title="${esc(plant.family_zh || family)}" loading="lazy">`;
 }
 
+function paintedSentence(sentence, words) {
+  return highlightSentence(sentence, words).map((part) => {
+    if (part.colorIndex == null) return esc(part.text);
+    const color = WORD_COLORS[part.colorIndex];
+    return `<mark style="color:${color};background:${color}24">${esc(part.text)}</mark>`;
+  }).join('');
+}
+
 function card(plant) {
-  const words = (plant.words || []).slice(0, 3).map(([en, zh]) => (
-    `<div class="word"><div class="en">${esc(en)}</div><div class="zh">${esc(zh)}</div></div>`
+  const words = (plant.words || []).slice(0, 3);
+  const chips = words.map(([en], index) => (
+    `<div class="word" style="--wc:${WORD_COLORS[index]}"><div class="en">${esc(en)}</div></div>`
   )).join('');
+  const answers = words.map(([, zh]) => `<span>${esc(zh)}</span>`).join('');
   return `<article class="card" style="--c:${esc(plant.color || '#5da33b')}">
     <div class="pic">${background(plant)}${image(plant)}${familyBadge(plant)}
       <div class="sunbadge">☀${esc(plant.sun)}</div>
       <div class="label"><div class="en">${esc(plant.en)}</div><div class="zh">${esc(plant.zh)}</div></div>
     </div>
     <div class="body">
-      <div class="stats">
-        <div class="stat"><div class="ic">◷</div><div class="v">${esc(plant.recharge)}</div><div class="k">Recharge<small>冷却</small></div></div>
-        <div class="stat"><div class="ic">♥</div><div class="v">${esc(plant.toughness)}</div><div class="k">Toughness<small>生命</small></div></div>
-        <div class="stat"><div class="ic">ϟ</div><div class="v">${esc(plant.damage)}</div><div class="k">Damage<small>攻击</small></div></div>
+      <div class="say">${paintedSentence(plant.sentence, words)}</div>
+      <div class="words">${chips}</div>
+      <div class="answer">
+        <div class="hint">Cover the Chinese · 用手盖住中文</div>
+        <div class="zh-row">${answers}</div>
       </div>
-      <div class="range"><span class="ic">➜</span>${esc(plant.range)} <span class="zh">${esc(plant.range_zh)}</span></div>
-      <div class="say"><div class="en">${esc(plant.sentence)}</div><div class="zh">${esc(plant.sentence_zh)}</div></div>
-      <div class="words">${words}</div>
     </div>
   </article>`;
 }
@@ -67,11 +76,11 @@ totalLabel.textContent = `of ${total} pages · 共 ${total} 页`;
 book.innerHTML = Array.from({ length: total }, (_, index) => `
   <section class="page">
     <div class="hdr">
-      <div class="t">Plants vs. Zombies 2 · Plant Seed Packets<span class="zh">植物种子卡</span></div>
+      <div class="t">Plants vs. Zombies 2 · Word Cards<span class="zh">英语单词卡</span></div>
       <div class="p">${index + 1} / ${total}</div>
     </div>
     <div class="grid">${plants.slice(index * perPage, (index + 1) * perPage).map(card).join('')}</div>
-    <div class="ftr">Data &amp; art: PvZ2 Gardendless · 沿虚线裁下即为单词卡</div>
+    <div class="ftr">先读英文，用手盖住底边中文再读 · 沿虚线裁下即为单词卡</div>
   </section>
 `).join('');
 

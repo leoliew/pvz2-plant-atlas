@@ -2,6 +2,7 @@ import { StrictMode, useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import plants from '../plants_egypt.json';
 import './styles.css';
+import { highlightSentence, WORD_COLORS } from './learning.js';
 import { resolveWorldBackgroundFile } from './world-backgrounds.js';
 
 const pageSize = 4;
@@ -110,16 +111,6 @@ function Sun({ value }) {
   return <span className="sun-pill"><span className="sun-glyph">☀</span>{value}</span>;
 }
 
-function Stat({ icon, label, zh, value, accent }) {
-  return (
-    <div className="stat" style={{ '--accent': accent }}>
-      <span className="stat-icon">{icon}</span>
-      <strong>{value}</strong>
-      <span className="stat-label">{label}<small>{zh}</small></span>
-    </div>
-  );
-}
-
 function PlantCard({ plant, index, onOpen }) {
   const family = normalizeFamily(plant.family);
   return (
@@ -135,17 +126,26 @@ function PlantCard({ plant, index, onOpen }) {
         </div>
       </div>
       <div className="card-body">
-        <div className="card-unlock"><span>◆</span>{plant.unlock}</div>
-        <div className="stats">
-          <Stat icon="◷" label="Recharge" zh="冷却" value={`${plant.recharge} · ${plant.recharge_zh}`} accent={plant.color} />
-          <Stat icon="♥" label="Toughness" zh="生命" value={plant.toughness} accent={plant.color} />
-          <Stat icon="ϟ" label="Damage" zh="攻击" value={plant.damage} accent={plant.color} />
+        <p className="say">
+          {highlightSentence(plant.sentence, plant.words).map((part, index) => (
+            part.colorIndex == null
+              ? <span key={index}>{part.text}</span>
+              : <mark key={index} style={{ color: WORD_COLORS[part.colorIndex], background: `${WORD_COLORS[part.colorIndex]}24` }}>{part.text}</mark>
+          ))}
+        </p>
+        <div className="words">
+          {plant.words.map(([en], index) => (
+            <span key={en} style={{ '--wc': WORD_COLORS[index] }}><b>{en}</b></span>
+          ))}
         </div>
-        <div className="range"><span>➜</span><b>Range</b> {plant.range}<em>{plant.range_zh}</em></div>
-        <div className="say"><b>{plant.sentence}</b><span>{plant.sentence_zh}</span></div>
-        <div className="words">{plant.words.map(([en, zh]) => <span key={en}><b>{en}</b><small>{zh}</small></span>)}</div>
+        <div className="answer-bar">
+          <div className="answer-hint">Cover the Chinese · 用手盖住中文</div>
+          <div className="answer-zh">
+            {plant.words.map(([en, zh]) => <span key={en}>{zh}</span>)}
+          </div>
+        </div>
         <button type="button" className="card-expand" onClick={() => onOpen(plant)}>
-          Details <span>· 详情</span>
+          Almanac <span>· 图鉴</span>
         </button>
       </div>
     </article>
@@ -227,7 +227,12 @@ function PlantDetailModal({ plant, onClose }) {
 }
 
 function Intro({ total, world, showGuide, featuredPlants }) {
-  const rows = [['☀', 'Sun cost', '阳光', 'What you pay to plant it.'], ['◷', 'Recharge', '冷却', 'How long until you can plant another.'], ['♥', 'Toughness', '生命', 'How many bites it can take.'], ['ϟ', 'Damage', '攻击', 'How hard it hits a zombie.'], ['➜', 'Range', '范围', 'Where it can reach.']];
+  const rows = [
+    ['1', 'Look', '看图', 'Say the English name.'],
+    ['2', 'Read', '读句子', 'Read the colored sentence out loud.'],
+    ['3', 'Point', '指单词', 'Point to the three matching words.'],
+    ['4', 'Cover', '盖住', 'Cover the Chinese and say it again.'],
+  ];
   return <section className={`page intro-page ${showGuide ? '' : 'intro-page--hero-only'}`}>
     <div className="intro-hero">
       <div className="intro-copy">
@@ -240,9 +245,9 @@ function Intro({ total, world, showGuide, featuredPlants }) {
       <div className="cover-plants">{featuredPlants.slice(0, 6).map((plant) => <Image key={plant.en} plant={plant} />)}</div>
     </div>
     {showGuide && <div className="intro-guide">
-      <div className="guide-heading"><div><div className="eyebrow">START HERE · 从这里开始</div><h3>How to read a plant card</h3></div><p>怎么看植物种子卡</p></div>
+      <div className="guide-heading"><div><div className="eyebrow">START HERE · 从这里开始</div><h3>How to learn a word card</h3></div><p>怎么用这张英语单词卡</p></div>
       <div className="legend-list">{rows.map(([icon, title, zh, desc]) => <div className="legend-row" key={title}><strong>{icon}</strong><div><b>{title}</b><span>{zh}</span></div><p>{desc}</p></div>)}</div>
-      <div className="legend-tip">Read the sentence out loud, then find the 3 words inside it! <span>大声读句子，再找出下面的单词！</span></div>
+      <div className="legend-tip">Cover the Chinese with your hand, then say the words! <span>用手盖住中文，再说一遍单词！</span></div>
     </div>}
     <div className="cover-footer">DEMO EDITION · {total} plants · ages 5–8</div>
     <Pyramids />
@@ -307,7 +312,7 @@ function App() {
     </div>
     <main className="book">
       {showIntro && <Intro total={filtered.length} world={world} showGuide={showGuide} featuredPlants={worldPlants} />}
-      {pages.length ? pages.map((page, pageIndex) => <section className="page cards-page" key={pageIndex}><div className="page-header"><div>Plants vs. Zombies 2 <span>· {isAllWorlds ? 'All worlds / 全部世界' : world}</span></div><b>{pageIndex + (showIntro ? 2 : 1)} / {pages.length + (showIntro ? 1 : 0)}</b></div><div className="cards-grid">{page.map((plant, index) => <PlantCard key={plant.codename || plant.id || plant.en} plant={plant} index={index} onOpen={setDetailPlant} />)}</div><div className="page-footer">Data & art: Plants vs. Zombies Wiki · 沿虚线裁下即为单词卡</div></section>) : <div className="empty">No plants found · 没有找到植物</div>}
+      {pages.length ? pages.map((page, pageIndex) => <section className="page cards-page" key={pageIndex}><div className="page-header"><div>Plants vs. Zombies 2 <span>· {isAllWorlds ? 'All worlds / 全部世界' : world}</span></div><b>{pageIndex + (showIntro ? 2 : 1)} / {pages.length + (showIntro ? 1 : 0)}</b></div><div className="cards-grid">{page.map((plant, index) => <PlantCard key={plant.codename || plant.id || plant.en} plant={plant} index={index} onOpen={setDetailPlant} />)}</div><div className="page-footer">先读英文，用手盖住底边中文再读 · 沿虚线裁下即为单词卡</div></section>) : <div className="empty">No plants found · 没有找到植物</div>}
     </main>
     <PlantDetailModal plant={detailPlant} onClose={() => setDetailPlant(null)} />
   </>;

@@ -18,16 +18,16 @@
     "sentence_zh": "向僵尸发射豌豆子弹",
     "words": [
       [
-        "peashooter",
-        "豌豆射手"
-      ],
-      [
         "shoots",
         "发射"
       ],
       [
         "peas",
         "豌豆"
+      ],
+      [
+        "enemies",
+        "敌人"
       ]
     ],
     "color": "#4CAF50",
@@ -47,16 +47,16 @@
         "zh": "向僵尸发射豌豆子弹",
         "words": [
           [
-            "peashooter",
-            "豌豆射手"
-          ],
-          [
             "shoots",
             "发射"
           ],
           [
             "peas",
             "豌豆"
+          ],
+          [
+            "enemies",
+            "敌人"
           ]
         ]
       }
@@ -114,20 +114,20 @@
     "family": "Enlighten-mint",
     "unlock": "Beating [[Player's House - Day 1]] or 10 seed packets",
     "unlock_zh": "玩家小屋植物",
-    "sentence": "Gives you additional sun",
+    "sentence": "Gives extra sun",
     "sentence_zh": "提供额外的阳光",
     "words": [
-      [
-        "sunflower",
-        "向日葵"
-      ],
       [
         "gives",
         "提供"
       ],
       [
-        "you",
-        "植物"
+        "extra",
+        "额外"
+      ],
+      [
+        "sun",
+        "阳光"
       ]
     ],
     "color": "#FFC107",
@@ -143,20 +143,20 @@
     "obtain_world_code": "frontyard",
     "learning_sentences": [
       {
-        "en": "Gives you additional sun",
+        "en": "Gives extra sun",
         "zh": "提供额外的阳光",
         "words": [
-          [
-            "sunflower",
-            "向日葵"
-          ],
           [
             "gives",
             "提供"
           ],
           [
-            "you",
-            "植物"
+            "extra",
+            "额外"
+          ],
+          [
+            "sun",
+            "阳光"
           ]
         ]
       }
@@ -219,16 +219,16 @@
     "sentence_zh": "抵挡僵尸并保护身后的植物",
     "words": [
       [
-        "wall",
-        "坚果墙"
-      ],
-      [
-        "nut",
-        "坚果墙"
-      ],
-      [
         "blocks",
-        "植物"
+        "挡住"
+      ],
+      [
+        "off",
+        "隔开"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#8D6E63",
@@ -248,16 +248,16 @@
         "zh": "抵挡僵尸并保护身后的植物",
         "words": [
           [
-            "wall",
-            "坚果墙"
-          ],
-          [
-            "nut",
-            "坚果墙"
-          ],
-          [
             "blocks",
-            "植物"
+            "挡住"
+          ],
+          [
+            "off",
+            "隔开"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -311,20 +311,20 @@
     "family": "Bombard-mint",
     "unlock": "Beating [[Player's House - Day 3]] or 10 seed packets",
     "unlock_zh": "玩家小屋植物",
-    "sentence": "Explodes on contact, but takes time to arm itself",
-    "sentence_zh": "种植一段时间后，在僵尸触碰时爆炸",
+    "sentence": "Explodes on contact after arming",
+    "sentence_zh": "装填完成后接触即爆炸",
     "words": [
-      [
-        "potato",
-        "土豆地雷"
-      ],
-      [
-        "mine",
-        "土豆地雷"
-      ],
       [
         "explodes",
         "爆炸"
+      ],
+      [
+        "contact",
+        "接触"
+      ],
+      [
+        "arming",
+        "装填"
       ]
     ],
     "color": "#A1887F",
@@ -340,20 +340,20 @@
     "obtain_world_code": "frontyard",
     "learning_sentences": [
       {
-        "en": "Explodes on contact, but takes time to arm itself",
-        "zh": "种植一段时间后，在僵尸触碰时爆炸",
+        "en": "Explodes on contact after arming",
+        "zh": "装填完成后接触即爆炸",
         "words": [
-          [
-            "potato",
-            "土豆地雷"
-          ],
-          [
-            "mine",
-            "土豆地雷"
-          ],
           [
             "explodes",
             "爆炸"
+          ],
+          [
+            "contact",
+            "接触"
+          ],
+          [
+            "arming",
+            "装填"
           ]
         ]
       }
@@ -440,16 +440,16 @@
     "sentence_zh": "向僵尸投掷能跨越障碍物的卷心菜",
     "words": [
       [
-        "cabbage",
-        "卷心菜投手"
-      ],
-      [
-        "pult",
-        "卷心菜投手"
-      ],
-      [
         "hurls",
-        "植物"
+        "投掷"
+      ],
+      [
+        "cabbages",
+        "卷心菜"
+      ],
+      [
+        "obstacles",
+        "障碍"
       ]
     ],
     "color": "#66BB6A",
@@ -469,16 +469,16 @@
         "zh": "向僵尸投掷能跨越障碍物的卷心菜",
         "words": [
           [
-            "cabbage",
-            "卷心菜投手"
-          ],
-          [
-            "pult",
-            "卷心菜投手"
-          ],
-          [
             "hurls",
-            "植物"
+            "投掷"
+          ],
+          [
+            "cabbages",
+            "卷心菜"
+          ],
+          [
+            "obstacles",
+            "障碍"
           ]
         ]
       }
@@ -543,16 +543,16 @@
     "sentence_zh": "击打本行的三个目标，各两次",
     "words": [
       [
-        "bloomerang",
-        "回旋镖射手"
-      ],
-      [
         "hits",
-        "植物"
+        "击中"
       ],
       [
-        "up",
-        "植物"
+        "three",
+        "三个"
+      ],
+      [
+        "targets",
+        "目标"
       ]
     ],
     "color": "#7CB342",
@@ -572,16 +572,16 @@
         "zh": "击打本行的三个目标，各两次",
         "words": [
           [
-            "bloomerang",
-            "回旋镖射手"
-          ],
-          [
             "hits",
-            "植物"
+            "击中"
           ],
           [
-            "up",
-            "植物"
+            "three",
+            "三个"
+          ],
+          [
+            "targets",
+            "目标"
           ]
         ]
       }
@@ -643,16 +643,16 @@
     "sentence_zh": "冻结接触到的僵尸，并熄灭火炬",
     "words": [
       [
-        "iceberg",
-        "冰冻生菜"
-      ],
-      [
-        "lettuce",
-        "冰冻生菜"
-      ],
-      [
         "freezes",
-        "植物"
+        "冻结"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "step",
+        "踩到"
       ]
     ],
     "color": "#4FC3F7",
@@ -672,16 +672,16 @@
         "zh": "冻结接触到的僵尸，并熄灭火炬",
         "words": [
           [
-            "iceberg",
-            "冰冻生菜"
-          ],
-          [
-            "lettuce",
-            "冰冻生菜"
-          ],
-          [
             "freezes",
-            "植物"
+            "冻结"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "step",
+            "踩到"
           ]
         ]
       }
@@ -762,16 +762,16 @@
     "sentence_zh": "快速击打身前或身后的敌人",
     "words": [
       [
-        "bonk",
-        "菜问"
-      ],
-      [
-        "choy",
-        "菜问"
-      ],
-      [
         "rapidly",
-        "植物"
+        "快速"
+      ],
+      [
+        "punches",
+        "拳击"
+      ],
+      [
+        "enemies",
+        "敌人"
       ]
     ],
     "color": "#43A047",
@@ -791,16 +791,16 @@
         "zh": "快速击打身前或身后的敌人",
         "words": [
           [
-            "bonk",
-            "菜问"
-          ],
-          [
-            "choy",
-            "菜问"
-          ],
-          [
             "rapidly",
-            "植物"
+            "快速"
+          ],
+          [
+            "punches",
+            "拳击"
+          ],
+          [
+            "enemies",
+            "敌人"
           ]
         ]
       }
@@ -876,16 +876,16 @@
     "sentence_zh": "向敌人发射两颗豌豆",
     "words": [
       [
-        "repeater",
-        "双重射手"
-      ],
-      [
         "shoots",
         "发射"
       ],
       [
         "two",
-        "植物"
+        "两发"
+      ],
+      [
+        "peas",
+        "豌豆"
       ]
     ],
     "color": "#2E7D32",
@@ -905,16 +905,16 @@
         "zh": "向敌人发射两颗豌豆",
         "words": [
           [
-            "repeater",
-            "双重射手"
-          ],
-          [
             "shoots",
             "发射"
           ],
           [
             "two",
-            "植物"
+            "两发"
+          ],
+          [
+            "peas",
+            "豌豆"
           ]
         ]
       }
@@ -983,20 +983,20 @@
     "damage": 20,
     "range": "Straight",
     "range_zh": "直线",
-    "sentence": "Fire 4 peas at a time",
-    "sentence_zh": "向敌人发射 4 颗豌豆，概率释放叶绿素效果",
+    "sentence": "Fires peas very fast",
+    "sentence_zh": "快速向僵尸发射豌豆",
     "words": [
       [
-        "mega",
-        "超级机枪射手"
+        "fires",
+        "发射"
       ],
       [
-        "gatling",
-        "超级机枪射手"
+        "peas",
+        "豌豆"
       ],
       [
-        "pea",
-        "超级机枪射手"
+        "fast",
+        "快"
       ]
     ],
     "color": "#4e9f66",
@@ -1013,20 +1013,20 @@
     "obtain_world_code": "epic",
     "learning_sentences": [
       {
-        "en": "Fire 4 peas at a time",
-        "zh": "向敌人发射 4 颗豌豆，概率释放叶绿素效果",
+        "en": "Fires peas very fast",
+        "zh": "快速向僵尸发射豌豆",
         "words": [
           [
-            "mega",
-            "超级机枪射手"
+            "fires",
+            "发射"
           ],
           [
-            "gatling",
-            "超级机枪射手"
+            "peas",
+            "豌豆"
           ],
           [
-            "pea",
-            "超级机枪射手"
+            "fast",
+            "快"
           ]
         ]
       }
@@ -1122,16 +1122,16 @@
     "sentence_zh": "向僵尸发射子弹，但是当僵尸靠近时躲避",
     "words": [
       [
-        "scaredy",
-        "胆小菇"
-      ],
-      [
-        "shroom",
-        "胆小菇"
-      ],
-      [
         "shoots",
         "发射"
+      ],
+      [
+        "spore",
+        "孢子"
+      ],
+      [
+        "projectiles",
+        "弹体"
       ]
     ],
     "color": "#4e9f66",
@@ -1149,16 +1149,16 @@
         "zh": "向僵尸发射子弹，但是当僵尸靠近时躲避",
         "words": [
           [
-            "scaredy",
-            "胆小菇"
-          ],
-          [
-            "shroom",
-            "胆小菇"
-          ],
-          [
             "shoots",
             "发射"
+          ],
+          [
+            "spore",
+            "孢子"
+          ],
+          [
+            "projectiles",
+            "弹体"
           ]
         ]
       }
@@ -1232,16 +1232,16 @@
     "sentence_zh": "向范围内的所有僵尸发射气泡攻击",
     "words": [
       [
-        "fume",
-        "大喷菇"
-      ],
-      [
-        "shroom",
-        "大喷菇"
-      ],
-      [
         "shoots",
         "发射"
+      ],
+      [
+        "fumes",
+        "烟雾"
+      ],
+      [
+        "damage",
+        "伤害"
       ]
     ],
     "color": "#4e9f66",
@@ -1262,16 +1262,16 @@
         "zh": "向范围内的所有僵尸发射气泡攻击",
         "words": [
           [
-            "fume",
-            "大喷菇"
-          ],
-          [
-            "shroom",
-            "大喷菇"
-          ],
-          [
             "shoots",
             "发射"
+          ],
+          [
+            "fumes",
+            "烟雾"
+          ],
+          [
+            "damage",
+            "伤害"
           ]
         ]
       }
@@ -1333,20 +1333,20 @@
     "family": "Contain-mint",
     "unlock": "Beating [[Ancient Egypt - Day 9]] or 40 seed packets",
     "unlock_zh": "古埃及植物",
-    "sentence": "Plant it on a grave to remove the grave",
-    "sentence_zh": "种植在墓碑上并移除这块墓碑",
+    "sentence": "Removes graves on the lawn",
+    "sentence_zh": "清除草坪上的墓碑",
     "words": [
       [
-        "grave",
-        "噬碑藤"
+        "removes",
+        "清除"
       ],
       [
-        "buster",
-        "噬碑藤"
+        "graves",
+        "墓碑"
       ],
       [
-        "plant",
-        "植物"
+        "lawn",
+        "草坪"
       ]
     ],
     "color": "#9575CD",
@@ -1362,20 +1362,20 @@
     "obtain_world_code": "egypt",
     "learning_sentences": [
       {
-        "en": "Plant it on a grave to remove the grave",
-        "zh": "种植在墓碑上并移除这块墓碑",
+        "en": "Removes graves on the lawn",
+        "zh": "清除草坪上的墓碑",
         "words": [
           [
-            "grave",
-            "噬碑藤"
+            "removes",
+            "清除"
           ],
           [
-            "buster",
-            "噬碑藤"
+            "graves",
+            "墓碑"
           ],
           [
-            "plant",
-            "植物"
+            "lawn",
+            "草坪"
           ]
         ]
       }
@@ -1447,20 +1447,20 @@
     "damage": "—",
     "range": "—",
     "range_zh": "特殊能力",
-    "sentence": "Surrounds and protects",
-    "sentence_zh": "保护本格的其他植物",
+    "sentence": "Surrounds plants and protects them",
+    "sentence_zh": "包围并保护格子里的植物",
     "words": [
       [
-        "pumpkin",
-        "南瓜头"
-      ],
-      [
         "surrounds",
+        "包围"
+      ],
+      [
+        "plants",
         "植物"
       ],
       [
-        "and",
-        "植物"
+        "protects",
+        "保护"
       ]
     ],
     "color": "#4e9f66",
@@ -1477,20 +1477,20 @@
     "obtain_world_code": "epic",
     "learning_sentences": [
       {
-        "en": "Surrounds and protects",
-        "zh": "保护本格的其他植物",
+        "en": "Surrounds plants and protects them",
+        "zh": "包围并保护格子里的植物",
         "words": [
           [
-            "pumpkin",
-            "南瓜头"
-          ],
-          [
             "surrounds",
+            "包围"
+          ],
+          [
+            "plants",
             "植物"
           ],
           [
-            "and",
-            "植物"
+            "protects",
+            "保护"
           ]
         ]
       }
@@ -1544,19 +1544,19 @@
     "damage": 1.5,
     "range": "—",
     "range_zh": "特殊能力",
-    "sentence": "Boosts Appease-mint plants",
-    "sentence_zh": "加强本格的豌豆类植物和豌豆家族植物",
+    "sentence": "Boosts pea plants nearby",
+    "sentence_zh": "强化附近的豌豆植物",
     "words": [
       [
-        "pea",
-        "豌豆藤蔓"
-      ],
-      [
-        "vine",
-        "豌豆藤蔓"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "pea",
+        "豌豆"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -1574,19 +1574,19 @@
     "obtain_world_code": "epic",
     "learning_sentences": [
       {
-        "en": "Boosts Appease-mint plants",
-        "zh": "加强本格的豌豆类植物和豌豆家族植物",
+        "en": "Boosts pea plants nearby",
+        "zh": "强化附近的豌豆植物",
         "words": [
           [
-            "pea",
-            "豌豆藤蔓"
-          ],
-          [
-            "vine",
-            "豌豆藤蔓"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "pea",
+            "豌豆"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -1657,15 +1657,15 @@
     "sentence_zh": "可以在空中种植不能飞行的植物",
     "words": [
       [
-        "floawer",
-        "飞天花盆"
-      ],
-      [
-        "pot",
-        "飞天花盆"
-      ],
-      [
         "allows",
+        "允许"
+      ],
+      [
+        "un-flyable",
+        "落地"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -1684,15 +1684,15 @@
         "zh": "可以在空中种植不能飞行的植物",
         "words": [
           [
-            "floawer",
-            "飞天花盆"
-          ],
-          [
-            "pot",
-            "飞天花盆"
-          ],
-          [
             "allows",
+            "允许"
+          ],
+          [
+            "un-flyable",
+            "落地"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -1759,16 +1759,16 @@
     "sentence_zh": "发射火焰豌豆，并冰释身边的植物",
     "words": [
       [
-        "fire",
-        "攻击"
-      ],
-      [
-        "peashooter",
-        "火焰豌豆"
-      ],
-      [
         "shoots",
         "发射"
+      ],
+      [
+        "flaming",
+        "燃烧"
+      ],
+      [
+        "peas",
+        "豌豆"
       ]
     ],
     "color": "#4e9f66",
@@ -1789,16 +1789,16 @@
         "zh": "发射火焰豌豆，并冰释身边的植物",
         "words": [
           [
-            "fire",
-            "攻击"
-          ],
-          [
-            "peashooter",
-            "火焰豌豆"
-          ],
-          [
             "shoots",
             "发射"
+          ],
+          [
+            "flaming",
+            "燃烧"
+          ],
+          [
+            "peas",
+            "豌豆"
           ]
         ]
       }
@@ -1892,16 +1892,16 @@
     "sentence_zh": "向三行发射豌豆",
     "words": [
       [
-        "threepeater",
-        "三线射手"
-      ],
-      [
         "shoots",
         "发射"
       ],
       [
         "three",
-        "植物"
+        "三个"
+      ],
+      [
+        "peas",
+        "豌豆"
       ]
     ],
     "color": "#4e9f66",
@@ -1922,16 +1922,16 @@
         "zh": "向三行发射豌豆",
         "words": [
           [
-            "threepeater",
-            "三线射手"
-          ],
-          [
             "shoots",
             "发射"
           ],
           [
             "three",
-            "植物"
+            "三个"
+          ],
+          [
+            "peas",
+            "豌豆"
           ]
         ]
       }
@@ -2003,16 +2003,16 @@
     "sentence_zh": "发射重型豌豆",
     "words": [
       [
-        "primal",
-        "原始豌豆射手"
-      ],
-      [
-        "peashooter",
-        "原始豌豆射手"
-      ],
-      [
         "shoots",
         "发射"
+      ],
+      [
+        "heavy",
+        "沉重"
+      ],
+      [
+        "stunning",
+        "击晕"
       ]
     ],
     "color": "#4e9f66",
@@ -2033,16 +2033,16 @@
         "zh": "发射重型豌豆",
         "words": [
           [
-            "primal",
-            "原始豌豆射手"
-          ],
-          [
-            "peashooter",
-            "原始豌豆射手"
-          ],
-          [
             "shoots",
             "发射"
+          ],
+          [
+            "heavy",
+            "沉重"
+          ],
+          [
+            "stunning",
+            "击晕"
           ]
         ]
       }
@@ -2116,16 +2116,16 @@
     "sentence_zh": "向四个对角方向发射子弹",
     "words": [
       [
-        "rotobaga",
-        "旋转芜菁"
-      ],
-      [
         "shoots",
         "发射"
       ],
       [
         "along",
-        "植物"
+        "沿着"
+      ],
+      [
+        "diagonal",
+        "斜向"
       ]
     ],
     "color": "#4e9f66",
@@ -2146,16 +2146,16 @@
         "zh": "向四个对角方向发射子弹",
         "words": [
           [
-            "rotobaga",
-            "旋转芜菁"
-          ],
-          [
             "shoots",
             "发射"
           ],
           [
             "along",
-            "植物"
+            "沿着"
+          ],
+          [
+            "diagonal",
+            "斜向"
           ]
         ]
       }
@@ -2216,16 +2216,16 @@
     "sentence_zh": "向场地最左侧目标发动攻击",
     "words": [
       [
-        "homing",
-        "导向蓟"
-      ],
-      [
-        "thistle",
-        "导向蓟"
-      ],
-      [
         "attacks",
-        "植物"
+        "攻击"
+      ],
+      [
+        "farthest",
+        "最远"
+      ],
+      [
+        "target",
+        "目标"
       ]
     ],
     "color": "#4e9f66",
@@ -2246,16 +2246,16 @@
         "zh": "向场地最左侧目标发动攻击",
         "words": [
           [
-            "homing",
-            "导向蓟"
-          ],
-          [
-            "thistle",
-            "导向蓟"
-          ],
-          [
             "attacks",
-            "植物"
+            "攻击"
+          ],
+          [
+            "farthest",
+            "最远"
+          ],
+          [
+            "target",
+            "目标"
           ]
         ]
       }
@@ -2316,16 +2316,16 @@
     "sentence_zh": "向五个方向发射星星",
     "words": [
       [
-        "starfruit",
-        "星星果"
-      ],
-      [
         "shoots",
         "发射"
       ],
       [
         "stars",
-        "植物"
+        "星星"
+      ],
+      [
+        "directions",
+        "方向"
       ]
     ],
     "color": "#4e9f66",
@@ -2346,16 +2346,16 @@
         "zh": "向五个方向发射星星",
         "words": [
           [
-            "starfruit",
-            "星星果"
-          ],
-          [
             "shoots",
             "发射"
           ],
           [
             "stars",
-            "植物"
+            "星星"
+          ],
+          [
+            "directions",
+            "方向"
           ]
         ]
       }
@@ -2419,16 +2419,16 @@
     "sentence_zh": "沿五行发射星星",
     "words": [
       [
-        "shooting",
-        "流星果"
-      ],
-      [
-        "starfruit",
-        "流星果"
-      ],
-      [
         "shoots",
         "发射"
+      ],
+      [
+        "stars",
+        "星星"
+      ],
+      [
+        "along",
+        "沿着"
       ]
     ],
     "color": "#4e9f66",
@@ -2446,16 +2446,16 @@
         "zh": "沿五行发射星星",
         "words": [
           [
-            "shooting",
-            "流星果"
-          ],
-          [
-            "starfruit",
-            "流星果"
-          ],
-          [
             "shoots",
             "发射"
+          ],
+          [
+            "stars",
+            "星星"
+          ],
+          [
+            "along",
+            "沿着"
           ]
         ]
       }
@@ -2515,15 +2515,15 @@
     "sentence_zh": "允许在水面上种植非两栖植物",
     "words": [
       [
-        "lily",
-        "莲叶"
+        "plant",
+        "植物"
       ],
       [
-        "pad",
-        "莲叶"
+        "non-aquatic",
+        "陆地"
       ],
       [
-        "let",
+        "plants",
         "植物"
       ]
     ],
@@ -2545,15 +2545,15 @@
         "zh": "允许在水面上种植非两栖植物",
         "words": [
           [
-            "lily",
-            "莲叶"
+            "plant",
+            "植物"
           ],
           [
-            "pad",
-            "莲叶"
+            "non-aquatic",
+            "陆地"
           ],
           [
-            "let",
+            "plants",
             "植物"
           ]
         ]
@@ -2604,20 +2604,20 @@
     "damage": "—",
     "range": "—",
     "range_zh": "特殊能力",
-    "sentence": "Gives more sun over time",
-    "sentence_zh": "随着生长产出更多的阳光",
+    "sentence": "Gives extra sun as it grows",
+    "sentence_zh": "长大后提供更多阳光",
     "words": [
-      [
-        "sun",
-        "阳光菇"
-      ],
-      [
-        "shroom",
-        "阳光菇"
-      ],
       [
         "gives",
         "提供"
+      ],
+      [
+        "extra",
+        "额外"
+      ],
+      [
+        "sun",
+        "阳光"
       ]
     ],
     "color": "#4e9f66",
@@ -2634,20 +2634,20 @@
     "obtain_world_code": "dark",
     "learning_sentences": [
       {
-        "en": "Gives more sun over time",
-        "zh": "随着生长产出更多的阳光",
+        "en": "Gives extra sun as it grows",
+        "zh": "长大后提供更多阳光",
         "words": [
-          [
-            "sun",
-            "阳光菇"
-          ],
-          [
-            "shroom",
-            "阳光菇"
-          ],
           [
             "gives",
             "提供"
+          ],
+          [
+            "extra",
+            "额外"
+          ],
+          [
+            "sun",
+            "阳光"
           ]
         ]
       }
@@ -2717,20 +2717,20 @@
     "family": "Enlighten-mint",
     "unlock": "Beating [[Ancient Egypt - Day 24]] or 60 seed packets",
     "unlock_zh": "古埃及植物",
-    "sentence": "Gives twice as much as a sunflower",
-    "sentence_zh": "生产比向日葵更多的阳光",
+    "sentence": "Gives double sun",
+    "sentence_zh": "提供双倍阳光",
     "words": [
-      [
-        "twin",
-        "双胞向日葵"
-      ],
-      [
-        "sunflower",
-        "双胞向日葵"
-      ],
       [
         "gives",
         "提供"
+      ],
+      [
+        "double",
+        "双倍"
+      ],
+      [
+        "sun",
+        "阳光"
       ]
     ],
     "color": "#FFB300",
@@ -2746,20 +2746,20 @@
     "obtain_world_code": "egypt",
     "learning_sentences": [
       {
-        "en": "Gives twice as much as a sunflower",
-        "zh": "生产比向日葵更多的阳光",
+        "en": "Gives double sun",
+        "zh": "提供双倍阳光",
         "words": [
-          [
-            "twin",
-            "双胞向日葵"
-          ],
-          [
-            "sunflower",
-            "双胞向日葵"
-          ],
           [
             "gives",
             "提供"
+          ],
+          [
+            "double",
+            "双倍"
+          ],
+          [
+            "sun",
+            "阳光"
           ]
         ]
       }
@@ -2832,16 +2832,16 @@
     "sentence_zh": "向三行的僵尸投掷爆裂子弹",
     "words": [
       [
-        "dragon",
-        "暴君火龙果"
-      ],
-      [
-        "bruit",
-        "暴君火龙果"
-      ],
-      [
         "launches",
-        "植物"
+        "发射"
+      ],
+      [
+        "explosive",
+        "爆炸"
+      ],
+      [
+        "seed",
+        "种子"
       ]
     ],
     "color": "#4e9f66",
@@ -2862,16 +2862,16 @@
         "zh": "向三行的僵尸投掷爆裂子弹",
         "words": [
           [
-            "dragon",
-            "暴君火龙果"
-          ],
-          [
-            "bruit",
-            "暴君火龙果"
-          ],
-          [
             "launches",
-            "植物"
+            "发射"
+          ],
+          [
+            "explosive",
+            "爆炸"
+          ],
+          [
+            "seed",
+            "种子"
           ]
         ]
       }
@@ -2939,16 +2939,16 @@
     "sentence_zh": "生产阳光并强化周围的暗影植物",
     "words": [
       [
-        "moonflower",
-        "月光花"
-      ],
-      [
         "gives",
         "提供"
       ],
       [
         "suns",
-        "植物"
+        "阳光"
+      ],
+      [
+        "powers",
+        "能力"
       ]
     ],
     "color": "#4e9f66",
@@ -2969,16 +2969,16 @@
         "zh": "生产阳光并强化周围的暗影植物",
         "words": [
           [
-            "moonflower",
-            "月光花"
-          ],
-          [
             "gives",
             "提供"
           ],
           [
             "suns",
-            "植物"
+            "阳光"
+          ],
+          [
+            "powers",
+            "能力"
           ]
         ]
       }
@@ -3056,16 +3056,16 @@
     "sentence_zh": "向僵尸发射寒冰子弹",
     "words": [
       [
-        "snow",
-        "寒冰射手"
-      ],
-      [
-        "pea",
-        "寒冰射手"
-      ],
-      [
         "shoots",
         "发射"
+      ],
+      [
+        "frozen",
+        "冰冻"
+      ],
+      [
+        "peas",
+        "豌豆"
       ]
     ],
     "color": "#4e9f66",
@@ -3086,16 +3086,16 @@
         "zh": "向僵尸发射寒冰子弹",
         "words": [
           [
-            "snow",
-            "寒冰射手"
-          ],
-          [
-            "pea",
-            "寒冰射手"
-          ],
-          [
             "shoots",
             "发射"
+          ],
+          [
+            "frozen",
+            "冰冻"
+          ],
+          [
+            "peas",
+            "豌豆"
           ]
         ]
       }
@@ -3170,16 +3170,16 @@
     "sentence_zh": "电击连续的几只僵尸或鸡",
     "words": [
       [
-        "lightning",
-        "闪电芦苇"
-      ],
-      [
-        "reed",
-        "闪电芦苇"
-      ],
-      [
         "zaps",
-        "植物"
+        "电击"
+      ],
+      [
+        "chickens",
+        "小鸡"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -3200,16 +3200,16 @@
         "zh": "电击连续的几只僵尸或鸡",
         "words": [
           [
-            "lightning",
-            "闪电芦苇"
-          ],
-          [
-            "reed",
-            "闪电芦苇"
-          ],
-          [
             "zaps",
-            "植物"
+            "电击"
+          ],
+          [
+            "chickens",
+            "小鸡"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -3280,16 +3280,16 @@
     "sentence_zh": "向僵尸投掷黄油和玉米粒",
     "words": [
       [
-        "kernel",
-        "玉米投手"
-      ],
-      [
-        "pult",
-        "玉米投手"
-      ],
-      [
         "flings",
-        "植物"
+        "甩出"
+      ],
+      [
+        "corn",
+        "玉米"
+      ],
+      [
+        "kernels",
+        "玉米粒"
       ]
     ],
     "color": "#4e9f66",
@@ -3310,16 +3310,16 @@
         "zh": "向僵尸投掷黄油和玉米粒",
         "words": [
           [
-            "kernel",
-            "玉米投手"
-          ],
-          [
-            "pult",
-            "玉米投手"
-          ],
-          [
             "flings",
-            "植物"
+            "甩出"
+          ],
+          [
+            "corn",
+            "玉米"
+          ],
+          [
+            "kernels",
+            "玉米粒"
           ]
         ]
       }
@@ -3407,16 +3407,16 @@
     "sentence_zh": "从空中召唤能融化地面的流星",
     "words": [
       [
-        "meteor",
-        "流星花"
-      ],
-      [
-        "flower",
-        "流星花"
-      ],
-      [
         "conjures",
-        "植物"
+        "召唤"
+      ],
+      [
+        "meteor",
+        "流星"
+      ],
+      [
+        "strikes",
+        "打击"
       ]
     ],
     "color": "#4e9f66",
@@ -3437,16 +3437,16 @@
         "zh": "从空中召唤能融化地面的流星",
         "words": [
           [
-            "meteor",
-            "流星花"
-          ],
-          [
-            "flower",
-            "流星花"
-          ],
-          [
             "conjures",
-            "植物"
+            "召唤"
+          ],
+          [
+            "meteor",
+            "流星"
+          ],
+          [
+            "strikes",
+            "打击"
           ]
         ]
       }
@@ -3531,16 +3531,16 @@
     "sentence_zh": "将僵尸向右侧弹开，或弹进周围的水里",
     "words": [
       [
-        "spring",
-        "弹簧豆"
-      ],
-      [
-        "bean",
-        "弹簧豆"
-      ],
-      [
         "bounces",
-        "植物"
+        "弹跳"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "nearby",
+        "附近"
       ]
     ],
     "color": "#4e9f66",
@@ -3561,16 +3561,16 @@
         "zh": "将僵尸向右侧弹开，或弹进周围的水里",
         "words": [
           [
-            "spring",
-            "弹簧豆"
-          ],
-          [
-            "bean",
-            "弹簧豆"
-          ],
-          [
             "bounces",
-            "植物"
+            "弹跳"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "nearby",
+            "附近"
           ]
         ]
       }
@@ -3657,16 +3657,16 @@
     "sentence_zh": "保护植物免受来自空中的威胁",
     "words": [
       [
-        "umbrella",
-        "伞叶"
-      ],
-      [
-        "leaf",
-        "伞叶"
-      ],
-      [
         "protects",
+        "保护"
+      ],
+      [
+        "plants",
         "植物"
+      ],
+      [
+        "falling",
+        "落下"
       ]
     ],
     "color": "#4e9f66",
@@ -3684,16 +3684,16 @@
         "zh": "保护植物免受来自空中的威胁",
         "words": [
           [
-            "umbrella",
-            "伞叶"
-          ],
-          [
-            "leaf",
-            "伞叶"
-          ],
-          [
             "protects",
+            "保护"
+          ],
+          [
+            "plants",
             "植物"
+          ],
+          [
+            "falling",
+            "落下"
           ]
         ]
       }
@@ -3773,16 +3773,16 @@
     "sentence_zh": "对一群僵尸造成大量伤害",
     "words": [
       [
-        "melon",
-        "西瓜投手"
+        "heavy",
+        "沉重"
       ],
       [
-        "pult",
-        "西瓜投手"
+        "damage",
+        "伤害"
       ],
       [
-        "does",
-        "植物"
+        "groups",
+        "成群"
       ]
     ],
     "color": "#4e9f66",
@@ -3803,16 +3803,16 @@
         "zh": "对一群僵尸造成大量伤害",
         "words": [
           [
-            "melon",
-            "西瓜投手"
+            "heavy",
+            "沉重"
           ],
           [
-            "pult",
-            "西瓜投手"
+            "damage",
+            "伤害"
           ],
           [
-            "does",
-            "植物"
+            "groups",
+            "成群"
           ]
         ]
       }
@@ -3887,16 +3887,16 @@
     "sentence_zh": "对一群僵尸造成大量伤害并减速",
     "words": [
       [
-        "winter",
-        "冰西瓜"
+        "heavy",
+        "沉重"
       ],
       [
-        "melon",
-        "冰西瓜"
+        "damage",
+        "伤害"
       ],
       [
-        "does",
-        "植物"
+        "slows",
+        "减速"
       ]
     ],
     "color": "#4e9f66",
@@ -3917,16 +3917,16 @@
         "zh": "对一群僵尸造成大量伤害并减速",
         "words": [
           [
-            "winter",
-            "冰西瓜"
+            "heavy",
+            "沉重"
           ],
           [
-            "melon",
-            "冰西瓜"
+            "damage",
+            "伤害"
           ],
           [
-            "does",
-            "植物"
+            "slows",
+            "减速"
           ]
         ]
       }
@@ -4007,16 +4007,16 @@
     "sentence_zh": "吹飞所有的飞行僵尸",
     "words": [
       [
-        "blover",
-        "三叶草"
-      ],
-      [
         "blows",
-        "植物"
+        "吹动"
       ],
       [
         "away",
-        "植物"
+        "离开"
+      ],
+      [
+        "flying",
+        "飞行"
       ]
     ],
     "color": "#4e9f66",
@@ -4037,16 +4037,16 @@
         "zh": "吹飞所有的飞行僵尸",
         "words": [
           [
-            "blover",
-            "三叶草"
-          ],
-          [
             "blows",
-            "植物"
+            "吹动"
           ],
           [
             "away",
-            "植物"
+            "离开"
+          ],
+          [
+            "flying",
+            "飞行"
           ]
         ]
       }
@@ -4124,16 +4124,16 @@
     "sentence_zh": "对走过的僵尸造成伤害，并破坏 1 个滚动的物体",
     "words": [
       [
-        "spikeweed",
-        "地刺"
-      ],
-      [
         "breaks",
-        "植物"
+        "打破"
       ],
       [
         "rolling",
-        "植物"
+        "滚动"
+      ],
+      [
+        "hurts",
+        "伤害"
       ]
     ],
     "color": "#4e9f66",
@@ -4154,16 +4154,16 @@
         "zh": "对走过的僵尸造成伤害，并破坏 1 个滚动的物体",
         "words": [
           [
-            "spikeweed",
-            "地刺"
-          ],
-          [
             "breaks",
-            "植物"
+            "打破"
           ],
           [
             "rolling",
-            "植物"
+            "滚动"
+          ],
+          [
+            "hurts",
+            "伤害"
           ]
         ]
       }
@@ -4248,16 +4248,16 @@
     "sentence_zh": "对走过的僵尸造成伤害，并破坏 3 个滚动的物体",
     "words": [
       [
-        "spikerock",
-        "钢地刺"
-      ],
-      [
         "breaks",
-        "植物"
+        "打破"
       ],
       [
         "rolling",
-        "植物"
+        "滚动"
+      ],
+      [
+        "hurts",
+        "伤害"
       ]
     ],
     "color": "#4e9f66",
@@ -4278,16 +4278,16 @@
         "zh": "对走过的僵尸造成伤害，并破坏 3 个滚动的物体",
         "words": [
           [
-            "spikerock",
-            "钢地刺"
-          ],
-          [
             "breaks",
-            "植物"
+            "打破"
           ],
           [
             "rolling",
-            "植物"
+            "滚动"
+          ],
+          [
+            "hurts",
+            "伤害"
           ]
         ]
       }
@@ -4373,16 +4373,16 @@
     "sentence_zh": "吃掉僵尸，并花费时间消化",
     "words": [
       [
-        "chomper",
-        "大嘴花"
-      ],
-      [
         "devours",
-        "植物"
+        "吞掉"
       ],
       [
         "zombies",
         "僵尸"
+      ],
+      [
+        "chews",
+        "咀嚼"
       ]
     ],
     "color": "#4e9f66",
@@ -4403,16 +4403,16 @@
         "zh": "吃掉僵尸，并花费时间消化",
         "words": [
           [
-            "chomper",
-            "大嘴花"
-          ],
-          [
             "devours",
-            "植物"
+            "吞掉"
           ],
           [
             "zombies",
             "僵尸"
+          ],
+          [
+            "chews",
+            "咀嚼"
           ]
         ]
       }
@@ -4487,16 +4487,16 @@
     "sentence_zh": "点击冻结所有的僵尸",
     "words": [
       [
-        "ice",
-        "寒冰菇"
-      ],
-      [
-        "shroom",
-        "寒冰菇"
-      ],
-      [
         "tap",
-        "植物"
+        "点击"
+      ],
+      [
+        "freeze",
+        "冻结"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -4517,16 +4517,16 @@
         "zh": "点击冻结所有的僵尸",
         "words": [
           [
-            "ice",
-            "寒冰菇"
-          ],
-          [
-            "shroom",
-            "寒冰菇"
-          ],
-          [
             "tap",
-            "植物"
+            "点击"
+          ],
+          [
+            "freeze",
+            "冻结"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -4624,16 +4624,16 @@
     "sentence_zh": "冷却时间更短的坚果墙",
     "words": [
       [
-        "primal",
-        "原始坚果墙"
+        "quick-planting",
+        "快种"
       ],
       [
         "wall",
-        "原始坚果墙"
+        "墙"
       ],
       [
-        "nut",
-        "原始坚果墙"
+        "blocks",
+        "挡住"
       ]
     ],
     "color": "#4e9f66",
@@ -4654,16 +4654,16 @@
         "zh": "冷却时间更短的坚果墙",
         "words": [
           [
-            "primal",
-            "原始坚果墙"
+            "quick-planting",
+            "快种"
           ],
           [
             "wall",
-            "原始坚果墙"
+            "墙"
           ],
           [
-            "nut",
-            "原始坚果墙"
+            "blocks",
+            "挡住"
           ]
         ]
       }
@@ -4731,16 +4731,16 @@
     "sentence_zh": "向啃食她的僵尸投掷黄油",
     "words": [
       [
-        "buttercup",
-        "黄油毛茛"
-      ],
-      [
         "butters",
-        "植物"
+        "涂黄油"
       ],
       [
         "attacking",
-        "植物"
+        "进攻"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -4761,16 +4761,16 @@
         "zh": "向啃食她的僵尸投掷黄油",
         "words": [
           [
-            "buttercup",
-            "黄油毛茛"
-          ],
-          [
             "butters",
-            "植物"
+            "涂黄油"
           ],
           [
             "attacking",
-            "植物"
+            "进攻"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -4844,16 +4844,16 @@
     "sentence_zh": "点击后，选择一格发射爆炸香蕉子弹",
     "words": [
       [
-        "banana",
-        "香蕉火箭炮"
-      ],
-      [
-        "launcher",
-        "香蕉火箭炮"
-      ],
-      [
         "click",
-        "植物"
+        "点击"
+      ],
+      [
+        "banana",
+        "香蕉"
+      ],
+      [
+        "tile",
+        "格子"
       ]
     ],
     "color": "#4e9f66",
@@ -4874,16 +4874,16 @@
         "zh": "点击后，选择一格发射爆炸香蕉子弹",
         "words": [
           [
-            "banana",
-            "香蕉火箭炮"
-          ],
-          [
-            "launcher",
-            "香蕉火箭炮"
-          ],
-          [
             "click",
-            "植物"
+            "点击"
+          ],
+          [
+            "banana",
+            "香蕉"
+          ],
+          [
+            "tile",
+            "格子"
           ]
         ]
       }
@@ -4972,16 +4972,16 @@
     "sentence_zh": "发射寒冰导弹",
     "words": [
       [
-        "missile",
-        "槲寄冰仙子"
-      ],
-      [
-        "toe",
-        "槲寄冰仙子"
-      ],
-      [
         "launches",
-        "植物"
+        "发射"
+      ],
+      [
+        "chilling",
+        "寒冷"
+      ],
+      [
+        "blasts",
+        "爆破"
       ]
     ],
     "color": "#4e9f66",
@@ -5002,16 +5002,16 @@
         "zh": "发射寒冰导弹",
         "words": [
           [
-            "missile",
-            "槲寄冰仙子"
-          ],
-          [
-            "toe",
-            "槲寄冰仙子"
-          ],
-          [
             "launches",
-            "植物"
+            "发射"
+          ],
+          [
+            "chilling",
+            "寒冷"
+          ],
+          [
+            "blasts",
+            "爆破"
           ]
         ]
       }
@@ -5105,16 +5105,16 @@
     "sentence_zh": "爆炸并对范围内僵尸造成伤害",
     "words": [
       [
-        "cherry",
-        "樱桃炸弹"
-      ],
-      [
-        "bomb",
-        "樱桃炸弹"
-      ],
-      [
         "blows",
-        "植物"
+        "吹动"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "medium",
+        "中等"
       ]
     ],
     "color": "#4e9f66",
@@ -5135,16 +5135,16 @@
         "zh": "爆炸并对范围内僵尸造成伤害",
         "words": [
           [
-            "cherry",
-            "樱桃炸弹"
-          ],
-          [
-            "bomb",
-            "樱桃炸弹"
-          ],
-          [
             "blows",
-            "植物"
+            "吹动"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "medium",
+            "中等"
           ]
         ]
       }
@@ -5215,16 +5215,16 @@
     "sentence_zh": "爆炸并对巨大范围内僵尸造成伤害",
     "words": [
       [
-        "doom",
-        "毁灭菇"
-      ],
-      [
-        "shroom",
-        "毁灭菇"
-      ],
-      [
         "blows",
-        "植物"
+        "吹动"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "huge",
+        "巨大"
       ]
     ],
     "color": "#4e9f66",
@@ -5245,16 +5245,16 @@
         "zh": "爆炸并对巨大范围内僵尸造成伤害",
         "words": [
           [
-            "doom",
-            "毁灭菇"
-          ],
-          [
-            "shroom",
-            "毁灭菇"
-          ],
-          [
             "blows",
-            "植物"
+            "吹动"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "huge",
+            "巨大"
           ]
         ]
       }
@@ -5326,16 +5326,16 @@
     "sentence_zh": "碾压一行的僵尸",
     "words": [
       [
-        "cran",
-        "果冻蔓越莓"
-      ],
-      [
-        "jelly",
-        "果冻蔓越莓"
-      ],
-      [
         "crushes",
-        "植物"
+        "压碎"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "lane",
+        "一行"
       ]
     ],
     "color": "#4e9f66",
@@ -5356,16 +5356,16 @@
         "zh": "碾压一行的僵尸",
         "words": [
           [
-            "cran",
-            "果冻蔓越莓"
-          ],
-          [
-            "jelly",
-            "果冻蔓越莓"
-          ],
-          [
             "crushes",
-            "植物"
+            "压碎"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "lane",
+            "一行"
           ]
         ]
       }
@@ -5438,16 +5438,16 @@
     "sentence_zh": "向僵尸投掷爆裂子弹",
     "words": [
       [
-        "baby",
-        "小暴君火龙果"
+        "launches",
+        "发射"
       ],
       [
-        "dragon",
-        "小暴君火龙果"
+        "explosive",
+        "爆炸"
       ],
       [
-        "bruit",
-        "小暴君火龙果"
+        "seed",
+        "种子"
       ]
     ],
     "color": "#4e9f66",
@@ -5465,16 +5465,16 @@
         "zh": "向僵尸投掷爆裂子弹",
         "words": [
           [
-            "baby",
-            "小暴君火龙果"
+            "launches",
+            "发射"
           ],
           [
-            "dragon",
-            "小暴君火龙果"
+            "explosive",
+            "爆炸"
           ],
           [
-            "bruit",
-            "小暴君火龙果"
+            "seed",
+            "种子"
           ]
         ]
       }
@@ -5546,16 +5546,16 @@
     "sentence_zh": "点燃经过的豌豆，死亡时对整行造成伤害",
     "words": [
       [
-        "torchwood",
-        "火炬树桩"
-      ],
-      [
         "turns",
-        "植物"
+        "变成"
       ],
       [
         "peas",
         "豌豆"
+      ],
+      [
+        "fireballs",
+        "火球"
       ]
     ],
     "color": "#4e9f66",
@@ -5576,16 +5576,16 @@
         "zh": "点燃经过的豌豆，死亡时对整行造成伤害",
         "words": [
           [
-            "torchwood",
-            "火炬树桩"
-          ],
-          [
             "turns",
-            "植物"
+            "变成"
           ],
           [
             "peas",
             "豌豆"
+          ],
+          [
+            "fireballs",
+            "火球"
           ]
         ]
       }
@@ -5696,16 +5696,16 @@
     "sentence_zh": "燃烧摧毁一整行的僵尸",
     "words": [
       [
-        "jalapeno",
-        "火爆辣椒"
-      ],
-      [
         "destroys",
-        "植物"
+        "摧毁"
       ],
       [
-        "an",
-        "植物"
+        "lane",
+        "一行"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -5726,16 +5726,16 @@
         "zh": "燃烧摧毁一整行的僵尸",
         "words": [
           [
-            "jalapeno",
-            "火爆辣椒"
-          ],
-          [
             "destroys",
-            "植物"
+            "摧毁"
           ],
           [
-            "an",
-            "植物"
+            "lane",
+            "一行"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -5807,16 +5807,16 @@
     "sentence_zh": "射程短，并且一段时间后消失",
     "words": [
       [
-        "puff",
-        "小喷菇"
+        "short-range",
+        "近距"
       ],
       [
-        "shroom",
-        "小喷菇"
+        "shooter",
+        "射手"
       ],
       [
-        "short",
-        "植物"
+        "lasts",
+        "持续"
       ]
     ],
     "color": "#4e9f66",
@@ -5837,16 +5837,16 @@
         "zh": "射程短，并且一段时间后消失",
         "words": [
           [
-            "puff",
-            "小喷菇"
+            "short-range",
+            "近距"
           ],
           [
-            "shroom",
-            "小喷菇"
+            "shooter",
+            "射手"
           ],
           [
-            "short",
-            "植物"
+            "lasts",
+            "持续"
           ]
         ]
       }
@@ -5920,20 +5920,20 @@
     "damage": 45,
     "range": "3x3",
     "range_zh": "3x3 范围",
-    "sentence": "Shoots in 8 directions",
-    "sentence_zh": "攻击自身为中心的范围内的僵尸",
+    "sentence": "Shoots zombies in eight directions",
+    "sentence_zh": "向八个方向射击僵尸",
     "words": [
-      [
-        "gloom",
-        "忧郁藤蔓"
-      ],
-      [
-        "vine",
-        "忧郁藤蔓"
-      ],
       [
         "shoots",
         "发射"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "eight",
+        "八个"
       ]
     ],
     "color": "#4e9f66",
@@ -5950,20 +5950,20 @@
     "obtain_world_code": "epic",
     "learning_sentences": [
       {
-        "en": "Shoots in 8 directions",
-        "zh": "攻击自身为中心的范围内的僵尸",
+        "en": "Shoots zombies in eight directions",
+        "zh": "向八个方向射击僵尸",
         "words": [
-          [
-            "gloom",
-            "忧郁藤蔓"
-          ],
-          [
-            "vine",
-            "忧郁藤蔓"
-          ],
           [
             "shoots",
             "发射"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "eight",
+            "八个"
           ]
         ]
       }
@@ -6035,16 +6035,16 @@
     "sentence_zh": "一段时间内吸收周围僵尸的血量",
     "words": [
       [
-        "vamporcini",
-        "吸血牛肝菌"
-      ],
-      [
         "drains",
-        "植物"
+        "吸走"
       ],
       [
         "hp",
-        "植物"
+        "生命"
+      ],
+      [
+        "surrounding",
+        "周围"
       ]
     ],
     "color": "#4e9f66",
@@ -6065,16 +6065,16 @@
         "zh": "一段时间内吸收周围僵尸的血量",
         "words": [
           [
-            "vamporcini",
-            "吸血牛肝菌"
-          ],
-          [
             "drains",
-            "植物"
+            "吸走"
           ],
           [
             "hp",
-            "植物"
+            "生命"
+          ],
+          [
+            "surrounding",
+            "周围"
           ]
         ]
       }
@@ -6146,16 +6146,16 @@
     "sentence_zh": "爆炸范围更大的土豆地雷",
     "words": [
       [
-        "primal",
-        "原始土豆地雷"
+        "explodes",
+        "爆炸"
       ],
       [
-        "potato",
-        "原始土豆地雷"
+        "area",
+        "范围"
       ],
       [
-        "mine",
-        "原始土豆地雷"
+        "damage",
+        "伤害"
       ]
     ],
     "color": "#4e9f66",
@@ -6176,16 +6176,16 @@
         "zh": "爆炸范围更大的土豆地雷",
         "words": [
           [
-            "primal",
-            "原始土豆地雷"
+            "explodes",
+            "爆炸"
           ],
           [
-            "potato",
-            "原始土豆地雷"
+            "area",
+            "范围"
           ],
           [
-            "mine",
-            "原始土豆地雷"
+            "damage",
+            "伤害"
           ]
         ]
       }
@@ -6267,16 +6267,16 @@
     "sentence_zh": "射出穿透性的刺，僵尸靠近时缩进地里攻击",
     "words": [
       [
-        "cactus",
-        "仙人掌"
-      ],
-      [
         "fires",
-        "攻击"
+        "发射"
       ],
       [
-        "a",
-        "植物"
+        "penetrating",
+        "穿透"
+      ],
+      [
+        "thorn",
+        "尖刺"
       ]
     ],
     "color": "#4e9f66",
@@ -6297,16 +6297,16 @@
         "zh": "射出穿透性的刺，僵尸靠近时缩进地里攻击",
         "words": [
           [
-            "cactus",
-            "仙人掌"
-          ],
-          [
             "fires",
-            "攻击"
+            "发射"
           ],
           [
-            "a",
-            "植物"
+            "penetrating",
+            "穿透"
+          ],
+          [
+            "thorn",
+            "尖刺"
           ]
         ]
       }
@@ -6387,16 +6387,16 @@
     "sentence_zh": "产生一个叶绿素",
     "words": [
       [
-        "power",
-        "能量花"
-      ],
-      [
-        "lily",
-        "能量花"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
+      ],
+      [
+        "plant",
+        "植物"
+      ],
+      [
+        "food",
+        "养分"
       ]
     ],
     "color": "#4e9f66",
@@ -6417,16 +6417,16 @@
         "zh": "产生一个叶绿素",
         "words": [
           [
-            "power",
-            "能量花"
-          ],
-          [
-            "lily",
-            "能量花"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
+          ],
+          [
+            "plant",
+            "植物"
+          ],
+          [
+            "food",
+            "养分"
           ]
         ]
       }
@@ -6490,16 +6490,16 @@
     "sentence_zh": "点击发射一颗爆炸性椰子炮弹",
     "words": [
       [
-        "coconut",
-        "椰子加农炮"
+        "tap",
+        "点击"
       ],
       [
         "cannon",
-        "椰子加农炮"
+        "大炮"
       ],
       [
-        "tap",
-        "植物"
+        "fire",
+        "火"
       ]
     ],
     "color": "#4e9f66",
@@ -6520,16 +6520,16 @@
         "zh": "点击发射一颗爆炸性椰子炮弹",
         "words": [
           [
-            "coconut",
-            "椰子加农炮"
+            "tap",
+            "点击"
           ],
           [
             "cannon",
-            "椰子加农炮"
+            "大炮"
           ],
           [
-            "tap",
-            "植物"
+            "fire",
+            "火"
           ]
         ]
       }
@@ -6611,16 +6611,16 @@
     "sentence_zh": "多次重叠种植提高攻击力",
     "words": [
       [
-        "pea",
-        "豌豆荚"
-      ],
-      [
-        "pod",
-        "豌豆荚"
-      ],
-      [
         "plant",
         "植物"
+      ],
+      [
+        "multiple",
+        "多个"
+      ],
+      [
+        "spot",
+        "位置"
       ]
     ],
     "color": "#4e9f66",
@@ -6641,16 +6641,16 @@
         "zh": "多次重叠种植提高攻击力",
         "words": [
           [
-            "pea",
-            "豌豆荚"
-          ],
-          [
-            "pod",
-            "豌豆荚"
-          ],
-          [
             "plant",
             "植物"
+          ],
+          [
+            "multiple",
+            "多个"
+          ],
+          [
+            "spot",
+            "位置"
           ]
         ]
       }
@@ -6722,16 +6722,16 @@
     "sentence_zh": "向身前区域吐息",
     "words": [
       [
-        "snapdragon",
-        "火龙草"
-      ],
-      [
         "breaths",
-        "植物"
+        "吐息"
       ],
       [
         "fire",
-        "攻击"
+        "火"
+      ],
+      [
+        "area",
+        "范围"
       ]
     ],
     "color": "#4e9f66",
@@ -6752,16 +6752,16 @@
         "zh": "向身前区域吐息",
         "words": [
           [
-            "snapdragon",
-            "火龙草"
-          ],
-          [
             "breaths",
-            "植物"
+            "吐息"
           ],
           [
             "fire",
-            "攻击"
+            "火"
+          ],
+          [
+            "area",
+            "范围"
           ]
         ]
       }
@@ -6833,20 +6833,20 @@
     "family_zh": "豌豆家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Shoots 4 peas at a time",
-    "sentence_zh": "向敌人发射 4 颗豌豆",
+    "sentence": "Shoots four peas quickly",
+    "sentence_zh": "快速发射四发豌豆",
     "words": [
-      [
-        "gatling",
-        "机枪射手"
-      ],
-      [
-        "pea",
-        "机枪射手"
-      ],
       [
         "shoots",
         "发射"
+      ],
+      [
+        "four",
+        "四发"
+      ],
+      [
+        "peas",
+        "豌豆"
       ]
     ],
     "color": "#4e9f66",
@@ -6860,20 +6860,20 @@
     "obtain_world_code": "epic",
     "learning_sentences": [
       {
-        "en": "Shoots 4 peas at a time",
-        "zh": "向敌人发射 4 颗豌豆",
+        "en": "Shoots four peas quickly",
+        "zh": "快速发射四发豌豆",
         "words": [
-          [
-            "gatling",
-            "机枪射手"
-          ],
-          [
-            "pea",
-            "机枪射手"
-          ],
           [
             "shoots",
             "发射"
+          ],
+          [
+            "four",
+            "四发"
+          ],
+          [
+            "peas",
+            "豌豆"
           ]
         ]
       }
@@ -6950,16 +6950,16 @@
     "sentence_zh": "向身前和身后发射豌豆",
     "words": [
       [
-        "split",
-        "裂荚射手"
-      ],
-      [
-        "pea",
-        "裂荚射手"
-      ],
-      [
         "shoots",
         "发射"
+      ],
+      [
+        "peas",
+        "豌豆"
+      ],
+      [
+        "forward",
+        "向前"
       ]
     ],
     "color": "#4e9f66",
@@ -6980,16 +6980,16 @@
         "zh": "向身前和身后发射豌豆",
         "words": [
           [
-            "split",
-            "裂荚射手"
-          ],
-          [
-            "pea",
-            "裂荚射手"
-          ],
-          [
             "shoots",
             "发射"
+          ],
+          [
+            "peas",
+            "豌豆"
+          ],
+          [
+            "forward",
+            "向前"
           ]
         ]
       }
@@ -7060,16 +7060,16 @@
     "sentence_zh": "僵尸吃下后死亡并释放眩晕气体",
     "words": [
       [
-        "chili",
-        "巴豆"
-      ],
-      [
-        "bean",
-        "巴豆"
-      ],
-      [
         "zombies",
         "僵尸"
+      ],
+      [
+        "eat",
+        "啃食"
+      ],
+      [
+        "defeated",
+        "被击败"
       ]
     ],
     "color": "#4e9f66",
@@ -7090,16 +7090,16 @@
         "zh": "僵尸吃下后死亡并释放眩晕气体",
         "words": [
           [
-            "chili",
-            "巴豆"
-          ],
-          [
-            "bean",
-            "巴豆"
-          ],
-          [
             "zombies",
             "僵尸"
+          ],
+          [
+            "eat",
+            "啃食"
+          ],
+          [
+            "defeated",
+            "被击败"
           ]
         ]
       }
@@ -7189,16 +7189,16 @@
     "sentence_zh": "血量更高的坚果墙，可以抵挡飞来的僵尸",
     "words": [
       [
-        "tall",
-        "高坚果"
+        "heavy-duty",
+        "重型"
       ],
       [
-        "nut",
-        "高坚果"
+        "wall",
+        "墙"
       ],
       [
-        "heavy",
-        "植物"
+        "blocks",
+        "挡住"
       ]
     ],
     "color": "#4e9f66",
@@ -7219,16 +7219,16 @@
         "zh": "血量更高的坚果墙，可以抵挡飞来的僵尸",
         "words": [
           [
-            "tall",
-            "高坚果"
+            "heavy-duty",
+            "重型"
           ],
           [
-            "nut",
-            "高坚果"
+            "wall",
+            "墙"
           ],
           [
-            "heavy",
-            "植物"
+            "blocks",
+            "挡住"
           ]
         ]
       }
@@ -7296,16 +7296,16 @@
     "sentence_zh": "吹出强寒风，推动本行的僵尸",
     "words": [
       [
-        "hurrikale",
-        "飓风甘蓝"
-      ],
-      [
         "blows",
-        "植物"
+        "吹动"
       ],
       [
-        "a",
-        "植物"
+        "chilling",
+        "寒冷"
+      ],
+      [
+        "wind",
+        "风"
       ]
     ],
     "color": "#4e9f66",
@@ -7326,16 +7326,16 @@
         "zh": "吹出强寒风，推动本行的僵尸",
         "words": [
           [
-            "hurrikale",
-            "飓风甘蓝"
-          ],
-          [
             "blows",
-            "植物"
+            "吹动"
           ],
           [
-            "a",
-            "植物"
+            "chilling",
+            "寒冷"
+          ],
+          [
+            "wind",
+            "风"
           ]
         ]
       }
@@ -7428,16 +7428,16 @@
     "sentence_zh": "减慢范围内的所有僵尸",
     "words": [
       [
-        "stallia",
-        "大丽菊"
-      ],
-      [
         "slows",
         "减速"
       ],
       [
         "zombies",
         "僵尸"
+      ],
+      [
+        "nearby",
+        "附近"
       ]
     ],
     "color": "#4e9f66",
@@ -7458,16 +7458,16 @@
         "zh": "减慢范围内的所有僵尸",
         "words": [
           [
-            "stallia",
-            "大丽菊"
-          ],
-          [
             "slows",
             "减速"
           ],
           [
             "zombies",
             "僵尸"
+          ],
+          [
+            "nearby",
+            "附近"
           ]
         ]
       }
@@ -7553,16 +7553,16 @@
     "sentence_zh": "发射电能豌豆子弹",
     "words": [
       [
-        "electric",
-        "电能豌豆"
-      ],
-      [
-        "peashooter",
-        "电能豌豆"
-      ],
-      [
         "fires",
-        "攻击"
+        "发射"
+      ],
+      [
+        "electric",
+        "带电"
+      ],
+      [
+        "peas",
+        "豌豆"
       ]
     ],
     "color": "#4e9f66",
@@ -7583,16 +7583,16 @@
         "zh": "发射电能豌豆子弹",
         "words": [
           [
-            "electric",
-            "电能豌豆"
-          ],
-          [
-            "peashooter",
-            "电能豌豆"
-          ],
-          [
             "fires",
-            "攻击"
+            "发射"
+          ],
+          [
+            "electric",
+            "带电"
+          ],
+          [
+            "peas",
+            "豌豆"
           ]
         ]
       }
@@ -7652,16 +7652,16 @@
     "damage": "—",
     "range": "Close",
     "range_zh": "靠近时",
-    "sentence": "Squashes zombies",
+    "sentence": "Squashes groups of zombies",
     "sentence_zh": "碾压一群僵尸",
     "words": [
       [
-        "squash",
-        "倭瓜"
+        "squashes",
+        "碾压"
       ],
       [
-        "squashes",
-        "植物"
+        "groups",
+        "成群"
       ],
       [
         "zombies",
@@ -7682,16 +7682,16 @@
     "obtain_world_code": "epic",
     "learning_sentences": [
       {
-        "en": "Squashes zombies",
+        "en": "Squashes groups of zombies",
         "zh": "碾压一群僵尸",
         "words": [
           [
-            "squash",
-            "倭瓜"
+            "squashes",
+            "碾压"
           ],
           [
-            "squashes",
-            "植物"
+            "groups",
+            "成群"
           ],
           [
             "zombies",
@@ -7768,16 +7768,16 @@
     "sentence_zh": "对 3x3 范围内所有僵尸造成伤害",
     "words": [
       [
-        "gloom",
-        "忧郁菇"
-      ],
-      [
-        "shroom",
-        "忧郁菇"
-      ],
-      [
         "damages",
-        "植物"
+        "伤害"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "area",
+        "范围"
       ]
     ],
     "color": "#4e9f66",
@@ -7795,16 +7795,16 @@
         "zh": "对 3x3 范围内所有僵尸造成伤害",
         "words": [
           [
-            "gloom",
-            "忧郁菇"
-          ],
-          [
-            "shroom",
-            "忧郁菇"
-          ],
-          [
             "damages",
-            "植物"
+            "伤害"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "area",
+            "范围"
           ]
         ]
       }
@@ -7876,16 +7876,16 @@
     "sentence_zh": "点击后，花费阳光发射光能子弹",
     "words": [
       [
-        "magnifying",
-        "棱镜草"
-      ],
-      [
-        "grass",
-        "棱镜草"
-      ],
-      [
         "tap",
-        "植物"
+        "点击"
+      ],
+      [
+        "spend",
+        "花费"
+      ],
+      [
+        "sun",
+        "阳光"
       ]
     ],
     "color": "#4e9f66",
@@ -7906,16 +7906,16 @@
         "zh": "点击后，花费阳光发射光能子弹",
         "words": [
           [
-            "magnifying",
-            "棱镜草"
-          ],
-          [
-            "grass",
-            "棱镜草"
-          ],
-          [
             "tap",
-            "植物"
+            "点击"
+          ],
+          [
+            "spend",
+            "花费"
+          ],
+          [
+            "sun",
+            "阳光"
           ]
         ]
       }
@@ -7994,16 +7994,16 @@
     "sentence_zh": "身后有僵尸时冒出并造成伤害",
     "words": [
       [
-        "celery",
-        "潜伏芹菜"
-      ],
-      [
-        "stalker",
-        "潜伏芹菜"
-      ],
-      [
         "pops",
-        "植物"
+        "爆开"
+      ],
+      [
+        "bashes",
+        "猛击"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -8024,16 +8024,16 @@
         "zh": "身后有僵尸时冒出并造成伤害",
         "words": [
           [
-            "celery",
-            "潜伏芹菜"
-          ],
-          [
-            "stalker",
-            "潜伏芹菜"
-          ],
-          [
             "pops",
-            "植物"
+            "爆开"
+          ],
+          [
+            "bashes",
+            "猛击"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -8093,16 +8093,16 @@
     "sentence_zh": "投掷释放树脂的子弹，使僵尸减速",
     "words": [
       [
-        "sap",
-        "树脂投手"
-      ],
-      [
-        "fling",
-        "树脂投手"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
+      ],
+      [
+        "zombies-slowing",
+        "减速"
+      ],
+      [
+        "puddles",
+        "水洼"
       ]
     ],
     "color": "#4e9f66",
@@ -8123,16 +8123,16 @@
         "zh": "投掷释放树脂的子弹，使僵尸减速",
         "words": [
           [
-            "sap",
-            "树脂投手"
-          ],
-          [
-            "fling",
-            "树脂投手"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
+          ],
+          [
+            "zombies-slowing",
+            "减速"
+          ],
+          [
+            "puddles",
+            "水洼"
           ]
         ]
       }
@@ -8213,16 +8213,16 @@
     "sentence_zh": "夹击僵尸，被啃咬时冲出并攻击前方所有僵尸",
     "words": [
       [
-        "parsnip",
-        "防风草"
-      ],
-      [
         "snips",
-        "植物"
+        "剪断"
       ],
       [
         "zombies",
         "僵尸"
+      ],
+      [
+        "charges",
+        "冲撞"
       ]
     ],
     "color": "#4e9f66",
@@ -8243,16 +8243,16 @@
         "zh": "夹击僵尸，被啃咬时冲出并攻击前方所有僵尸",
         "words": [
           [
-            "parsnip",
-            "防风草"
-          ],
-          [
             "snips",
-            "植物"
+            "剪断"
           ],
           [
             "zombies",
             "僵尸"
+          ],
+          [
+            "charges",
+            "冲撞"
           ]
         ]
       }
@@ -8319,20 +8319,20 @@
     "damage": 1800,
     "range": "—",
     "range_zh": "特殊能力",
-    "sentence": "Explodes when eaten",
-    "sentence_zh": "被啃食后爆炸",
+    "sentence": "Explodes when eaten by zombies",
+    "sentence_zh": "被僵尸啃食后爆炸",
     "words": [
       [
-        "explode",
+        "explodes",
         "爆炸"
       ],
       [
-        "o",
-        "爆炸坚果"
+        "eaten",
+        "被吃"
       ],
       [
-        "nut",
-        "爆炸坚果"
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -8349,20 +8349,20 @@
     "obtain_world_code": "market",
     "learning_sentences": [
       {
-        "en": "Explodes when eaten",
-        "zh": "被啃食后爆炸",
+        "en": "Explodes when eaten by zombies",
+        "zh": "被僵尸啃食后爆炸",
         "words": [
           [
-            "explode",
+            "explodes",
             "爆炸"
           ],
           [
-            "o",
-            "爆炸坚果"
+            "eaten",
+            "被吃"
           ],
           [
-            "nut",
-            "爆炸坚果"
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -8428,16 +8428,16 @@
     "sentence_zh": "爆炸并发射弹射子弹",
     "words": [
       [
-        "grapeshot",
-        "爆裂葡萄"
-      ],
-      [
         "explodes",
         "爆炸"
       ],
       [
-        "and",
-        "植物"
+        "scatters",
+        "散开"
+      ],
+      [
+        "bouncing",
+        "弹跳"
       ]
     ],
     "color": "#4e9f66",
@@ -8458,16 +8458,16 @@
         "zh": "爆炸并发射弹射子弹",
         "words": [
           [
-            "grapeshot",
-            "爆裂葡萄"
-          ],
-          [
             "explodes",
             "爆炸"
           ],
           [
-            "and",
-            "植物"
+            "scatters",
+            "散开"
+          ],
+          [
+            "bouncing",
+            "弹跳"
           ]
         ]
       }
@@ -8542,16 +8542,16 @@
     "sentence_zh": "驱散迷雾，并显示隐形的僵尸",
     "words": [
       [
-        "plantern",
-        "路灯花"
-      ],
-      [
         "removes",
-        "植物"
+        "清除"
       ],
       [
         "fogs",
-        "植物"
+        "放雾"
+      ],
+      [
+        "reveals",
+        "显露"
       ]
     ],
     "color": "#4e9f66",
@@ -8569,16 +8569,16 @@
         "zh": "驱散迷雾，并显示隐形的僵尸",
         "words": [
           [
-            "plantern",
-            "路灯花"
-          ],
-          [
             "removes",
-            "植物"
+            "清除"
           ],
           [
             "fogs",
-            "植物"
+            "放雾"
+          ],
+          [
+            "reveals",
+            "显露"
           ]
         ]
       }
@@ -8668,16 +8668,16 @@
     "sentence_zh": "治疗 3x3 范围内的植物",
     "words": [
       [
-        "heavenly",
-        "仙桃"
-      ],
-      [
-        "peach",
-        "仙桃"
-      ],
-      [
         "heals",
+        "治疗"
+      ],
+      [
+        "plants",
         "植物"
+      ],
+      [
+        "area",
+        "范围"
       ]
     ],
     "color": "#4e9f66",
@@ -8695,16 +8695,16 @@
         "zh": "治疗 3x3 范围内的植物",
         "words": [
           [
-            "heavenly",
-            "仙桃"
-          ],
-          [
-            "peach",
-            "仙桃"
-          ],
-          [
             "heals",
+            "治疗"
+          ],
+          [
+            "plants",
             "植物"
+          ],
+          [
+            "area",
+            "范围"
           ]
         ]
       }
@@ -8767,16 +8767,16 @@
     "sentence_zh": "短距离内喷射火焰攻击",
     "words": [
       [
-        "jack",
-        "杰克南瓜"
+        "fires",
+        "发射"
       ],
       [
-        "o",
-        "杰克南瓜"
+        "jets",
+        "喷射"
       ],
       [
-        "lantern",
-        "杰克南瓜"
+        "flame",
+        "火焰"
       ]
     ],
     "color": "#4e9f66",
@@ -8797,16 +8797,16 @@
         "zh": "短距离内喷射火焰攻击",
         "words": [
           [
-            "jack",
-            "杰克南瓜"
+            "fires",
+            "发射"
           ],
           [
-            "o",
-            "杰克南瓜"
+            "jets",
+            "喷射"
           ],
           [
-            "lantern",
-            "杰克南瓜"
+            "flame",
+            "火焰"
           ]
         ]
       }
@@ -8885,16 +8885,16 @@
     "sentence_zh": "攻击邻近行的僵尸",
     "words": [
       [
-        "dandelion",
-        "蒲公英"
-      ],
-      [
         "attacks",
-        "植物"
+        "攻击"
       ],
       [
         "multiple",
-        "植物"
+        "多个"
+      ],
+      [
+        "lanes",
+        "几行"
       ]
     ],
     "color": "#4e9f66",
@@ -8915,16 +8915,16 @@
         "zh": "攻击邻近行的僵尸",
         "words": [
           [
-            "dandelion",
-            "蒲公英"
-          ],
-          [
             "attacks",
-            "植物"
+            "攻击"
           ],
           [
             "multiple",
-            "植物"
+            "多个"
+          ],
+          [
+            "lanes",
+            "几行"
           ]
         ]
       }
@@ -9008,16 +9008,16 @@
     "sentence_zh": "阻挡并击退僵尸",
     "words": [
       [
-        "chard",
-        "甜菜护卫"
-      ],
-      [
-        "guard",
-        "甜菜护卫"
-      ],
-      [
         "blocks",
-        "植物"
+        "挡住"
+      ],
+      [
+        "hurls",
+        "投掷"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -9038,16 +9038,16 @@
         "zh": "阻挡并击退僵尸",
         "words": [
           [
-            "chard",
-            "甜菜护卫"
-          ],
-          [
-            "guard",
-            "甜菜护卫"
-          ],
-          [
             "blocks",
-            "植物"
+            "挡住"
+          ],
+          [
+            "hurls",
+            "投掷"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -9104,16 +9104,16 @@
     "sentence_zh": "让一名僵尸为你战斗",
     "words": [
       [
-        "hypno",
-        "魅惑菇"
-      ],
-      [
-        "shroom",
-        "魅惑菇"
-      ],
-      [
         "makes",
-        "植物"
+        "变成"
+      ],
+      [
+        "zombie",
+        "僵尸"
+      ],
+      [
+        "fight",
+        "对抗"
       ]
     ],
     "color": "#4e9f66",
@@ -9134,16 +9134,16 @@
         "zh": "让一名僵尸为你战斗",
         "words": [
           [
-            "hypno",
-            "魅惑菇"
-          ],
-          [
-            "shroom",
-            "魅惑菇"
-          ],
-          [
             "makes",
-            "植物"
+            "变成"
+          ],
+          [
+            "zombie",
+            "僵尸"
+          ],
+          [
+            "fight",
+            "对抗"
           ]
         ]
       }
@@ -9223,16 +9223,16 @@
     "sentence_zh": "链接电弧对僵尸造成伤害",
     "words": [
       [
-        "electric",
-        "电流醋栗"
-      ],
-      [
-        "currant",
-        "电流醋栗"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
+      ],
+      [
+        "electric",
+        "带电"
+      ],
+      [
+        "fences",
+        "电网"
       ]
     ],
     "color": "#4e9f66",
@@ -9253,16 +9253,16 @@
         "zh": "链接电弧对僵尸造成伤害",
         "words": [
           [
-            "electric",
-            "电流醋栗"
-          ],
-          [
-            "currant",
-            "电流醋栗"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
+          ],
+          [
+            "electric",
+            "带电"
+          ],
+          [
+            "fences",
+            "电网"
           ]
         ]
       }
@@ -9347,16 +9347,16 @@
     "sentence_zh": "能与其他植物换位，遇到僵尸时爆炸",
     "words": [
       [
-        "escape",
-        "逃脱树根"
-      ],
-      [
-        "root",
-        "逃脱树根"
-      ],
-      [
         "explodes",
         "爆炸"
+      ],
+      [
+        "swapped",
+        "对换"
+      ],
+      [
+        "plants",
+        "植物"
       ]
     ],
     "color": "#4e9f66",
@@ -9377,16 +9377,16 @@
         "zh": "能与其他植物换位，遇到僵尸时爆炸",
         "words": [
           [
-            "escape",
-            "逃脱树根"
-          ],
-          [
-            "root",
-            "逃脱树根"
-          ],
-          [
             "explodes",
             "爆炸"
+          ],
+          [
+            "swapped",
+            "对换"
+          ],
+          [
+            "plants",
+            "植物"
           ]
         ]
       }
@@ -9455,20 +9455,20 @@
     "damage": "—",
     "range": "—",
     "range_zh": "特殊能力",
-    "sentence": "Lets you have two of the same plant",
-    "sentence_zh": "允许你同时选取两张相同的卡片",
+    "sentence": "Copies a plant on the lawn",
+    "sentence_zh": "变成草坪上的另一种植物",
     "words": [
       [
-        "imitater",
-        "模仿者"
+        "copies",
+        "复制"
       ],
       [
-        "lets",
+        "plant",
         "植物"
       ],
       [
-        "you",
-        "植物"
+        "lawn",
+        "草坪"
       ]
     ],
     "color": "#4e9f66",
@@ -9485,20 +9485,20 @@
     "obtain_world_code": "lod",
     "learning_sentences": [
       {
-        "en": "Lets you have two of the same plant",
-        "zh": "允许你同时选取两张相同的卡片",
+        "en": "Copies a plant on the lawn",
+        "zh": "变成草坪上的另一种植物",
         "words": [
           [
-            "imitater",
-            "模仿者"
+            "copies",
+            "复制"
           ],
           [
-            "lets",
+            "plant",
             "植物"
           ],
           [
-            "you",
-            "植物"
+            "lawn",
+            "草坪"
           ]
         ]
       }
@@ -9548,20 +9548,20 @@
     "damage": "—",
     "range": "Touch",
     "range_zh": "接触",
-    "sentence": "Poisons zombies over time",
-    "sentence_zh": "使僵尸获得一段时间的中毒效果",
+    "sentence": "Poisons nearby zombies",
+    "sentence_zh": "让附近的僵尸中毒",
     "words": [
       [
-        "shadow",
-        "毒影菇"
-      ],
-      [
-        "shroom",
-        "毒影菇"
-      ],
-      [
         "poisons",
-        "植物"
+        "使中毒"
+      ],
+      [
+        "nearby",
+        "附近"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -9578,20 +9578,20 @@
     "obtain_world_code": "modern",
     "learning_sentences": [
       {
-        "en": "Poisons zombies over time",
-        "zh": "使僵尸获得一段时间的中毒效果",
+        "en": "Poisons nearby zombies",
+        "zh": "让附近的僵尸中毒",
         "words": [
           [
-            "shadow",
-            "毒影菇"
-          ],
-          [
-            "shroom",
-            "毒影菇"
-          ],
-          [
             "poisons",
-            "植物"
+            "使中毒"
+          ],
+          [
+            "nearby",
+            "附近"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -9674,16 +9674,16 @@
     "sentence_zh": "吸走僵尸身上的金属盔甲和其他金属物品",
     "words": [
       [
-        "magnet",
-        "磁力菇"
-      ],
-      [
-        "shroom",
-        "磁力菇"
-      ],
-      [
         "removes",
-        "植物"
+        "清除"
+      ],
+      [
+        "helmets",
+        "头盔"
+      ],
+      [
+        "metal",
+        "金属"
       ]
     ],
     "color": "#4e9f66",
@@ -9704,16 +9704,16 @@
         "zh": "吸走僵尸身上的金属盔甲和其他金属物品",
         "words": [
           [
-            "magnet",
-            "磁力菇"
-          ],
-          [
-            "shroom",
-            "磁力菇"
-          ],
-          [
             "removes",
-            "植物"
+            "清除"
+          ],
+          [
+            "helmets",
+            "头盔"
+          ],
+          [
+            "metal",
+            "金属"
           ]
         ]
       }
@@ -9789,16 +9789,16 @@
     "sentence_zh": "稳固地立在地上，抵抗气功僵尸的法术和时空黑洞的吞噬",
     "words": [
       [
-        "resistant",
-        "白萝卜"
-      ],
-      [
-        "radish",
-        "白萝卜"
-      ],
-      [
         "stands",
-        "植物"
+        "站立"
+      ],
+      [
+        "firm",
+        "牢固"
+      ],
+      [
+        "resists",
+        "抵抗"
       ]
     ],
     "color": "#4e9f66",
@@ -9816,16 +9816,16 @@
         "zh": "稳固地立在地上，抵抗气功僵尸的法术和时空黑洞的吞噬",
         "words": [
           [
-            "resistant",
-            "白萝卜"
-          ],
-          [
-            "radish",
-            "白萝卜"
-          ],
-          [
             "stands",
-            "植物"
+            "站立"
+          ],
+          [
+            "firm",
+            "牢固"
+          ],
+          [
+            "resists",
+            "抵抗"
           ]
         ]
       }
@@ -9898,16 +9898,16 @@
     "sentence_zh": "使范围内所有的机械僵尸陷入故障",
     "words": [
       [
-        "e",
-        "脉冲黄桃"
+        "disables",
+        "使失效"
       ],
       [
-        "m",
-        "脉冲黄桃"
+        "machines",
+        "机器"
       ],
       [
-        "peach",
-        "脉冲黄桃"
+        "area",
+        "范围"
       ]
     ],
     "color": "#4e9f66",
@@ -9925,16 +9925,16 @@
         "zh": "使范围内所有的机械僵尸陷入故障",
         "words": [
           [
-            "e",
-            "脉冲黄桃"
+            "disables",
+            "使失效"
           ],
           [
-            "m",
-            "脉冲黄桃"
+            "machines",
+            "机器"
           ],
           [
-            "peach",
-            "脉冲黄桃"
+            "area",
+            "范围"
           ]
         ]
       }
@@ -10013,16 +10013,16 @@
     "sentence_zh": "发射高能的等离子子弹",
     "words": [
       [
-        "citron",
-        "充能柚子"
-      ],
-      [
         "shoots",
         "发射"
       ],
       [
         "powerful",
-        "植物"
+        "强大"
+      ],
+      [
+        "balls",
+        "球"
       ]
     ],
     "color": "#4e9f66",
@@ -10043,16 +10043,16 @@
         "zh": "发射高能的等离子子弹",
         "words": [
           [
-            "citron",
-            "充能柚子"
-          ],
-          [
             "shoots",
             "发射"
           ],
           [
             "powerful",
-            "植物"
+            "强大"
+          ],
+          [
+            "balls",
+            "球"
           ]
         ]
       }
@@ -10112,16 +10112,16 @@
     "sentence_zh": "发射穿透僵尸的激光",
     "words": [
       [
-        "laser",
-        "激光豆"
-      ],
-      [
-        "bean",
-        "激光豆"
-      ],
-      [
         "shoots",
         "发射"
+      ],
+      [
+        "laser",
+        "激光"
+      ],
+      [
+        "pierces",
+        "穿透"
       ]
     ],
     "color": "#4e9f66",
@@ -10142,16 +10142,16 @@
         "zh": "发射穿透僵尸的激光",
         "words": [
           [
-            "laser",
-            "激光豆"
-          ],
-          [
-            "bean",
-            "激光豆"
-          ],
-          [
             "shoots",
             "发射"
+          ],
+          [
+            "laser",
+            "激光"
+          ],
+          [
+            "pierces",
+            "穿透"
           ]
         ]
       }
@@ -10223,16 +10223,16 @@
     "sentence_zh": "令僵尸眩晕，并使之掉落阳光",
     "words": [
       [
-        "solar",
-        "阳光番茄"
-      ],
-      [
-        "tomato",
-        "阳光番茄"
-      ],
-      [
         "stuns",
-        "植物"
+        "击晕"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "dropping",
+        "掉落"
       ]
     ],
     "color": "#4e9f66",
@@ -10253,16 +10253,16 @@
         "zh": "令僵尸眩晕，并使之掉落阳光",
         "words": [
           [
-            "solar",
-            "阳光番茄"
-          ],
-          [
-            "tomato",
-            "阳光番茄"
-          ],
-          [
             "stuns",
-            "植物"
+            "击晕"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "dropping",
+            "掉落"
           ]
         ]
       }
@@ -10337,16 +10337,16 @@
     "sentence_zh": "放置一块强化瓷砖",
     "words": [
       [
-        "tile",
-        "瓷砖萝卜"
-      ],
-      [
-        "turnip",
-        "瓷砖萝卜"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
+      ],
+      [
+        "power",
+        "能量"
+      ],
+      [
+        "tile",
+        "格子"
       ]
     ],
     "color": "#4e9f66",
@@ -10367,16 +10367,16 @@
         "zh": "放置一块强化瓷砖",
         "words": [
           [
-            "tile",
-            "瓷砖萝卜"
-          ],
-          [
-            "turnip",
-            "瓷砖萝卜"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
+          ],
+          [
+            "power",
+            "能量"
+          ],
+          [
+            "tile",
+            "格子"
           ]
         ]
       }
@@ -10444,16 +10444,16 @@
     "sentence_zh": "放置一块强化瓷砖",
     "words": [
       [
-        "tile",
-        "瓷砖萝卜"
-      ],
-      [
-        "turnip",
-        "瓷砖萝卜"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
+      ],
+      [
+        "power",
+        "能量"
+      ],
+      [
+        "tile",
+        "格子"
       ]
     ],
     "color": "#4e9f66",
@@ -10474,16 +10474,16 @@
         "zh": "放置一块强化瓷砖",
         "words": [
           [
-            "tile",
-            "瓷砖萝卜"
-          ],
-          [
-            "turnip",
-            "瓷砖萝卜"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
+          ],
+          [
+            "power",
+            "能量"
+          ],
+          [
+            "tile",
+            "格子"
           ]
         ]
       }
@@ -10551,16 +10551,16 @@
     "sentence_zh": "放置一块强化瓷砖",
     "words": [
       [
-        "tile",
-        "瓷砖萝卜"
-      ],
-      [
-        "turnip",
-        "瓷砖萝卜"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
+      ],
+      [
+        "power",
+        "能量"
+      ],
+      [
+        "tile",
+        "格子"
       ]
     ],
     "color": "#4e9f66",
@@ -10581,16 +10581,16 @@
         "zh": "放置一块强化瓷砖",
         "words": [
           [
-            "tile",
-            "瓷砖萝卜"
-          ],
-          [
-            "turnip",
-            "瓷砖萝卜"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
+          ],
+          [
+            "power",
+            "能量"
+          ],
+          [
+            "tile",
+            "格子"
           ]
         ]
       }
@@ -10658,16 +10658,16 @@
     "sentence_zh": "放置一块强化瓷砖",
     "words": [
       [
-        "tile",
-        "瓷砖萝卜"
-      ],
-      [
-        "turnip",
-        "瓷砖萝卜"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
+      ],
+      [
+        "power",
+        "能量"
+      ],
+      [
+        "tile",
+        "格子"
       ]
     ],
     "color": "#4e9f66",
@@ -10688,16 +10688,16 @@
         "zh": "放置一块强化瓷砖",
         "words": [
           [
-            "tile",
-            "瓷砖萝卜"
-          ],
-          [
-            "turnip",
-            "瓷砖萝卜"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
+          ],
+          [
+            "power",
+            "能量"
+          ],
+          [
+            "tile",
+            "格子"
           ]
         ]
       }
@@ -10765,16 +10765,16 @@
     "sentence_zh": "放置一块强化瓷砖",
     "words": [
       [
-        "tile",
-        "瓷砖萝卜"
-      ],
-      [
-        "turnip",
-        "瓷砖萝卜"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
+      ],
+      [
+        "power",
+        "能量"
+      ],
+      [
+        "tile",
+        "格子"
       ]
     ],
     "color": "#4e9f66",
@@ -10795,16 +10795,16 @@
         "zh": "放置一块强化瓷砖",
         "words": [
           [
-            "tile",
-            "瓷砖萝卜"
-          ],
-          [
-            "turnip",
-            "瓷砖萝卜"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
+          ],
+          [
+            "power",
+            "能量"
+          ],
+          [
+            "tile",
+            "格子"
           ]
         ]
       }
@@ -10872,16 +10872,16 @@
     "sentence_zh": "比坚果脆弱，但是能隔一段时间回复血量",
     "words": [
       [
-        "infi",
-        "全息坚果"
+        "weaker",
+        "较弱"
       ],
       [
-        "nut",
-        "全息坚果"
+        "wall-nut",
+        "坚果墙"
       ],
       [
-        "a",
-        "植物"
+        "regains",
+        "恢复"
       ]
     ],
     "color": "#4e9f66",
@@ -10902,16 +10902,16 @@
         "zh": "比坚果脆弱，但是能隔一段时间回复血量",
         "words": [
           [
-            "infi",
-            "全息坚果"
+            "weaker",
+            "较弱"
           ],
           [
-            "nut",
-            "全息坚果"
+            "wall-nut",
+            "坚果墙"
           ],
           [
-            "a",
-            "植物"
+            "regains",
+            "恢复"
           ]
         ]
       }
@@ -10981,16 +10981,16 @@
     "sentence_zh": "放置一块强化瓷砖",
     "words": [
       [
-        "tile",
-        "瓷砖萝卜"
-      ],
-      [
-        "turnip",
-        "瓷砖萝卜"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
+      ],
+      [
+        "power",
+        "能量"
+      ],
+      [
+        "tile",
+        "格子"
       ]
     ],
     "color": "#4e9f66",
@@ -11011,16 +11011,16 @@
         "zh": "放置一块强化瓷砖",
         "words": [
           [
-            "tile",
-            "瓷砖萝卜"
-          ],
-          [
-            "turnip",
-            "瓷砖萝卜"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
+          ],
+          [
+            "power",
+            "能量"
+          ],
+          [
+            "tile",
+            "格子"
           ]
         ]
       }
@@ -11087,20 +11087,20 @@
     "family_zh": "滞缓家族",
     "unlock": "International edition",
     "unlock_zh": "玩家小屋植物",
-    "sentence": "Gives you coins over time",
-    "sentence_zh": "时常产生金币",
+    "sentence": "Gives extra coins",
+    "sentence_zh": "提供额外金币",
     "words": [
-      [
-        "marigold",
-        "金盏花"
-      ],
       [
         "gives",
         "提供"
       ],
       [
-        "you",
-        "植物"
+        "extra",
+        "额外"
+      ],
+      [
+        "coins",
+        "金币"
       ]
     ],
     "color": "#4e9f66",
@@ -11114,20 +11114,20 @@
     "obtain_world_code": "frontyard",
     "learning_sentences": [
       {
-        "en": "Gives you coins over time",
-        "zh": "时常产生金币",
+        "en": "Gives extra coins",
+        "zh": "提供额外金币",
         "words": [
-          [
-            "marigold",
-            "金盏花"
-          ],
           [
             "gives",
             "提供"
           ],
           [
-            "you",
-            "植物"
+            "extra",
+            "额外"
+          ],
+          [
+            "coins",
+            "金币"
           ]
         ]
       }
@@ -11198,20 +11198,20 @@
     "family_zh": "燃烧家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Gives you coins over time",
-    "sentence_zh": "时常产生金币",
+    "sentence": "Gives extra coins",
+    "sentence_zh": "提供额外金币",
     "words": [
-      [
-        "red",
-        "火红金盏花"
-      ],
-      [
-        "marigold",
-        "火红金盏花"
-      ],
       [
         "gives",
         "提供"
+      ],
+      [
+        "extra",
+        "额外"
+      ],
+      [
+        "coins",
+        "金币"
       ]
     ],
     "color": "#4e9f66",
@@ -11225,20 +11225,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Gives you coins over time",
-        "zh": "时常产生金币",
+        "en": "Gives extra coins",
+        "zh": "提供额外金币",
         "words": [
-          [
-            "red",
-            "火红金盏花"
-          ],
-          [
-            "marigold",
-            "火红金盏花"
-          ],
           [
             "gives",
             "提供"
+          ],
+          [
+            "extra",
+            "额外"
+          ],
+          [
+            "coins",
+            "金币"
           ]
         ]
       }
@@ -11305,20 +11305,20 @@
     "family_zh": "爆裂家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Gives you coins over time",
-    "sentence_zh": "时常产生金币",
+    "sentence": "Gives extra coins",
+    "sentence_zh": "提供额外金币",
     "words": [
-      [
-        "orange",
-        "爆裂金盏花"
-      ],
-      [
-        "marigold",
-        "爆裂金盏花"
-      ],
       [
         "gives",
         "提供"
+      ],
+      [
+        "extra",
+        "额外"
+      ],
+      [
+        "coins",
+        "金币"
       ]
     ],
     "color": "#4e9f66",
@@ -11332,20 +11332,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Gives you coins over time",
-        "zh": "时常产生金币",
+        "en": "Gives extra coins",
+        "zh": "提供额外金币",
         "words": [
-          [
-            "orange",
-            "爆裂金盏花"
-          ],
-          [
-            "marigold",
-            "爆裂金盏花"
-          ],
           [
             "gives",
             "提供"
+          ],
+          [
+            "extra",
+            "额外"
+          ],
+          [
+            "coins",
+            "金币"
           ]
         ]
       }
@@ -11412,20 +11412,20 @@
     "family_zh": "阳光家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Gives you coins over time",
-    "sentence_zh": "时常产生金币",
+    "sentence": "Gives extra coins",
+    "sentence_zh": "提供额外金币",
     "words": [
-      [
-        "yellow",
-        "耀黄金盏花"
-      ],
-      [
-        "marigold",
-        "耀黄金盏花"
-      ],
       [
         "gives",
         "提供"
+      ],
+      [
+        "extra",
+        "额外"
+      ],
+      [
+        "coins",
+        "金币"
       ]
     ],
     "color": "#4e9f66",
@@ -11439,20 +11439,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Gives you coins over time",
-        "zh": "时常产生金币",
+        "en": "Gives extra coins",
+        "zh": "提供额外金币",
         "words": [
-          [
-            "yellow",
-            "耀黄金盏花"
-          ],
-          [
-            "marigold",
-            "耀黄金盏花"
-          ],
           [
             "gives",
             "提供"
+          ],
+          [
+            "extra",
+            "额外"
+          ],
+          [
+            "coins",
+            "金币"
           ]
         ]
       }
@@ -11513,20 +11513,20 @@
     "family_zh": "豌豆家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Gives you coins over time",
-    "sentence_zh": "时常产生金币",
+    "sentence": "Gives extra coins",
+    "sentence_zh": "提供额外金币",
     "words": [
-      [
-        "green",
-        "豌豆金盏花"
-      ],
-      [
-        "marigold",
-        "豌豆金盏花"
-      ],
       [
         "gives",
         "提供"
+      ],
+      [
+        "extra",
+        "额外"
+      ],
+      [
+        "coins",
+        "金币"
       ]
     ],
     "color": "#4e9f66",
@@ -11540,20 +11540,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Gives you coins over time",
-        "zh": "时常产生金币",
+        "en": "Gives extra coins",
+        "zh": "提供额外金币",
         "words": [
-          [
-            "green",
-            "豌豆金盏花"
-          ],
-          [
-            "marigold",
-            "豌豆金盏花"
-          ],
           [
             "gives",
             "提供"
+          ],
+          [
+            "extra",
+            "额外"
+          ],
+          [
+            "coins",
+            "金币"
           ]
         ]
       }
@@ -11614,20 +11614,20 @@
     "family_zh": "寒冰家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Gives you coins over time",
-    "sentence_zh": "时常产生金币",
+    "sentence": "Gives extra coins",
+    "sentence_zh": "提供额外金币",
     "words": [
-      [
-        "blue",
-        "冰蓝金盏花"
-      ],
-      [
-        "marigold",
-        "冰蓝金盏花"
-      ],
       [
         "gives",
         "提供"
+      ],
+      [
+        "extra",
+        "额外"
+      ],
+      [
+        "coins",
+        "金币"
       ]
     ],
     "color": "#4e9f66",
@@ -11641,20 +11641,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Gives you coins over time",
-        "zh": "时常产生金币",
+        "en": "Gives extra coins",
+        "zh": "提供额外金币",
         "words": [
-          [
-            "blue",
-            "冰蓝金盏花"
-          ],
-          [
-            "marigold",
-            "冰蓝金盏花"
-          ],
           [
             "gives",
             "提供"
+          ],
+          [
+            "extra",
+            "额外"
+          ],
+          [
+            "coins",
+            "金币"
           ]
         ]
       }
@@ -11716,20 +11716,20 @@
     "family_zh": "魔法家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Gives you coins over time",
-    "sentence_zh": "时常产生金币",
+    "sentence": "Gives extra coins",
+    "sentence_zh": "提供额外金币",
     "words": [
-      [
-        "pink",
-        "魔力金盏花"
-      ],
-      [
-        "marigold",
-        "魔力金盏花"
-      ],
       [
         "gives",
         "提供"
+      ],
+      [
+        "extra",
+        "额外"
+      ],
+      [
+        "coins",
+        "金币"
       ]
     ],
     "color": "#4e9f66",
@@ -11743,20 +11743,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Gives you coins over time",
-        "zh": "时常产生金币",
+        "en": "Gives extra coins",
+        "zh": "提供额外金币",
         "words": [
-          [
-            "pink",
-            "魔力金盏花"
-          ],
-          [
-            "marigold",
-            "魔力金盏花"
-          ],
           [
             "gives",
             "提供"
+          ],
+          [
+            "extra",
+            "额外"
+          ],
+          [
+            "coins",
+            "金币"
           ]
         ]
       }
@@ -11826,20 +11826,20 @@
     "family_zh": "毒性家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Gives you coins over time",
-    "sentence_zh": "时常产生金币",
+    "sentence": "Gives extra coins",
+    "sentence_zh": "提供额外金币",
     "words": [
-      [
-        "purple",
-        "紫毒金盏花"
-      ],
-      [
-        "marigold",
-        "紫毒金盏花"
-      ],
       [
         "gives",
         "提供"
+      ],
+      [
+        "extra",
+        "额外"
+      ],
+      [
+        "coins",
+        "金币"
       ]
     ],
     "color": "#4e9f66",
@@ -11853,20 +11853,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Gives you coins over time",
-        "zh": "时常产生金币",
+        "en": "Gives extra coins",
+        "zh": "提供额外金币",
         "words": [
-          [
-            "purple",
-            "紫毒金盏花"
-          ],
-          [
-            "marigold",
-            "紫毒金盏花"
-          ],
           [
             "gives",
             "提供"
+          ],
+          [
+            "extra",
+            "额外"
+          ],
+          [
+            "coins",
+            "金币"
           ]
         ]
       }
@@ -11929,16 +11929,16 @@
     "sentence_zh": "向三行投射眩晕的苹果核",
     "words": [
       [
-        "apple",
-        "苹果迫击炮"
-      ],
-      [
-        "mortar",
-        "苹果迫击炮"
-      ],
-      [
         "lobs",
-        "植物"
+        "投掷"
+      ],
+      [
+        "stunning",
+        "击晕"
+      ],
+      [
+        "cores",
+        "核心"
       ]
     ],
     "color": "#4e9f66",
@@ -11959,16 +11959,16 @@
         "zh": "向三行投射眩晕的苹果核",
         "words": [
           [
-            "apple",
-            "苹果迫击炮"
-          ],
-          [
-            "mortar",
-            "苹果迫击炮"
-          ],
-          [
             "lobs",
-            "植物"
+            "投掷"
+          ],
+          [
+            "stunning",
+            "击晕"
+          ],
+          [
+            "cores",
+            "核心"
           ]
         ]
       }
@@ -12030,20 +12030,20 @@
     "damage": "—",
     "range": "Straight",
     "range_zh": "直线",
-    "sentence": "Fires shots at full force when close to home and becomes more defensive further from it",
-    "sentence_zh": "离草坪左侧越远，攻击力越低，同时防御力越高",
+    "sentence": "Fires shots close to home",
+    "sentence_zh": "在靠近家里时全力射击",
     "words": [
       [
-        "red",
-        "红针花"
-      ],
-      [
-        "stinger",
-        "红针花"
-      ],
-      [
         "fires",
-        "攻击"
+        "发射"
+      ],
+      [
+        "shots",
+        "射击"
+      ],
+      [
+        "close",
+        "靠近"
       ]
     ],
     "color": "#4e9f66",
@@ -12060,20 +12060,20 @@
     "obtain_world_code": "lostcity",
     "learning_sentences": [
       {
-        "en": "Fires shots at full force when close to home and becomes more defensive further from it",
-        "zh": "离草坪左侧越远，攻击力越低，同时防御力越高",
+        "en": "Fires shots close to home",
+        "zh": "在靠近家里时全力射击",
         "words": [
           [
-            "red",
-            "红针花"
-          ],
-          [
-            "stinger",
-            "红针花"
-          ],
-          [
             "fires",
-            "攻击"
+            "发射"
+          ],
+          [
+            "shots",
+            "射击"
+          ],
+          [
+            "close",
+            "靠近"
           ]
         ]
       }
@@ -12143,16 +12143,16 @@
     "sentence_zh": "更快地向僵尸发射豌豆，能在空中飞行",
     "words": [
       [
-        "skyshooter",
-        "飞天射手"
-      ],
-      [
         "flying",
-        "植物"
+        "飞行"
       ],
       [
         "shooters",
-        "植物"
+        "射手"
+      ],
+      [
+        "shoot",
+        "射击"
       ]
     ],
     "color": "#4e9f66",
@@ -12170,16 +12170,16 @@
         "zh": "更快地向僵尸发射豌豆，能在空中飞行",
         "words": [
           [
-            "skyshooter",
-            "飞天射手"
-          ],
-          [
             "flying",
-            "植物"
+            "飞行"
           ],
           [
             "shooters",
-            "植物"
+            "射手"
+          ],
+          [
+            "shoot",
+            "射击"
           ]
         ]
       }
@@ -12251,16 +12251,16 @@
     "sentence_zh": "吃了他的僵尸，会在受伤时掉落阳光",
     "words": [
       [
-        "sun",
-        "阳光豆"
-      ],
-      [
-        "bean",
-        "阳光豆"
-      ],
-      [
         "zombies",
         "僵尸"
+      ],
+      [
+        "eat",
+        "啃食"
+      ],
+      [
+        "drop",
+        "掉落"
       ]
     ],
     "color": "#4e9f66",
@@ -12281,16 +12281,16 @@
         "zh": "吃了他的僵尸，会在受伤时掉落阳光",
         "words": [
           [
-            "sun",
-            "阳光豆"
-          ],
-          [
-            "bean",
-            "阳光豆"
-          ],
-          [
             "zombies",
             "僵尸"
+          ],
+          [
+            "eat",
+            "啃食"
+          ],
+          [
+            "drop",
+            "掉落"
           ]
         ]
       }
@@ -12347,16 +12347,16 @@
     "sentence_zh": "阻挡僵尸并发射花生",
     "words": [
       [
-        "pea",
-        "花生"
-      ],
-      [
-        "nut",
-        "花生"
-      ],
-      [
         "shoots",
         "发射"
+      ],
+      [
+        "peanuts",
+        "花生"
+      ],
+      [
+        "blocks",
+        "挡住"
       ]
     ],
     "color": "#4e9f66",
@@ -12377,16 +12377,16 @@
         "zh": "阻挡僵尸并发射花生",
         "words": [
           [
-            "pea",
-            "花生"
-          ],
-          [
-            "nut",
-            "花生"
-          ],
-          [
             "shoots",
             "发射"
+          ],
+          [
+            "peanuts",
+            "花生"
+          ],
+          [
+            "blocks",
+            "挡住"
           ]
         ]
       }
@@ -12449,20 +12449,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Potion of Speed is a helpful plant that fights zombies.",
-    "sentence_zh": "速度药水是一种帮助你对抗僵尸的植物。",
+    "sentence": "Gives extra speed to plants",
+    "sentence_zh": "让植物获得额外速度",
     "words": [
       [
-        "potion",
-        "速度药水"
+        "gives",
+        "提供"
       ],
       [
-        "of",
-        "速度药水"
+        "extra",
+        "额外"
       ],
       [
         "speed",
-        "速度药水"
+        "速度"
       ]
     ],
     "color": "#4e9f66",
@@ -12476,20 +12476,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Potion of Speed is a helpful plant that fights zombies.",
-        "zh": "速度药水是一种帮助你对抗僵尸的植物。",
+        "en": "Gives extra speed to plants",
+        "zh": "让植物获得额外速度",
         "words": [
           [
-            "potion",
-            "速度药水"
+            "gives",
+            "提供"
           ],
           [
-            "of",
-            "速度药水"
+            "extra",
+            "额外"
           ],
           [
             "speed",
-            "速度药水"
+            "速度"
           ]
         ]
       }
@@ -12531,20 +12531,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Potion of Toughness is a helpful plant that fights zombies.",
-    "sentence_zh": "健壮药水是一种帮助你对抗僵尸的植物。",
+    "sentence": "Gives extra toughness to plants",
+    "sentence_zh": "让植物变得更耐打",
     "words": [
       [
-        "potion",
-        "健壮药水"
+        "gives",
+        "提供"
       ],
       [
-        "of",
-        "健壮药水"
+        "extra",
+        "额外"
       ],
       [
         "toughness",
-        "健壮药水"
+        "生命"
       ]
     ],
     "color": "#4e9f66",
@@ -12558,20 +12558,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Potion of Toughness is a helpful plant that fights zombies.",
-        "zh": "健壮药水是一种帮助你对抗僵尸的植物。",
+        "en": "Gives extra toughness to plants",
+        "zh": "让植物变得更耐打",
         "words": [
           [
-            "potion",
-            "健壮药水"
+            "gives",
+            "提供"
           ],
           [
-            "of",
-            "健壮药水"
+            "extra",
+            "额外"
           ],
           [
             "toughness",
-            "健壮药水"
+            "生命"
           ]
         ]
       }
@@ -12613,20 +12613,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Potion of Invisibility is a helpful plant that fights zombies.",
-    "sentence_zh": "隐身药水是一种帮助你对抗僵尸的植物。",
+    "sentence": "Hides plants from zombies",
+    "sentence_zh": "让植物对僵尸隐身",
     "words": [
       [
-        "potion",
-        "隐身药水"
+        "hides",
+        "隐藏"
       ],
       [
-        "of",
-        "隐身药水"
+        "plants",
+        "植物"
       ],
       [
-        "invisibility",
-        "隐身药水"
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -12640,20 +12640,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Potion of Invisibility is a helpful plant that fights zombies.",
-        "zh": "隐身药水是一种帮助你对抗僵尸的植物。",
+        "en": "Hides plants from zombies",
+        "zh": "让植物对僵尸隐身",
         "words": [
           [
-            "potion",
-            "隐身药水"
+            "hides",
+            "隐藏"
           ],
           [
-            "of",
-            "隐身药水"
+            "plants",
+            "植物"
           ],
           [
-            "invisibility",
-            "隐身药水"
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -12696,16 +12696,16 @@
     "sentence_zh": "水生植物，将一名僵尸拖入水下",
     "words": [
       [
-        "tangle",
-        "缠绕水草"
-      ],
-      [
-        "kelp",
-        "缠绕水草"
-      ],
-      [
         "aquatic",
+        "水生"
+      ],
+      [
+        "plant",
         "植物"
+      ],
+      [
+        "pulls",
+        "拉近"
       ]
     ],
     "color": "#4e9f66",
@@ -12726,16 +12726,16 @@
         "zh": "水生植物，将一名僵尸拖入水下",
         "words": [
           [
-            "tangle",
-            "缠绕水草"
-          ],
-          [
-            "kelp",
-            "缠绕水草"
-          ],
-          [
             "aquatic",
+            "水生"
+          ],
+          [
+            "plant",
             "植物"
+          ],
+          [
+            "pulls",
+            "拉近"
           ]
         ]
       }
@@ -12812,16 +12812,16 @@
     "sentence_zh": "滚出弹性的保龄球，对多只僵尸造成伤害",
     "words": [
       [
-        "bowling",
-        "保龄泡泡"
-      ],
-      [
-        "bulb",
-        "保龄泡泡"
-      ],
-      [
         "rolls",
-        "植物"
+        "滚动"
+      ],
+      [
+        "bouncing",
+        "弹跳"
+      ],
+      [
+        "shots",
+        "射击"
       ]
     ],
     "color": "#4e9f66",
@@ -12842,16 +12842,16 @@
         "zh": "滚出弹性的保龄球，对多只僵尸造成伤害",
         "words": [
           [
-            "bowling",
-            "保龄泡泡"
-          ],
-          [
-            "bulb",
-            "保龄泡泡"
-          ],
-          [
             "rolls",
-            "植物"
+            "滚动"
+          ],
+          [
+            "bouncing",
+            "弹跳"
+          ],
+          [
+            "shots",
+            "射击"
           ]
         ]
       }
@@ -12925,20 +12925,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Aquamarine Bowling is a helpful plant that fights zombies.",
-    "sentence_zh": "青色保龄球是一种帮助你对抗僵尸的植物。",
+    "sentence": "Rolls a bowling ball at zombies",
+    "sentence_zh": "把保龄球滚向僵尸",
     "words": [
       [
-        "aquamarine",
-        "青色保龄球"
+        "rolls",
+        "滚动"
       ],
       [
         "bowling",
-        "青色保龄球"
+        "保龄"
       ],
       [
-        "is",
-        "植物"
+        "ball",
+        "球"
       ]
     ],
     "color": "#4e9f66",
@@ -12952,20 +12952,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Aquamarine Bowling is a helpful plant that fights zombies.",
-        "zh": "青色保龄球是一种帮助你对抗僵尸的植物。",
+        "en": "Rolls a bowling ball at zombies",
+        "zh": "把保龄球滚向僵尸",
         "words": [
           [
-            "aquamarine",
-            "青色保龄球"
+            "rolls",
+            "滚动"
           ],
           [
             "bowling",
-            "青色保龄球"
+            "保龄"
           ],
           [
-            "is",
-            "植物"
+            "ball",
+            "球"
           ]
         ]
       }
@@ -13005,20 +13005,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Blue Bowling is a helpful plant that fights zombies.",
-    "sentence_zh": "蓝色保龄球是一种帮助你对抗僵尸的植物。",
+    "sentence": "Rolls a bowling ball at zombies",
+    "sentence_zh": "把保龄球滚向僵尸",
     "words": [
       [
-        "blue",
-        "蓝色保龄球"
+        "rolls",
+        "滚动"
       ],
       [
         "bowling",
-        "蓝色保龄球"
+        "保龄"
       ],
       [
-        "is",
-        "植物"
+        "ball",
+        "球"
       ]
     ],
     "color": "#4e9f66",
@@ -13032,20 +13032,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Blue Bowling is a helpful plant that fights zombies.",
-        "zh": "蓝色保龄球是一种帮助你对抗僵尸的植物。",
+        "en": "Rolls a bowling ball at zombies",
+        "zh": "把保龄球滚向僵尸",
         "words": [
           [
-            "blue",
-            "蓝色保龄球"
+            "rolls",
+            "滚动"
           ],
           [
             "bowling",
-            "蓝色保龄球"
+            "保龄"
           ],
           [
-            "is",
-            "植物"
+            "ball",
+            "球"
           ]
         ]
       }
@@ -13085,20 +13085,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Orange Bowling is a helpful plant that fights zombies.",
-    "sentence_zh": "橙色保龄球是一种帮助你对抗僵尸的植物。",
+    "sentence": "Rolls a bowling ball at zombies",
+    "sentence_zh": "把保龄球滚向僵尸",
     "words": [
       [
-        "orange",
-        "橙色保龄球"
+        "rolls",
+        "滚动"
       ],
       [
         "bowling",
-        "橙色保龄球"
+        "保龄"
       ],
       [
-        "is",
-        "植物"
+        "ball",
+        "球"
       ]
     ],
     "color": "#4e9f66",
@@ -13112,20 +13112,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Orange Bowling is a helpful plant that fights zombies.",
-        "zh": "橙色保龄球是一种帮助你对抗僵尸的植物。",
+        "en": "Rolls a bowling ball at zombies",
+        "zh": "把保龄球滚向僵尸",
         "words": [
           [
-            "orange",
-            "橙色保龄球"
+            "rolls",
+            "滚动"
           ],
           [
             "bowling",
-            "橙色保龄球"
+            "保龄"
           ],
           [
-            "is",
-            "植物"
+            "ball",
+            "球"
           ]
         ]
       }
@@ -13165,20 +13165,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Charged Bowling is a helpful plant that fights zombies.",
-    "sentence_zh": "充能保龄球是一种帮助你对抗僵尸的植物。",
+    "sentence": "Rolls a charged ball at zombies",
+    "sentence_zh": "把充能球滚向僵尸",
     "words": [
       [
+        "rolls",
+        "滚动"
+      ],
+      [
         "charged",
-        "充能保龄球"
+        "充能"
       ],
       [
-        "bowling",
-        "充能保龄球"
-      ],
-      [
-        "is",
-        "植物"
+        "ball",
+        "球"
       ]
     ],
     "color": "#4e9f66",
@@ -13192,20 +13192,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Charged Bowling is a helpful plant that fights zombies.",
-        "zh": "充能保龄球是一种帮助你对抗僵尸的植物。",
+        "en": "Rolls a charged ball at zombies",
+        "zh": "把充能球滚向僵尸",
         "words": [
           [
+            "rolls",
+            "滚动"
+          ],
+          [
             "charged",
-            "充能保龄球"
+            "充能"
           ],
           [
-            "bowling",
-            "充能保龄球"
-          ],
-          [
-            "is",
-            "植物"
+            "ball",
+            "球"
           ]
         ]
       }
@@ -13246,16 +13246,16 @@
     "sentence_zh": "发射子弹，受到攻击时跳起并冲向前方的所有僵尸",
     "words": [
       [
-        "guacodile",
-        "鳄梨"
-      ],
-      [
         "shoots",
         "发射"
       ],
       [
         "seeds",
-        "植物"
+        "种子"
+      ],
+      [
+        "rush",
+        "冲刺"
       ]
     ],
     "color": "#4e9f66",
@@ -13276,16 +13276,16 @@
         "zh": "发射子弹，受到攻击时跳起并冲向前方的所有僵尸",
         "words": [
           [
-            "guacodile",
-            "鳄梨"
-          ],
-          [
             "shoots",
             "发射"
           ],
           [
             "seeds",
-            "植物"
+            "种子"
+          ],
+          [
+            "rush",
+            "冲刺"
           ]
         ]
       }
@@ -13368,20 +13368,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Bowling Wall-nut is a helpful plant that fights zombies.",
-    "sentence_zh": "坚果保龄球是一种帮助你对抗僵尸的植物。",
+    "sentence": "Rolls a tough nut at zombies",
+    "sentence_zh": "把坚果滚向僵尸",
     "words": [
       [
-        "bowling",
-        "坚果保龄球"
+        "rolls",
+        "滚动"
       ],
       [
-        "wall",
-        "坚果保龄球"
+        "tough",
+        "坚硬"
       ],
       [
         "nut",
-        "坚果保龄球"
+        "坚果"
       ]
     ],
     "color": "#4e9f66",
@@ -13395,20 +13395,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Bowling Wall-nut is a helpful plant that fights zombies.",
-        "zh": "坚果保龄球是一种帮助你对抗僵尸的植物。",
+        "en": "Rolls a tough nut at zombies",
+        "zh": "把坚果滚向僵尸",
         "words": [
           [
-            "bowling",
-            "坚果保龄球"
+            "rolls",
+            "滚动"
           ],
           [
-            "wall",
-            "坚果保龄球"
+            "tough",
+            "坚硬"
           ],
           [
             "nut",
-            "坚果保龄球"
+            "坚果"
           ]
         ]
       }
@@ -13449,20 +13449,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Bowling Explode-O-Nut is a helpful plant that fights zombies.",
-    "sentence_zh": "爆炸坚果保龄球是一种帮助你对抗僵尸的植物。",
+    "sentence": "Rolls and explodes on zombies",
+    "sentence_zh": "滚向僵尸并爆炸",
     "words": [
       [
-        "bowling",
-        "爆炸坚果保龄球"
+        "rolls",
+        "滚动"
       ],
       [
-        "explode",
+        "explodes",
         "爆炸"
       ],
       [
-        "o",
-        "爆炸坚果保龄球"
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -13476,20 +13476,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Bowling Explode-O-Nut is a helpful plant that fights zombies.",
-        "zh": "爆炸坚果保龄球是一种帮助你对抗僵尸的植物。",
+        "en": "Rolls and explodes on zombies",
+        "zh": "滚向僵尸并爆炸",
         "words": [
           [
-            "bowling",
-            "爆炸坚果保龄球"
+            "rolls",
+            "滚动"
           ],
           [
-            "explode",
+            "explodes",
             "爆炸"
           ],
           [
-            "o",
-            "爆炸坚果保龄球"
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -13530,20 +13530,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Bowling Infi-nut is a helpful plant that fights zombies.",
-    "sentence_zh": "全息坚果保龄球是一种帮助你对抗僵尸的植物。",
+    "sentence": "Rolls a glowing nut at zombies",
+    "sentence_zh": "把发光坚果滚向僵尸",
     "words": [
       [
-        "bowling",
-        "全息坚果保龄球"
+        "rolls",
+        "滚动"
       ],
       [
-        "infi",
-        "全息坚果保龄球"
+        "glowing",
+        "发光"
       ],
       [
         "nut",
-        "全息坚果保龄球"
+        "坚果"
       ]
     ],
     "color": "#4e9f66",
@@ -13557,20 +13557,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Bowling Infi-nut is a helpful plant that fights zombies.",
-        "zh": "全息坚果保龄球是一种帮助你对抗僵尸的植物。",
+        "en": "Rolls a glowing nut at zombies",
+        "zh": "把发光坚果滚向僵尸",
         "words": [
           [
-            "bowling",
-            "全息坚果保龄球"
+            "rolls",
+            "滚动"
           ],
           [
-            "infi",
-            "全息坚果保龄球"
+            "glowing",
+            "发光"
           ],
           [
             "nut",
-            "全息坚果保龄球"
+            "坚果"
           ]
         ]
       }
@@ -13611,20 +13611,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Bowling Primal Wall-nut is a helpful plant that fights zombies.",
-    "sentence_zh": "原始坚果保龄球是一种帮助你对抗僵尸的植物。",
+    "sentence": "Rolls a tough nut at zombies",
+    "sentence_zh": "把坚果滚向僵尸",
     "words": [
       [
-        "bowling",
-        "原始坚果保龄球"
+        "rolls",
+        "滚动"
       ],
       [
-        "primal",
-        "原始坚果保龄球"
+        "tough",
+        "坚硬"
       ],
       [
-        "wall",
-        "原始坚果保龄球"
+        "nut",
+        "坚果"
       ]
     ],
     "color": "#4e9f66",
@@ -13638,20 +13638,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Bowling Primal Wall-nut is a helpful plant that fights zombies.",
-        "zh": "原始坚果保龄球是一种帮助你对抗僵尸的植物。",
+        "en": "Rolls a tough nut at zombies",
+        "zh": "把坚果滚向僵尸",
         "words": [
           [
-            "bowling",
-            "原始坚果保龄球"
+            "rolls",
+            "滚动"
           ],
           [
-            "primal",
-            "原始坚果保龄球"
+            "tough",
+            "坚硬"
           ],
           [
-            "wall",
-            "原始坚果保龄球"
+            "nut",
+            "坚果"
           ]
         ]
       }
@@ -13692,20 +13692,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Iceberg Bowling is a helpful plant that fights zombies.",
-    "sentence_zh": "冰冻保龄球是一种帮助你对抗僵尸的植物。",
+    "sentence": "Rolls and freezes zombies",
+    "sentence_zh": "滚向僵尸并冻结它们",
     "words": [
       [
-        "iceberg",
-        "冰冻保龄球"
+        "rolls",
+        "滚动"
       ],
       [
-        "bowling",
-        "冰冻保龄球"
+        "freezes",
+        "冻结"
       ],
       [
-        "is",
-        "植物"
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -13719,20 +13719,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Iceberg Bowling is a helpful plant that fights zombies.",
-        "zh": "冰冻保龄球是一种帮助你对抗僵尸的植物。",
+        "en": "Rolls and freezes zombies",
+        "zh": "滚向僵尸并冻结它们",
         "words": [
           [
-            "iceberg",
-            "冰冻保龄球"
+            "rolls",
+            "滚动"
           ],
           [
-            "bowling",
-            "冰冻保龄球"
+            "freezes",
+            "冻结"
           ],
           [
-            "is",
-            "植物"
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -13772,20 +13772,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Bowling Tall-nut is a helpful plant that fights zombies.",
-    "sentence_zh": "高坚果保龄球是一种帮助你对抗僵尸的植物。",
+    "sentence": "Rolls a tall nut at zombies",
+    "sentence_zh": "把高坚果滚向僵尸",
     "words": [
       [
-        "bowling",
-        "高坚果保龄球"
+        "rolls",
+        "滚动"
       ],
       [
         "tall",
-        "高坚果保龄球"
+        "高的"
       ],
       [
         "nut",
-        "高坚果保龄球"
+        "坚果"
       ]
     ],
     "color": "#4e9f66",
@@ -13799,20 +13799,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Bowling Tall-nut is a helpful plant that fights zombies.",
-        "zh": "高坚果保龄球是一种帮助你对抗僵尸的植物。",
+        "en": "Rolls a tall nut at zombies",
+        "zh": "把高坚果滚向僵尸",
         "words": [
           [
-            "bowling",
-            "高坚果保龄球"
+            "rolls",
+            "滚动"
           ],
           [
             "tall",
-            "高坚果保龄球"
+            "高的"
           ],
           [
             "nut",
-            "高坚果保龄球"
+            "坚果"
           ]
         ]
       }
@@ -13854,16 +13854,16 @@
     "sentence_zh": "惊吓路过的僵尸，并在一段时间后爆炸",
     "words": [
       [
-        "ghost",
-        "幽灵辣椒"
-      ],
-      [
-        "pepper",
-        "幽灵辣椒"
-      ],
-      [
         "haunts",
-        "植物"
+        "缠绕"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "pass",
+        "穿过"
       ]
     ],
     "color": "#4e9f66",
@@ -13884,16 +13884,16 @@
         "zh": "惊吓路过的僵尸，并在一段时间后爆炸",
         "words": [
           [
-            "ghost",
-            "幽灵辣椒"
-          ],
-          [
-            "pepper",
-            "幽灵辣椒"
-          ],
-          [
             "haunts",
-            "植物"
+            "缠绕"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "pass",
+            "穿过"
           ]
         ]
       }
@@ -13957,16 +13957,16 @@
     "sentence_zh": "吸引相邻行靠近的僵尸",
     "words": [
       [
-        "sweet",
-        "甜薯"
-      ],
-      [
-        "potato",
-        "甜薯"
-      ],
-      [
         "attracts",
-        "植物"
+        "吸引"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "lanes",
+        "几行"
       ]
     ],
     "color": "#4e9f66",
@@ -13987,16 +13987,16 @@
         "zh": "吸引相邻行靠近的僵尸",
         "words": [
           [
-            "sweet",
-            "甜薯"
-          ],
-          [
-            "potato",
-            "甜薯"
-          ],
-          [
             "attracts",
-            "植物"
+            "吸引"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "lanes",
+            "几行"
           ]
         ]
       }
@@ -14058,16 +14058,16 @@
     "sentence_zh": "向僵尸投掷燃烧的甜椒子弹，冰释身边的植物",
     "words": [
       [
-        "pepper",
-        "甜椒投手"
-      ],
-      [
-        "pult",
-        "甜椒投手"
-      ],
-      [
         "lobs",
-        "植物"
+        "投掷"
+      ],
+      [
+        "flaming",
+        "燃烧"
+      ],
+      [
+        "peppers",
+        "辣椒"
       ]
     ],
     "color": "#4e9f66",
@@ -14088,16 +14088,16 @@
         "zh": "向僵尸投掷燃烧的甜椒子弹，冰释身边的植物",
         "words": [
           [
-            "pepper",
-            "甜椒投手"
-          ],
-          [
-            "pult",
-            "甜椒投手"
-          ],
-          [
             "lobs",
-            "植物"
+            "投掷"
+          ],
+          [
+            "flaming",
+            "燃烧"
+          ],
+          [
+            "peppers",
+            "辣椒"
           ]
         ]
       }
@@ -14184,16 +14184,16 @@
     "sentence_zh": "种植在冰块上并融化这块冰块",
     "words": [
       [
-        "hot",
-        "烤马铃薯"
-      ],
-      [
-        "potato",
-        "烤马铃薯"
-      ],
-      [
         "plant",
         "植物"
+      ],
+      [
+        "ice",
+        "冰"
+      ],
+      [
+        "block",
+        "挡住"
       ]
     ],
     "color": "#4e9f66",
@@ -14214,16 +14214,16 @@
         "zh": "种植在冰块上并融化这块冰块",
         "words": [
           [
-            "hot",
-            "烤马铃薯"
-          ],
-          [
-            "potato",
-            "烤马铃薯"
-          ],
-          [
             "plant",
             "植物"
+          ],
+          [
+            "ice",
+            "冰"
+          ],
+          [
+            "block",
+            "挡住"
           ]
         ]
       }
@@ -14300,16 +14300,16 @@
     "sentence_zh": "使本行靠近的僵尸眩晕",
     "words": [
       [
-        "stunion",
-        "眩晕洋葱"
-      ],
-      [
         "stuns",
-        "植物"
+        "击晕"
       ],
       [
         "nearby",
-        "植物"
+        "附近"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -14330,16 +14330,16 @@
         "zh": "使本行靠近的僵尸眩晕",
         "words": [
           [
-            "stunion",
-            "眩晕洋葱"
-          ],
-          [
             "stuns",
-            "植物"
+            "击晕"
           ],
           [
             "nearby",
-            "植物"
+            "附近"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -14420,16 +14420,16 @@
     "sentence_zh": "在种植时放置一枚黄金地砖",
     "words": [
       [
-        "gold",
-        "黄金叶"
-      ],
-      [
-        "leaf",
-        "黄金叶"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
+      ],
+      [
+        "gold",
+        "金色"
+      ],
+      [
+        "tile",
+        "格子"
       ]
     ],
     "color": "#4e9f66",
@@ -14450,16 +14450,16 @@
         "zh": "在种植时放置一枚黄金地砖",
         "words": [
           [
-            "gold",
-            "黄金叶"
-          ],
-          [
-            "leaf",
-            "黄金叶"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
+          ],
+          [
+            "gold",
+            "金色"
+          ],
+          [
+            "tile",
+            "格子"
           ]
         ]
       }
@@ -14513,16 +14513,16 @@
     "sentence_zh": "喷射出能在僵尸之间弹跳的投掷物",
     "words": [
       [
-        "a",
-        "AKEE"
+        "lobs",
+        "投掷"
       ],
       [
-        "k",
-        "AKEE"
+        "projectiles",
+        "弹体"
       ],
       [
-        "e",
-        "AKEE"
+        "bounce",
+        "弹跳"
       ]
     ],
     "color": "#4e9f66",
@@ -14543,16 +14543,16 @@
         "zh": "喷射出能在僵尸之间弹跳的投掷物",
         "words": [
           [
-            "a",
-            "AKEE"
+            "lobs",
+            "投掷"
           ],
           [
-            "k",
-            "AKEE"
+            "projectiles",
+            "弹体"
           ],
           [
-            "e",
-            "AKEE"
+            "bounce",
+            "弹跳"
           ]
         ]
       }
@@ -14616,16 +14616,16 @@
     "sentence_zh": "防御的同时对靠近的僵尸造成伤害",
     "words": [
       [
-        "endurian",
-        "榴莲"
-      ],
-      [
         "blocks",
-        "植物"
+        "挡住"
       ],
       [
         "off",
-        "植物"
+        "隔开"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -14646,16 +14646,16 @@
         "zh": "防御的同时对靠近的僵尸造成伤害",
         "words": [
           [
-            "endurian",
-            "榴莲"
-          ],
-          [
             "blocks",
-            "植物"
+            "挡住"
           ],
           [
             "off",
-            "植物"
+            "隔开"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -14715,16 +14715,16 @@
     "sentence_zh": "将僵尸整只吞下，并产出阳光",
     "words": [
       [
-        "toadstool",
-        "金蟾菇"
-      ],
-      [
         "gulps",
-        "植物"
+        "吞下"
       ],
       [
-        "down",
-        "植物"
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "produce",
+        "生产"
       ]
     ],
     "color": "#4e9f66",
@@ -14745,16 +14745,16 @@
         "zh": "将僵尸整只吞下，并产出阳光",
         "words": [
           [
-            "toadstool",
-            "金蟾菇"
-          ],
-          [
             "gulps",
-            "植物"
+            "吞下"
           ],
           [
-            "down",
-            "植物"
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "produce",
+            "生产"
           ]
         ]
       }
@@ -14832,16 +14832,16 @@
     "sentence_zh": "喷发并留下一滩滚烫的岩浆",
     "words": [
       [
-        "lava",
-        "岩浆番石榴"
-      ],
-      [
-        "guava",
-        "岩浆番石榴"
-      ],
-      [
         "erupts",
-        "植物"
+        "喷发"
+      ],
+      [
+        "leaves",
+        "叶子"
+      ],
+      [
+        "burning",
+        "燃烧"
       ]
     ],
     "color": "#4e9f66",
@@ -14862,16 +14862,16 @@
         "zh": "喷发并留下一滩滚烫的岩浆",
         "words": [
           [
-            "lava",
-            "岩浆番石榴"
-          ],
-          [
-            "guava",
-            "岩浆番石榴"
-          ],
-          [
             "erupts",
-            "植物"
+            "喷发"
+          ],
+          [
+            "leaves",
+            "叶子"
+          ],
+          [
+            "burning",
+            "燃烧"
           ]
         ]
       }
@@ -14974,16 +14974,16 @@
     "sentence_zh": "每隔一段时间发动音波攻击",
     "words": [
       [
-        "phat",
-        "魔音甜菜"
-      ],
-      [
-        "beet",
-        "魔音甜菜"
-      ],
-      [
         "thumps",
-        "植物"
+        "捶打"
+      ],
+      [
+        "damage",
+        "伤害"
+      ],
+      [
+        "seconds",
+        "秒"
       ]
     ],
     "color": "#4e9f66",
@@ -15004,16 +15004,16 @@
         "zh": "每隔一段时间发动音波攻击",
         "words": [
           [
-            "phat",
-            "魔音甜菜"
-          ],
-          [
-            "beet",
-            "魔音甜菜"
-          ],
-          [
             "thumps",
-            "植物"
+            "捶打"
+          ],
+          [
+            "damage",
+            "伤害"
+          ],
+          [
+            "seconds",
+            "秒"
           ]
         ]
       }
@@ -15079,16 +15079,16 @@
     "sentence_zh": "随着成长，提供伤害不同的爆浆莓果",
     "words": [
       [
-        "strawburst",
-        "爆浆草莓"
-      ],
-      [
         "grows",
         "生长"
       ],
       [
-        "a",
-        "植物"
+        "berry",
+        "浆果"
+      ],
+      [
+        "small",
+        "小的"
       ]
     ],
     "color": "#4e9f66",
@@ -15109,16 +15109,16 @@
         "zh": "随着成长，提供伤害不同的爆浆莓果",
         "words": [
           [
-            "strawburst",
-            "爆浆草莓"
-          ],
-          [
             "grows",
             "生长"
           ],
           [
-            "a",
-            "植物"
+            "berry",
+            "浆果"
+          ],
+          [
+            "small",
+            "小的"
           ]
         ]
       }
@@ -15200,16 +15200,16 @@
     "sentence_zh": "将僵尸回退到他们出现的位置",
     "words": [
       [
-        "thyme",
-        "逆时草"
-      ],
-      [
-        "warp",
-        "逆时草"
-      ],
-      [
         "sends",
-        "植物"
+        "送出"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "started",
+        "开始"
       ]
     ],
     "color": "#4e9f66",
@@ -15230,16 +15230,16 @@
         "zh": "将僵尸回退到他们出现的位置",
         "words": [
           [
-            "thyme",
-            "逆时草"
-          ],
-          [
-            "warp",
-            "逆时草"
-          ],
-          [
             "sends",
-            "植物"
+            "送出"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "started",
+            "开始"
           ]
         ]
       }
@@ -15310,20 +15310,20 @@
     "family_zh": "健壮家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Rhythm Phat Beet is a helpful plant that fights zombies.",
-    "sentence_zh": "音游甜菜是一种帮助你对抗僵尸的植物。",
+    "sentence": "Beats zombies with rhythm",
+    "sentence_zh": "跟着节奏打击僵尸",
     "words": [
       [
+        "beats",
+        "打击"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
         "rhythm",
-        "音游甜菜"
-      ],
-      [
-        "phat",
-        "音游甜菜"
-      ],
-      [
-        "beet",
-        "音游甜菜"
+        "节奏"
       ]
     ],
     "color": "#4e9f66",
@@ -15337,20 +15337,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Rhythm Phat Beet is a helpful plant that fights zombies.",
-        "zh": "音游甜菜是一种帮助你对抗僵尸的植物。",
+        "en": "Beats zombies with rhythm",
+        "zh": "跟着节奏打击僵尸",
         "words": [
           [
+            "beats",
+            "打击"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
             "rhythm",
-            "音游甜菜"
-          ],
-          [
-            "phat",
-            "音游甜菜"
-          ],
-          [
-            "beet",
-            "音游甜菜"
+            "节奏"
           ]
         ]
       }
@@ -15394,16 +15394,16 @@
     "sentence_zh": "射程短，并且一段时间后消失，在水中能存活更久",
     "words": [
       [
-        "sea",
-        "海蘑菇"
+        "short-range",
+        "近距"
       ],
       [
-        "shroom",
-        "海蘑菇"
+        "shooter",
+        "射手"
       ],
       [
-        "short",
-        "植物"
+        "lasts",
+        "持续"
       ]
     ],
     "color": "#4e9f66",
@@ -15424,16 +15424,16 @@
         "zh": "射程短，并且一段时间后消失，在水中能存活更久",
         "words": [
           [
-            "sea",
-            "海蘑菇"
+            "short-range",
+            "近距"
           ],
           [
-            "shroom",
-            "海蘑菇"
+            "shooter",
+            "射手"
           ],
           [
-            "short",
-            "植物"
+            "lasts",
+            "持续"
           ]
         ]
       }
@@ -15522,16 +15522,16 @@
     "sentence_zh": "把僵尸分散到其他行",
     "words": [
       [
-        "garlic",
-        "大蒜"
-      ],
-      [
         "diverts",
-        "植物"
+        "引开"
       ],
       [
         "zombies",
         "僵尸"
+      ],
+      [
+        "lanes",
+        "几行"
       ]
     ],
     "color": "#4e9f66",
@@ -15552,16 +15552,16 @@
         "zh": "把僵尸分散到其他行",
         "words": [
           [
-            "garlic",
-            "大蒜"
-          ],
-          [
             "diverts",
-            "植物"
+            "引开"
           ],
           [
             "zombies",
             "僵尸"
+          ],
+          [
+            "lanes",
+            "几行"
           ]
         ]
       }
@@ -15627,16 +15627,16 @@
     "sentence_zh": "电击烧毁随机的僵尸",
     "words": [
       [
-        "electric",
-        "闪电蓝莓"
-      ],
-      [
-        "blueberry",
-        "闪电蓝莓"
-      ],
-      [
         "randomly",
-        "植物"
+        "随机"
+      ],
+      [
+        "electrocute",
+        "电击"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -15657,16 +15657,16 @@
         "zh": "电击烧毁随机的僵尸",
         "words": [
           [
-            "electric",
-            "闪电蓝莓"
-          ],
-          [
-            "blueberry",
-            "闪电蓝莓"
-          ],
-          [
             "randomly",
-            "植物"
+            "随机"
+          ],
+          [
+            "electrocute",
+            "电击"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -15736,16 +15736,16 @@
     "sentence_zh": "使僵尸被击败时能产生新的孢子菇",
     "words": [
       [
-        "spore",
-        "孢子菇"
-      ],
-      [
-        "shroom",
-        "孢子菇"
-      ],
-      [
         "spawns",
-        "植物"
+        "生成"
+      ],
+      [
+        "spore-shrooms",
+        "孢子菇"
+      ],
+      [
+        "defeated",
+        "被击败"
       ]
     ],
     "color": "#4e9f66",
@@ -15766,16 +15766,16 @@
         "zh": "使僵尸被击败时能产生新的孢子菇",
         "words": [
           [
-            "spore",
-            "孢子菇"
-          ],
-          [
-            "shroom",
-            "孢子菇"
-          ],
-          [
             "spawns",
-            "植物"
+            "生成"
+          ],
+          [
+            "spore-shrooms",
+            "孢子菇"
+          ],
+          [
+            "defeated",
+            "被击败"
           ]
         ]
       }
@@ -15835,15 +15835,15 @@
     "sentence_zh": "将被打败的植物复活",
     "words": [
       [
-        "intensive",
-        "复活萝卜"
-      ],
-      [
-        "carrot",
-        "复活萝卜"
-      ],
-      [
         "brings",
+        "带来"
+      ],
+      [
+        "eaten",
+        "被吃"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -15865,15 +15865,15 @@
         "zh": "将被打败的植物复活",
         "words": [
           [
-            "intensive",
-            "复活萝卜"
-          ],
-          [
-            "carrot",
-            "复活萝卜"
-          ],
-          [
             "brings",
+            "带来"
+          ],
+          [
+            "eaten",
+            "被吃"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -15937,16 +15937,16 @@
     "sentence_zh": "提供巨大的阳光",
     "words": [
       [
-        "primal",
-        "原始向日葵"
-      ],
-      [
-        "sunflower",
-        "原始向日葵"
-      ],
-      [
         "gives",
         "提供"
+      ],
+      [
+        "large",
+        "巨大"
+      ],
+      [
+        "suns",
+        "阳光"
       ]
     ],
     "color": "#4e9f66",
@@ -15967,16 +15967,16 @@
         "zh": "提供巨大的阳光",
         "words": [
           [
-            "primal",
-            "原始向日葵"
-          ],
-          [
-            "sunflower",
-            "原始向日葵"
-          ],
-          [
             "gives",
             "提供"
+          ],
+          [
+            "large",
+            "巨大"
+          ],
+          [
+            "suns",
+            "阳光"
           ]
         ]
       }
@@ -16041,16 +16041,16 @@
     "sentence_zh": "被吃掉后会变成太阳炸弹",
     "words": [
       [
-        "moon",
-        "月亮豆"
-      ],
-      [
-        "bean",
-        "月亮豆"
-      ],
-      [
         "turn",
-        "植物"
+        "变成"
+      ],
+      [
+        "sunbomb",
+        "阳光弹"
+      ],
+      [
+        "eaten",
+        "被吃"
       ]
     ],
     "color": "#4e9f66",
@@ -16068,16 +16068,16 @@
         "zh": "被吃掉后会变成太阳炸弹",
         "words": [
           [
-            "moon",
-            "月亮豆"
-          ],
-          [
-            "bean",
-            "月亮豆"
-          ],
-          [
             "turn",
-            "植物"
+            "变成"
+          ],
+          [
+            "sunbomb",
+            "阳光弹"
+          ],
+          [
+            "eaten",
+            "被吃"
           ]
         ]
       }
@@ -16139,16 +16139,16 @@
     "sentence_zh": "向身前区域吐出冰雾",
     "words": [
       [
-        "cold",
-        "冰龙草"
-      ],
-      [
-        "snapdragon",
-        "冰龙草"
-      ],
-      [
         "breaths",
-        "植物"
+        "吐息"
+      ],
+      [
+        "icy",
+        "冰冷"
+      ],
+      [
+        "mist",
+        "雾"
       ]
     ],
     "color": "#4e9f66",
@@ -16169,16 +16169,16 @@
         "zh": "向身前区域吐出冰雾",
         "words": [
           [
-            "cold",
-            "冰龙草"
-          ],
-          [
-            "snapdragon",
-            "冰龙草"
-          ],
-          [
             "breaths",
-            "植物"
+            "吐息"
+          ],
+          [
+            "icy",
+            "冰冷"
+          ],
+          [
+            "mist",
+            "雾"
           ]
         ]
       }
@@ -16259,16 +16259,16 @@
     "sentence_zh": "用叶子猛烈地拍击僵尸",
     "words": [
       [
-        "nightshade",
-        "暗影龙葵"
-      ],
-      [
         "smacks",
-        "植物"
+        "拍打"
       ],
       [
         "zombies",
         "僵尸"
+      ],
+      [
+        "slappy",
+        "拍打"
       ]
     ],
     "color": "#4e9f66",
@@ -16289,16 +16289,16 @@
         "zh": "用叶子猛烈地拍击僵尸",
         "words": [
           [
-            "nightshade",
-            "暗影龙葵"
-          ],
-          [
             "smacks",
-            "植物"
+            "拍打"
           ],
           [
             "zombies",
             "僵尸"
+          ],
+          [
+            "slappy",
+            "拍打"
           ]
         ]
       }
@@ -16373,16 +16373,16 @@
     "sentence_zh": "投掷炸裂性花蕾",
     "words": [
       [
-        "dusk",
-        "幽暮投手"
-      ],
-      [
-        "lobber",
-        "幽暮投手"
-      ],
-      [
         "lobs",
-        "植物"
+        "投掷"
+      ],
+      [
+        "explosive",
+        "爆炸"
+      ],
+      [
+        "buds",
+        "花蕾"
       ]
     ],
     "color": "#4e9f66",
@@ -16403,16 +16403,16 @@
         "zh": "投掷炸裂性花蕾",
         "words": [
           [
-            "dusk",
-            "幽暮投手"
-          ],
-          [
-            "lobber",
-            "幽暮投手"
-          ],
-          [
             "lobs",
-            "植物"
+            "投掷"
+          ],
+          [
+            "explosive",
+            "爆炸"
+          ],
+          [
+            "buds",
+            "花蕾"
           ]
         ]
       }
@@ -16488,16 +16488,16 @@
     "sentence_zh": "把僵尸拖入地底",
     "words": [
       [
-        "grimrose",
-        "暗樱草"
-      ],
-      [
         "drags",
-        "植物"
+        "拖走"
       ],
       [
         "zombies",
         "僵尸"
+      ],
+      [
+        "ground",
+        "地面"
       ]
     ],
     "color": "#4e9f66",
@@ -16518,16 +16518,16 @@
         "zh": "把僵尸拖入地底",
         "words": [
           [
-            "grimrose",
-            "暗樱草"
-          ],
-          [
             "drags",
-            "植物"
+            "拖走"
           ],
           [
             "zombies",
             "僵尸"
+          ],
+          [
+            "ground",
+            "地面"
           ]
         ]
       }
@@ -16601,16 +16601,16 @@
     "sentence_zh": "一次性爆射出大量阳光",
     "words": [
       [
-        "gold",
-        "黄金蓓蕾"
-      ],
-      [
-        "bloom",
-        "黄金蓓蕾"
-      ],
-      [
         "produces",
-        "植物"
+        "生产"
+      ],
+      [
+        "burst",
+        "爆发"
+      ],
+      [
+        "sun",
+        "阳光"
       ]
     ],
     "color": "#4e9f66",
@@ -16631,16 +16631,16 @@
         "zh": "一次性爆射出大量阳光",
         "words": [
           [
-            "gold",
-            "黄金蓓蕾"
-          ],
-          [
-            "bloom",
-            "黄金蓓蕾"
-          ],
-          [
             "produces",
-            "植物"
+            "生产"
+          ],
+          [
+            "burst",
+            "爆发"
+          ],
+          [
+            "sun",
+            "阳光"
           ]
         ]
       }
@@ -16709,16 +16709,16 @@
     "sentence_zh": "向僵尸投掷子弹，使之防御力下降",
     "words": [
       [
-        "blooming",
-        "心蕊"
-      ],
-      [
-        "heart",
-        "心蕊"
-      ],
-      [
         "lobs",
-        "植物"
+        "投掷"
+      ],
+      [
+        "projectiles",
+        "弹体"
+      ],
+      [
+        "infatuate",
+        "迷惑"
       ]
     ],
     "color": "#4e9f66",
@@ -16739,16 +16739,16 @@
         "zh": "向僵尸投掷子弹，使之防御力下降",
         "words": [
           [
-            "blooming",
-            "心蕊"
-          ],
-          [
-            "heart",
-            "心蕊"
-          ],
-          [
             "lobs",
-            "植物"
+            "投掷"
+          ],
+          [
+            "projectiles",
+            "弹体"
+          ],
+          [
+            "infatuate",
+            "迷惑"
           ]
         ]
       }
@@ -16809,16 +16809,16 @@
     "sentence_zh": "缩小僵尸，使他们变弱",
     "words": [
       [
-        "shrinking",
-        "畏缩紫罗兰"
-      ],
-      [
-        "violet",
-        "畏缩紫罗兰"
-      ],
-      [
         "shrinks",
-        "植物"
+        "缩小"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "makes",
+        "变成"
       ]
     ],
     "color": "#4e9f66",
@@ -16839,16 +16839,16 @@
         "zh": "缩小僵尸，使他们变弱",
         "words": [
           [
-            "shrinking",
-            "畏缩紫罗兰"
-          ],
-          [
-            "violet",
-            "畏缩紫罗兰"
-          ],
-          [
             "shrinks",
-            "植物"
+            "缩小"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "makes",
+            "变成"
           ]
         ]
       }
@@ -16937,16 +16937,16 @@
     "sentence_zh": "吸引僵尸并焚烧",
     "words": [
       [
-        "hot",
-        "热辣海枣"
-      ],
-      [
-        "date",
-        "热辣海枣"
-      ],
-      [
         "attracts",
-        "植物"
+        "吸引"
+      ],
+      [
+        "burns",
+        "焚烧"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -16967,16 +16967,16 @@
         "zh": "吸引僵尸并焚烧",
         "words": [
           [
-            "hot",
-            "热辣海枣"
-          ],
-          [
-            "date",
-            "热辣海枣"
-          ],
-          [
             "attracts",
-            "植物"
+            "吸引"
+          ],
+          [
+            "burns",
+            "焚烧"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -17075,16 +17075,16 @@
     "sentence_zh": "点击向前喷射火焰",
     "words": [
       [
-        "fire",
-        "攻击"
+        "tap",
+        "点击"
       ],
       [
         "gourd",
-        "火葫芦"
+        "葫芦"
       ],
       [
-        "tap",
-        "植物"
+        "breathe",
+        "喷出"
       ]
     ],
     "color": "#4e9f66",
@@ -17102,16 +17102,16 @@
         "zh": "点击向前喷射火焰",
         "words": [
           [
-            "fire",
-            "攻击"
+            "tap",
+            "点击"
           ],
           [
             "gourd",
-            "火葫芦"
+            "葫芦"
           ],
           [
-            "tap",
-            "植物"
+            "breathe",
+            "喷出"
           ]
         ]
       }
@@ -17213,16 +17213,16 @@
     "sentence_zh": "在地面上来回移动，对经过的僵尸造成伤害",
     "words": [
       [
-        "bamboo",
-        "竹笋"
-      ],
-      [
-        "shoot",
-        "发射"
-      ],
-      [
         "digs",
-        "植物"
+        "挖掘"
+      ],
+      [
+        "forth",
+        "向前"
+      ],
+      [
+        "damages",
+        "伤害"
       ]
     ],
     "color": "#4e9f66",
@@ -17240,16 +17240,16 @@
         "zh": "在地面上来回移动，对经过的僵尸造成伤害",
         "words": [
           [
-            "bamboo",
-            "竹笋"
-          ],
-          [
-            "shoot",
-            "发射"
-          ],
-          [
             "digs",
-            "植物"
+            "挖掘"
+          ],
+          [
+            "forth",
+            "向前"
+          ],
+          [
+            "damages",
+            "伤害"
           ]
         ]
       }
@@ -17316,16 +17316,16 @@
     "sentence_zh": "向僵尸投掷雪球和冰锥",
     "words": [
       [
-        "snowdrop",
-        "雪滴花"
-      ],
-      [
         "throw",
-        "植物"
+        "投掷"
       ],
       [
         "snow",
-        "植物"
+        "雪"
+      ],
+      [
+        "balls",
+        "球"
       ]
     ],
     "color": "#4e9f66",
@@ -17343,16 +17343,16 @@
         "zh": "向僵尸投掷雪球和冰锥",
         "words": [
           [
-            "snowdrop",
-            "雪滴花"
-          ],
-          [
             "throw",
-            "植物"
+            "投掷"
           ],
           [
             "snow",
-            "植物"
+            "雪"
+          ],
+          [
+            "balls",
+            "球"
           ]
         ]
       }
@@ -17435,16 +17435,16 @@
     "sentence_zh": "受伤时对范围内僵尸造成伤害",
     "words": [
       [
-        "lychee",
-        "荔枝"
-      ],
-      [
         "hurts",
-        "植物"
+        "伤害"
       ],
       [
         "zombies",
         "僵尸"
+      ],
+      [
+        "area",
+        "范围"
       ]
     ],
     "color": "#4e9f66",
@@ -17462,16 +17462,16 @@
         "zh": "受伤时对范围内僵尸造成伤害",
         "words": [
           [
-            "lychee",
-            "荔枝"
-          ],
-          [
             "hurts",
-            "植物"
+            "伤害"
           ],
           [
             "zombies",
             "僵尸"
+          ],
+          [
+            "area",
+            "范围"
           ]
         ]
       }
@@ -17543,16 +17543,16 @@
     "sentence_zh": "魅惑恐龙以僵尸为敌",
     "words": [
       [
-        "perfume",
-        "香水菇"
-      ],
-      [
-        "shroom",
-        "香水菇"
-      ],
-      [
         "charms",
-        "植物"
+        "魅惑"
+      ],
+      [
+        "dinosaurs",
+        "恐龙"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -17573,16 +17573,16 @@
         "zh": "魅惑恐龙以僵尸为敌",
         "words": [
           [
-            "perfume",
-            "香水菇"
-          ],
-          [
-            "shroom",
-            "香水菇"
-          ],
-          [
             "charms",
-            "植物"
+            "魅惑"
+          ],
+          [
+            "dinosaurs",
+            "恐龙"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -17652,16 +17652,16 @@
     "sentence_zh": "感化僵尸，使之生产阳光",
     "words": [
       [
-        "solar",
-        "阳光鼠尾草"
-      ],
-      [
-        "sage",
-        "阳光鼠尾草"
-      ],
-      [
         "illuminates",
-        "植物"
+        "照亮"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "sun",
+        "阳光"
       ]
     ],
     "color": "#4e9f66",
@@ -17682,16 +17682,16 @@
         "zh": "感化僵尸，使之生产阳光",
         "words": [
           [
-            "solar",
-            "阳光鼠尾草"
-          ],
-          [
-            "sage",
-            "阳光鼠尾草"
-          ],
-          [
             "illuminates",
-            "植物"
+            "照亮"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "sun",
+            "阳光"
           ]
         ]
       }
@@ -17780,16 +17780,16 @@
     "sentence_zh": "点击后，选择一格发射竹竿",
     "words": [
       [
-        "bamboozle",
-        "整人竹"
-      ],
-      [
         "click",
-        "植物"
+        "点击"
       ],
       [
-        "on",
-        "植物"
+        "bamboo",
+        "竹子"
+      ],
+      [
+        "tile",
+        "格子"
       ]
     ],
     "color": "#4e9f66",
@@ -17807,16 +17807,16 @@
         "zh": "点击后，选择一格发射竹竿",
         "words": [
           [
-            "bamboozle",
-            "整人竹"
-          ],
-          [
             "click",
-            "植物"
+            "点击"
           ],
           [
-            "on",
-            "植物"
+            "bamboo",
+            "竹子"
+          ],
+          [
+            "tile",
+            "格子"
           ]
         ]
       }
@@ -17890,20 +17890,20 @@
     "family_zh": "防御家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Bamboo Busket is a helpful plant that fights zombies.",
-    "sentence_zh": "竹篮是一种帮助你对抗僵尸的植物。",
+    "sentence": "Drops bamboo on zombies",
+    "sentence_zh": "把竹子砸向僵尸",
     "words": [
       [
+        "drops",
+        "掉落"
+      ],
+      [
         "bamboo",
-        "竹篮"
+        "竹子"
       ],
       [
-        "busket",
-        "竹篮"
-      ],
-      [
-        "is",
-        "植物"
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -17917,20 +17917,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Bamboo Busket is a helpful plant that fights zombies.",
-        "zh": "竹篮是一种帮助你对抗僵尸的植物。",
+        "en": "Drops bamboo on zombies",
+        "zh": "把竹子砸向僵尸",
         "words": [
           [
+            "drops",
+            "掉落"
+          ],
+          [
             "bamboo",
-            "竹篮"
+            "竹子"
           ],
           [
-            "busket",
-            "竹篮"
-          ],
-          [
-            "is",
-            "植物"
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -17979,16 +17979,16 @@
     "sentence_zh": "不直接砸中，子弹在空中对成群僵尸造成大量伤害",
     "words": [
       [
-        "cantaloupe",
-        "哈密瓜投手"
-      ],
-      [
-        "pult",
-        "哈密瓜投手"
-      ],
-      [
         "heavily",
-        "植物"
+        "猛烈"
+      ],
+      [
+        "damages",
+        "伤害"
+      ],
+      [
+        "groups",
+        "成群"
       ]
     ],
     "color": "#4e9f66",
@@ -18006,16 +18006,16 @@
         "zh": "不直接砸中，子弹在空中对成群僵尸造成大量伤害",
         "words": [
           [
-            "cantaloupe",
-            "哈密瓜投手"
-          ],
-          [
-            "pult",
-            "哈密瓜投手"
-          ],
-          [
             "heavily",
-            "植物"
+            "猛烈"
+          ],
+          [
+            "damages",
+            "伤害"
+          ],
+          [
+            "groups",
+            "成群"
           ]
         ]
       }
@@ -18101,16 +18101,16 @@
     "sentence_zh": "对走过的僵尸造成伤害并使之冷冻",
     "words": [
       [
-        "iceweed",
-        "冰地刺"
-      ],
-      [
         "hurts",
-        "植物"
+        "伤害"
       ],
       [
-        "and",
-        "植物"
+        "chills",
+        "冰冻"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -18131,16 +18131,16 @@
         "zh": "对走过的僵尸造成伤害并使之冷冻",
         "words": [
           [
-            "iceweed",
-            "冰地刺"
-          ],
-          [
             "hurts",
-            "植物"
+            "伤害"
           ],
           [
-            "and",
-            "植物"
+            "chills",
+            "冰冻"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -18233,16 +18233,16 @@
     "sentence_zh": "调整角度并向五个方向发射星星",
     "words": [
       [
-        "angel",
-        "天使星星果"
-      ],
-      [
-        "starfruit",
-        "天使星星果"
-      ],
-      [
         "adjusts",
-        "植物"
+        "调整"
+      ],
+      [
+        "angle",
+        "角度"
+      ],
+      [
+        "shoots",
+        "发射"
       ]
     ],
     "color": "#4e9f66",
@@ -18260,16 +18260,16 @@
         "zh": "调整角度并向五个方向发射星星",
         "words": [
           [
-            "angel",
-            "天使星星果"
-          ],
-          [
-            "starfruit",
-            "天使星星果"
-          ],
-          [
             "adjusts",
-            "植物"
+            "调整"
+          ],
+          [
+            "angle",
+            "角度"
+          ],
+          [
+            "shoots",
+            "发射"
           ]
         ]
       }
@@ -18341,16 +18341,16 @@
     "sentence_zh": "冰冻并伤害僵尸，将其中几名僵尸变作冰雕",
     "words": [
       [
-        "ice",
-        "寒冰蓓蕾"
-      ],
-      [
-        "bloom",
-        "寒冰蓓蕾"
-      ],
-      [
         "freezes",
-        "植物"
+        "冻结"
+      ],
+      [
+        "damages",
+        "伤害"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -18371,16 +18371,16 @@
         "zh": "冰冻并伤害僵尸，将其中几名僵尸变作冰雕",
         "words": [
           [
-            "ice",
-            "寒冰蓓蕾"
-          ],
-          [
-            "bloom",
-            "寒冰蓓蕾"
-          ],
-          [
             "freezes",
-            "植物"
+            "冻结"
+          ],
+          [
+            "damages",
+            "伤害"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -18459,20 +18459,20 @@
     "damage": "—",
     "range": "—",
     "range_zh": "特殊能力",
-    "sentence": "Grows helpful zomboids",
-    "sentence_zh": "生成为我们战斗的豆腐僵尸",
+    "sentence": "Grows zomboids that fight zombies",
+    "sentence_zh": "长出帮你打架的小僵尸",
     "words": [
-      [
-        "zoybean",
-        "豆腐尸荚"
-      ],
-      [
-        "pod",
-        "豆腐尸荚"
-      ],
       [
         "grows",
         "生长"
+      ],
+      [
+        "zomboids",
+        "小僵尸"
+      ],
+      [
+        "fight",
+        "对抗"
       ]
     ],
     "color": "#4e9f66",
@@ -18489,20 +18489,20 @@
     "obtain_world_code": "market",
     "learning_sentences": [
       {
-        "en": "Grows helpful zomboids",
-        "zh": "生成为我们战斗的豆腐僵尸",
+        "en": "Grows zomboids that fight zombies",
+        "zh": "长出帮你打架的小僵尸",
         "words": [
-          [
-            "zoybean",
-            "豆腐尸荚"
-          ],
-          [
-            "pod",
-            "豆腐尸荚"
-          ],
           [
             "grows",
             "生长"
+          ],
+          [
+            "zomboids",
+            "小僵尸"
+          ],
+          [
+            "fight",
+            "对抗"
           ]
         ]
       }
@@ -18577,20 +18577,20 @@
     "family_zh": "爆裂家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Explodes on contact, spawning Seedlings around",
-    "sentence_zh": "在僵尸触碰时爆炸，并在周围生成小种子",
+    "sentence": "Explodes and scatters seeds",
+    "sentence_zh": "爆炸并散出种子",
     "words": [
-      [
-        "atomic",
-        "原子石榴弹"
-      ],
-      [
-        "bombegranate",
-        "原子石榴弹"
-      ],
       [
         "explodes",
         "爆炸"
+      ],
+      [
+        "scatters",
+        "散开"
+      ],
+      [
+        "seeds",
+        "种子"
       ]
     ],
     "color": "#4e9f66",
@@ -18604,20 +18604,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Explodes on contact, spawning Seedlings around",
-        "zh": "在僵尸触碰时爆炸，并在周围生成小种子",
+        "en": "Explodes and scatters seeds",
+        "zh": "爆炸并散出种子",
         "words": [
-          [
-            "atomic",
-            "原子石榴弹"
-          ],
-          [
-            "bombegranate",
-            "原子石榴弹"
-          ],
           [
             "explodes",
             "爆炸"
+          ],
+          [
+            "scatters",
+            "散开"
+          ],
+          [
+            "seeds",
+            "种子"
           ]
         ]
       }
@@ -18738,19 +18738,19 @@
     "family_zh": "爆裂家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Seedling is a helpful plant that fights zombies.",
-    "sentence_zh": "小种子是一种帮助你对抗僵尸的植物。",
+    "sentence": "Grows into a random plant",
+    "sentence_zh": "长成一株随机植物",
     "words": [
       [
-        "seedling",
-        "小种子"
+        "grows",
+        "生长"
       ],
       [
-        "is",
-        "植物"
+        "random",
+        "随机"
       ],
       [
-        "a",
+        "plant",
         "植物"
       ]
     ],
@@ -18765,19 +18765,19 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Seedling is a helpful plant that fights zombies.",
-        "zh": "小种子是一种帮助你对抗僵尸的植物。",
+        "en": "Grows into a random plant",
+        "zh": "长成一株随机植物",
         "words": [
           [
-            "seedling",
-            "小种子"
+            "grows",
+            "生长"
           ],
           [
-            "is",
-            "植物"
+            "random",
+            "随机"
           ],
           [
-            "a",
+            "plant",
             "植物"
           ]
         ]
@@ -18831,20 +18831,20 @@
     "damage": "—",
     "range": "2 Tiles",
     "range_zh": "2 格",
-    "sentence": "Warms and flames",
-    "sentence_zh": "温暖四周并喷火",
+    "sentence": "Warms plants and shoots flames",
+    "sentence_zh": "温暖植物并喷出火焰",
     "words": [
       [
-        "pyre",
-        "柴火藤蔓"
-      ],
-      [
-        "vine",
-        "柴火藤蔓"
-      ],
-      [
         "warms",
+        "温暖"
+      ],
+      [
+        "plants",
         "植物"
+      ],
+      [
+        "shoots",
+        "发射"
       ]
     ],
     "color": "#4e9f66",
@@ -18861,20 +18861,20 @@
     "obtain_world_code": "epic",
     "learning_sentences": [
       {
-        "en": "Warms and flames",
-        "zh": "温暖四周并喷火",
+        "en": "Warms plants and shoots flames",
+        "zh": "温暖植物并喷出火焰",
         "words": [
           [
-            "pyre",
-            "柴火藤蔓"
-          ],
-          [
-            "vine",
-            "柴火藤蔓"
-          ],
-          [
             "warms",
+            "温暖"
+          ],
+          [
+            "plants",
             "植物"
+          ],
+          [
+            "shoots",
+            "发射"
           ]
         ]
       }
@@ -18941,16 +18941,16 @@
     "sentence_zh": "促进阳光的生产",
     "words": [
       [
-        "shine",
-        "闪耀藤蔓"
-      ],
-      [
-        "vine",
-        "闪耀藤蔓"
-      ],
-      [
         "increases",
-        "植物"
+        "增加"
+      ],
+      [
+        "sun",
+        "阳光"
+      ],
+      [
+        "production",
+        "产量"
       ]
     ],
     "color": "#4e9f66",
@@ -18971,16 +18971,16 @@
         "zh": "促进阳光的生产",
         "words": [
           [
-            "shine",
-            "闪耀藤蔓"
-          ],
-          [
-            "vine",
-            "闪耀藤蔓"
-          ],
-          [
             "increases",
-            "植物"
+            "增加"
+          ],
+          [
+            "sun",
+            "阳光"
+          ],
+          [
+            "production",
+            "产量"
           ]
         ]
       }
@@ -19068,20 +19068,20 @@
     "family_zh": "无",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Atomic Bombegranate is a helpful plant that fights zombies.",
-    "sentence_zh": "原子石榴弹是一种帮助你对抗僵尸的植物。",
+    "sentence": "Explodes and scatters seeds",
+    "sentence_zh": "爆炸并散出种子",
     "words": [
       [
-        "atomic",
-        "原子石榴弹"
+        "explodes",
+        "爆炸"
       ],
       [
-        "bombegranate",
-        "原子石榴弹"
+        "scatters",
+        "散开"
       ],
       [
-        "is",
-        "植物"
+        "seeds",
+        "种子"
       ]
     ],
     "color": "#4e9f66",
@@ -19095,20 +19095,20 @@
     "obtain_world_code": "epic",
     "learning_sentences": [
       {
-        "en": "Atomic Bombegranate is a helpful plant that fights zombies.",
-        "zh": "原子石榴弹是一种帮助你对抗僵尸的植物。",
+        "en": "Explodes and scatters seeds",
+        "zh": "爆炸并散出种子",
         "words": [
           [
-            "atomic",
-            "原子石榴弹"
+            "explodes",
+            "爆炸"
           ],
           [
-            "bombegranate",
-            "原子石榴弹"
+            "scatters",
+            "散开"
           ],
           [
-            "is",
-            "植物"
+            "seeds",
+            "种子"
           ]
         ]
       }
@@ -19142,16 +19142,16 @@
     "sentence_zh": "伤害身边的僵尸，点击发射障碍",
     "words": [
       [
-        "holly",
-        "冬青骑士"
-      ],
-      [
-        "knight",
-        "冬青骑士"
-      ],
-      [
         "damages",
-        "植物"
+        "伤害"
+      ],
+      [
+        "attacking",
+        "进攻"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -19169,16 +19169,16 @@
         "zh": "伤害身边的僵尸，点击发射障碍",
         "words": [
           [
-            "holly",
-            "冬青骑士"
-          ],
-          [
-            "knight",
-            "冬青骑士"
-          ],
-          [
             "damages",
-            "植物"
+            "伤害"
+          ],
+          [
+            "attacking",
+            "进攻"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -19255,20 +19255,20 @@
     "family_zh": "防御家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Holly Barrier Leaf is a helpful plant that fights zombies.",
-    "sentence_zh": "冬青骑士障碍是一种帮助你对抗僵尸的植物。",
+    "sentence": "Creates a holly barrier",
+    "sentence_zh": "制造冬青屏障",
     "words": [
       [
+        "creates",
+        "制造"
+      ],
+      [
         "holly",
-        "冬青骑士障碍"
+        "冬青"
       ],
       [
         "barrier",
-        "冬青骑士障碍"
-      ],
-      [
-        "leaf",
-        "冬青骑士障碍"
+        "屏障"
       ]
     ],
     "color": "#4e9f66",
@@ -19282,20 +19282,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Holly Barrier Leaf is a helpful plant that fights zombies.",
-        "zh": "冬青骑士障碍是一种帮助你对抗僵尸的植物。",
+        "en": "Creates a holly barrier",
+        "zh": "制造冬青屏障",
         "words": [
           [
+            "creates",
+            "制造"
+          ],
+          [
             "holly",
-            "冬青骑士障碍"
+            "冬青"
           ],
           [
             "barrier",
-            "冬青骑士障碍"
-          ],
-          [
-            "leaf",
-            "冬青骑士障碍"
+            "屏障"
           ]
         ]
       }
@@ -19342,20 +19342,20 @@
     "family_zh": "防御家族",
     "unlock": "International edition",
     "unlock_zh": "特殊与高级植物",
-    "sentence": "Plantfood Holly Barrier Leaf is a helpful plant that fights zombies.",
-    "sentence_zh": "叶绿素冬青骑士障碍是一种帮助你对抗僵尸的植物。",
+    "sentence": "Creates a stronger holly barrier",
+    "sentence_zh": "制造更强的冬青屏障",
     "words": [
       [
-        "plantfood",
-        "叶绿素冬青骑士障碍"
+        "creates",
+        "制造"
+      ],
+      [
+        "stronger",
+        "更强"
       ],
       [
         "holly",
-        "叶绿素冬青骑士障碍"
-      ],
-      [
-        "barrier",
-        "叶绿素冬青骑士障碍"
+        "冬青"
       ]
     ],
     "color": "#4e9f66",
@@ -19369,20 +19369,20 @@
     "obtain_world_code": "",
     "learning_sentences": [
       {
-        "en": "Plantfood Holly Barrier Leaf is a helpful plant that fights zombies.",
-        "zh": "叶绿素冬青骑士障碍是一种帮助你对抗僵尸的植物。",
+        "en": "Creates a stronger holly barrier",
+        "zh": "制造更强的冬青屏障",
         "words": [
           [
-            "plantfood",
-            "叶绿素冬青骑士障碍"
+            "creates",
+            "制造"
+          ],
+          [
+            "stronger",
+            "更强"
           ],
           [
             "holly",
-            "叶绿素冬青骑士障碍"
-          ],
-          [
-            "barrier",
-            "叶绿素冬青骑士障碍"
+            "冬青"
           ]
         ]
       }
@@ -19430,15 +19430,15 @@
     "sentence_zh": "治疗右边的植物",
     "words": [
       [
-        "aloe",
-        "芦荟"
-      ],
-      [
         "heals",
-        "植物"
+        "治疗"
       ],
       [
         "rightward",
+        "右侧"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -19460,15 +19460,15 @@
         "zh": "治疗右边的植物",
         "words": [
           [
-            "aloe",
-            "芦荟"
-          ],
-          [
             "heals",
-            "植物"
+            "治疗"
           ],
           [
             "rightward",
+            "右侧"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -19526,16 +19526,16 @@
     "sentence_zh": "魅惑随机的僵尸",
     "words": [
       [
-        "caulipower",
-        "超能花菜"
-      ],
-      [
         "hypnotizes",
-        "植物"
+        "催眠"
       ],
       [
         "electrocute",
-        "植物"
+        "电击"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -19556,16 +19556,16 @@
         "zh": "魅惑随机的僵尸",
         "words": [
           [
-            "caulipower",
-            "超能花菜"
-          ],
-          [
             "hypnotizes",
-            "植物"
+            "催眠"
           ],
           [
             "electrocute",
-            "植物"
+            "电击"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -19649,16 +19649,16 @@
     "sentence_zh": "制造口香糖障碍",
     "words": [
       [
-        "gumnut",
-        "香果胶"
-      ],
-      [
         "creates",
-        "创造"
+        "制造"
       ],
       [
         "gum",
-        "植物"
+        "口香糖"
+      ],
+      [
+        "barriers",
+        "障碍"
       ]
     ],
     "color": "#4e9f66",
@@ -19679,16 +19679,16 @@
         "zh": "制造口香糖障碍",
         "words": [
           [
-            "gumnut",
-            "香果胶"
-          ],
-          [
             "creates",
-            "创造"
+            "制造"
           ],
           [
             "gum",
-            "植物"
+            "口香糖"
+          ],
+          [
+            "barriers",
+            "障碍"
           ]
         ]
       }
@@ -19764,15 +19764,15 @@
     "sentence_zh": "强化防御植物",
     "words": [
       [
-        "reinforce",
-        "防御薄荷"
-      ],
-      [
-        "mint",
-        "防御薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "defence",
+        "防御"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -19794,15 +19794,15 @@
         "zh": "强化防御植物",
         "words": [
           [
-            "reinforce",
-            "防御薄荷"
-          ],
-          [
-            "mint",
-            "防御薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "defence",
+            "防御"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -19863,15 +19863,15 @@
     "sentence_zh": "强化阳光植物",
     "words": [
       [
-        "enlighten",
-        "启明薄荷"
-      ],
-      [
-        "mint",
-        "启明薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "sun",
+        "阳光"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -19893,15 +19893,15 @@
         "zh": "强化阳光植物",
         "words": [
           [
-            "enlighten",
-            "启明薄荷"
-          ],
-          [
-            "mint",
-            "启明薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "sun",
+            "阳光"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -19962,15 +19962,15 @@
     "sentence_zh": "强化寒冻植物",
     "words": [
       [
-        "winter",
-        "寒冻薄荷"
-      ],
-      [
-        "mint",
-        "寒冻薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "cold",
+        "寒冷"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -19992,15 +19992,15 @@
         "zh": "强化寒冻植物",
         "words": [
           [
-            "winter",
-            "寒冻薄荷"
-          ],
-          [
-            "mint",
-            "寒冻薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "cold",
+            "寒冷"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -20061,15 +20061,15 @@
     "sentence_zh": "强化穿刺植物",
     "words": [
       [
-        "spear",
-        "穿刺薄荷"
-      ],
-      [
-        "mint",
-        "穿刺薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "piercing",
+        "穿透"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -20091,15 +20091,15 @@
         "zh": "强化穿刺植物",
         "words": [
           [
-            "spear",
-            "穿刺薄荷"
-          ],
-          [
-            "mint",
-            "穿刺薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "piercing",
+            "穿透"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -20160,16 +20160,16 @@
     "sentence_zh": "强化直射子弹的植物",
     "words": [
       [
-        "appease",
-        "平射薄荷"
-      ],
-      [
-        "mint",
-        "平射薄荷"
-      ],
-      [
         "boosts",
-        "植物"
+        "强化"
+      ],
+      [
+        "straight",
+        "直线"
+      ],
+      [
+        "shooters",
+        "射手"
       ]
     ],
     "color": "#4e9f66",
@@ -20190,16 +20190,16 @@
         "zh": "强化直射子弹的植物",
         "words": [
           [
-            "appease",
-            "平射薄荷"
-          ],
-          [
-            "mint",
-            "平射薄荷"
-          ],
-          [
             "boosts",
-            "植物"
+            "强化"
+          ],
+          [
+            "straight",
+            "直线"
+          ],
+          [
+            "shooters",
+            "射手"
           ]
         ]
       }
@@ -20261,15 +20261,15 @@
     "sentence_zh": "强化近战的植物",
     "words": [
       [
-        "enforce",
-        "健壮薄荷"
-      ],
-      [
-        "mint",
-        "健壮薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "melee",
+        "近战"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -20291,15 +20291,15 @@
         "zh": "强化近战的植物",
         "words": [
           [
-            "enforce",
-            "健壮薄荷"
-          ],
-          [
-            "mint",
-            "健壮薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "melee",
+            "近战"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -20363,15 +20363,15 @@
     "sentence_zh": "强化火焰植物",
     "words": [
       [
-        "pepper",
-        "热辣薄荷"
-      ],
-      [
-        "mint",
-        "热辣薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "fire",
+        "火"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -20393,15 +20393,15 @@
         "zh": "强化火焰植物",
         "words": [
           [
-            "pepper",
-            "热辣薄荷"
-          ],
-          [
-            "mint",
-            "热辣薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "fire",
+            "火"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -20462,15 +20462,15 @@
     "sentence_zh": "强化爆炸植物",
     "words": [
       [
-        "bombard",
-        "爆裂薄荷"
-      ],
-      [
-        "mint",
-        "爆裂薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "explosive",
+        "爆炸"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -20492,15 +20492,15 @@
         "zh": "强化爆炸植物",
         "words": [
           [
-            "bombard",
-            "爆裂薄荷"
-          ],
-          [
-            "mint",
-            "爆裂薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "explosive",
+            "爆炸"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -20563,15 +20563,15 @@
     "sentence_zh": "强化暗影植物",
     "words": [
       [
-        "conceal",
-        "暗影薄荷"
-      ],
-      [
-        "mint",
-        "暗影薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "shadow",
+        "暗影"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -20593,15 +20593,15 @@
         "zh": "强化暗影植物",
         "words": [
           [
-            "conceal",
-            "暗影薄荷"
-          ],
-          [
-            "mint",
-            "暗影薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "shadow",
+            "暗影"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -20663,15 +20663,15 @@
     "sentence_zh": "强化毒性植物和菌类",
     "words": [
       [
-        "ail",
-        "剧毒薄荷"
-      ],
-      [
-        "mint",
-        "剧毒薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "poison",
+        "毒素"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -20693,15 +20693,15 @@
         "zh": "强化毒性植物和菌类",
         "words": [
           [
-            "ail",
-            "剧毒薄荷"
-          ],
-          [
-            "mint",
-            "剧毒薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "poison",
+            "毒素"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -20762,15 +20762,15 @@
     "sentence_zh": "强化魔法植物",
     "words": [
       [
-        "enchant",
-        "魔法薄荷"
-      ],
-      [
-        "mint",
-        "魔法薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "magical",
+        "魔法"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -20792,15 +20792,15 @@
         "zh": "强化魔法植物",
         "words": [
           [
-            "enchant",
-            "魔法薄荷"
-          ],
-          [
-            "mint",
-            "魔法薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "magical",
+            "魔法"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -20861,15 +20861,15 @@
     "sentence_zh": "强化带电植物",
     "words": [
       [
-        "fila",
-        "电能薄荷"
-      ],
-      [
-        "mint",
-        "电能薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "electricity",
+        "电"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -20891,15 +20891,15 @@
         "zh": "强化带电植物",
         "words": [
           [
-            "fila",
-            "电能薄荷"
-          ],
-          [
-            "mint",
-            "电能薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "electricity",
+            "电"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -20963,15 +20963,15 @@
     "sentence_zh": "强化滞缓植物",
     "words": [
       [
-        "contain",
-        "滞缓薄荷"
-      ],
-      [
-        "mint",
-        "滞缓薄荷"
-      ],
-      [
         "boosts",
+        "强化"
+      ],
+      [
+        "slowing",
+        "减速"
+      ],
+      [
+        "plants",
         "植物"
       ]
     ],
@@ -20993,15 +20993,15 @@
         "zh": "强化滞缓植物",
         "words": [
           [
-            "contain",
-            "滞缓薄荷"
-          ],
-          [
-            "mint",
-            "滞缓薄荷"
-          ],
-          [
             "boosts",
+            "强化"
+          ],
+          [
+            "slowing",
+            "减速"
+          ],
+          [
+            "plants",
             "植物"
           ]
         ]
@@ -21062,16 +21062,16 @@
     "sentence_zh": "强化炮类和投掷类植物",
     "words": [
       [
-        "arma",
-        "军械薄荷"
-      ],
-      [
-        "mint",
-        "军械薄荷"
-      ],
-      [
         "boosts",
-        "植物"
+        "强化"
+      ],
+      [
+        "cannon",
+        "大炮"
+      ],
+      [
+        "lobbing",
+        "投掷"
       ]
     ],
     "color": "#4e9f66",
@@ -21092,16 +21092,16 @@
         "zh": "强化炮类和投掷类植物",
         "words": [
           [
-            "arma",
-            "军械薄荷"
-          ],
-          [
-            "mint",
-            "军械薄荷"
-          ],
-          [
             "boosts",
-            "植物"
+            "强化"
+          ],
+          [
+            "cannon",
+            "大炮"
+          ],
+          [
+            "lobbing",
+            "投掷"
           ]
         ]
       }
@@ -21163,16 +21163,16 @@
     "sentence_zh": "向僵尸发射 3 颗豌豆，两栖",
     "words": [
       [
-        "seashooter",
-        "海豌豆"
-      ],
-      [
         "amphibious",
-        "植物"
+        "水陆"
       ],
       [
         "plant",
         "植物"
+      ],
+      [
+        "shoots",
+        "发射"
       ]
     ],
     "color": "#4e9f66",
@@ -21193,16 +21193,16 @@
         "zh": "向僵尸发射 3 颗豌豆，两栖",
         "words": [
           [
-            "seashooter",
-            "海豌豆"
-          ],
-          [
             "amphibious",
-            "植物"
+            "水陆"
           ],
           [
             "plant",
             "植物"
+          ],
+          [
+            "shoots",
+            "发射"
           ]
         ]
       }
@@ -21276,16 +21276,16 @@
     "sentence_zh": "向僵尸发射穿透且使之减速的光束",
     "words": [
       [
-        "shadow",
-        "暗影豌豆"
-      ],
-      [
-        "peashooter",
-        "暗影豌豆"
-      ],
-      [
         "fires",
-        "攻击"
+        "发射"
+      ],
+      [
+        "piercing",
+        "穿透"
+      ],
+      [
+        "slowing",
+        "减速"
       ]
     ],
     "color": "#4e9f66",
@@ -21306,16 +21306,16 @@
         "zh": "向僵尸发射穿透且使之减速的光束",
         "words": [
           [
-            "shadow",
-            "暗影豌豆"
-          ],
-          [
-            "peashooter",
-            "暗影豌豆"
-          ],
-          [
             "fires",
-            "攻击"
+            "发射"
+          ],
+          [
+            "piercing",
+            "穿透"
+          ],
+          [
+            "slowing",
+            "减速"
           ]
         ]
       }
@@ -21404,19 +21404,19 @@
     "range": "—",
     "range_zh": "特殊能力",
     "sentence": "Powered murk damages zombies",
-    "sentence_zh": "供能时的胶体会对僵尸造成伤害",
+    "sentence_zh": "供能后的暗雾伤害僵尸",
     "words": [
       [
-        "murkadamia",
-        "暗影夏威夷果"
-      ],
-      [
-        "nut",
-        "暗影夏威夷果"
-      ],
-      [
         "powered",
-        "植物"
+        "供能"
+      ],
+      [
+        "murk",
+        "暗雾"
+      ],
+      [
+        "damages",
+        "伤害"
       ]
     ],
     "color": "#4e9f66",
@@ -21434,19 +21434,19 @@
     "learning_sentences": [
       {
         "en": "Powered murk damages zombies",
-        "zh": "供能时的胶体会对僵尸造成伤害",
+        "zh": "供能后的暗雾伤害僵尸",
         "words": [
           [
-            "murkadamia",
-            "暗影夏威夷果"
-          ],
-          [
-            "nut",
-            "暗影夏威夷果"
-          ],
-          [
             "powered",
-            "植物"
+            "供能"
+          ],
+          [
+            "murk",
+            "暗雾"
+          ],
+          [
+            "damages",
+            "伤害"
           ]
         ]
       }
@@ -21520,16 +21520,16 @@
     "sentence_zh": "爆炸并产生毒雾",
     "words": [
       [
-        "noctarine",
-        "暗影油桃"
-      ],
-      [
         "explodes",
         "爆炸"
       ],
       [
-        "to",
-        "植物"
+        "make",
+        "制造"
+      ],
+      [
+        "gas",
+        "气体"
       ]
     ],
     "color": "#4e9f66",
@@ -21550,16 +21550,16 @@
         "zh": "爆炸并产生毒雾",
         "words": [
           [
-            "noctarine",
-            "暗影油桃"
-          ],
-          [
             "explodes",
             "爆炸"
           ],
           [
-            "to",
-            "植物"
+            "make",
+            "制造"
+          ],
+          [
+            "gas",
+            "气体"
           ]
         ]
       }
@@ -21655,16 +21655,16 @@
     "sentence_zh": "吃掉僵尸并吐出他们的头颅",
     "words": [
       [
-        "snap",
-        "大嘴豌豆"
-      ],
-      [
-        "pea",
-        "大嘴豌豆"
-      ],
-      [
         "eats",
-        "植物"
+        "啃食"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "spits",
+        "喷吐"
       ]
     ],
     "color": "#4e9f66",
@@ -21685,16 +21685,16 @@
         "zh": "吃掉僵尸并吐出他们的头颅",
         "words": [
           [
-            "snap",
-            "大嘴豌豆"
-          ],
-          [
-            "pea",
-            "大嘴豌豆"
-          ],
-          [
             "eats",
-            "植物"
+            "啃食"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "spits",
+            "喷吐"
           ]
         ]
       }
@@ -21759,16 +21759,16 @@
     "sentence_zh": "向三行的僵尸发射子弹",
     "words": [
       [
-        "asparajet",
-        "芦笋战机"
-      ],
-      [
         "shoots",
         "发射"
       ],
       [
-        "at",
-        "植物"
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "three",
+        "三个"
       ]
     ],
     "color": "#4e9f66",
@@ -21786,16 +21786,16 @@
         "zh": "向三行的僵尸发射子弹",
         "words": [
           [
-            "asparajet",
-            "芦笋战机"
-          ],
-          [
             "shoots",
             "发射"
           ],
           [
-            "at",
-            "植物"
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "three",
+            "三个"
           ]
         ]
       }
@@ -21873,16 +21873,16 @@
     "sentence_zh": "抵挡僵尸并反弹子弹",
     "words": [
       [
-        "spinapple",
-        "旋转菠萝"
-      ],
-      [
         "blocks",
-        "植物"
+        "挡住"
       ],
       [
         "off",
-        "植物"
+        "隔开"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -21900,16 +21900,16 @@
         "zh": "抵挡僵尸并反弹子弹",
         "words": [
           [
-            "spinapple",
-            "旋转菠萝"
-          ],
-          [
             "blocks",
-            "植物"
+            "挡住"
           ],
           [
             "off",
-            "植物"
+            "隔开"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -21982,16 +21982,16 @@
     "sentence_zh": "发射球状电并吸收电荷",
     "words": [
       [
-        "ampereum",
-        "电离红掌"
-      ],
-      [
         "fire",
-        "攻击"
+        "火"
       ],
       [
         "lightning",
-        "植物"
+        "闪电"
+      ],
+      [
+        "bolts",
+        "光束"
       ]
     ],
     "color": "#4e9f66",
@@ -22009,16 +22009,16 @@
         "zh": "发射球状电并吸收电荷",
         "words": [
           [
-            "ampereum",
-            "电离红掌"
-          ],
-          [
             "fire",
-            "攻击"
+            "火"
           ],
           [
             "lightning",
-            "植物"
+            "闪电"
+          ],
+          [
+            "bolts",
+            "光束"
           ]
         ]
       }
@@ -22103,16 +22103,16 @@
     "sentence_zh": "驱散中等范围内的迷雾",
     "words": [
       [
-        "bulbkekengi",
-        "灯笼草"
-      ],
-      [
         "removes",
-        "植物"
+        "清除"
       ],
       [
         "fogs",
-        "植物"
+        "放雾"
+      ],
+      [
+        "medium",
+        "中等"
       ]
     ],
     "color": "#4e9f66",
@@ -22130,16 +22130,16 @@
         "zh": "驱散中等范围内的迷雾",
         "words": [
           [
-            "bulbkekengi",
-            "灯笼草"
-          ],
-          [
             "removes",
-            "植物"
+            "清除"
           ],
           [
             "fogs",
-            "植物"
+            "放雾"
+          ],
+          [
+            "medium",
+            "中等"
           ]
         ]
       }
@@ -22209,16 +22209,16 @@
     "sentence_zh": "将范围内的僵尸向自己吸引",
     "words": [
       [
-        "loquanado",
-        "漩涡枇杷"
-      ],
-      [
         "drags",
-        "植物"
+        "拖走"
       ],
       [
         "zombies",
         "僵尸"
+      ],
+      [
+        "towards",
+        "朝向"
       ]
     ],
     "color": "#4e9f66",
@@ -22236,16 +22236,16 @@
         "zh": "将范围内的僵尸向自己吸引",
         "words": [
           [
-            "loquanado",
-            "漩涡枇杷"
-          ],
-          [
             "drags",
-            "植物"
+            "拖走"
           ],
           [
             "zombies",
             "僵尸"
+          ],
+          [
+            "towards",
+            "朝向"
           ]
         ]
       }
@@ -22321,16 +22321,16 @@
     "sentence_zh": "派遣飞行小兵，向僵尸发动突袭",
     "words": [
       [
-        "pea",
-        "豌豆突击队"
-      ],
-      [
-        "commando",
-        "豌豆突击队"
-      ],
-      [
         "deploys",
-        "植物"
+        "部署"
+      ],
+      [
+        "flying",
+        "飞行"
+      ],
+      [
+        "pea",
+        "豌豆"
       ]
     ],
     "color": "#4e9f66",
@@ -22348,16 +22348,16 @@
         "zh": "派遣飞行小兵，向僵尸发动突袭",
         "words": [
           [
-            "pea",
-            "豌豆突击队"
-          ],
-          [
-            "commando",
-            "豌豆突击队"
-          ],
-          [
             "deploys",
-            "植物"
+            "部署"
+          ],
+          [
+            "flying",
+            "飞行"
+          ],
+          [
+            "pea",
+            "豌豆"
           ]
         ]
       }
@@ -22439,20 +22439,20 @@
     "damage": 40,
     "range": "Close",
     "range_zh": "接近",
-    "sentence": "Whips both ahead and behind",
-    "sentence_zh": "抽打身前和身后的敌人",
+    "sentence": "Whips enemies in both directions",
+    "sentence_zh": "抽打两个方向的敌人",
     "words": [
       [
-        "wasabi",
-        "炙热山葵"
-      ],
-      [
-        "whip",
-        "炙热山葵"
-      ],
-      [
         "whips",
-        "植物"
+        "抽打"
+      ],
+      [
+        "enemies",
+        "敌人"
+      ],
+      [
+        "directions",
+        "方向"
       ]
     ],
     "color": "#4e9f66",
@@ -22469,20 +22469,20 @@
     "obtain_world_code": "epic",
     "learning_sentences": [
       {
-        "en": "Whips both ahead and behind",
-        "zh": "抽打身前和身后的敌人",
+        "en": "Whips enemies in both directions",
+        "zh": "抽打两个方向的敌人",
         "words": [
           [
-            "wasabi",
-            "炙热山葵"
-          ],
-          [
-            "whip",
-            "炙热山葵"
-          ],
-          [
             "whips",
-            "植物"
+            "抽打"
+          ],
+          [
+            "enemies",
+            "敌人"
+          ],
+          [
+            "directions",
+            "方向"
           ]
         ]
       }
@@ -22567,16 +22567,16 @@
     "sentence_zh": "发射黏性毒液豌豆子弹",
     "words": [
       [
-        "goo",
-        "黏毒豌豆"
-      ],
-      [
-        "peashooter",
-        "黏毒豌豆"
-      ],
-      [
         "shoots",
         "发射"
+      ],
+      [
+        "sticky",
+        "黏性"
+      ],
+      [
+        "poison",
+        "毒素"
       ]
     ],
     "color": "#4e9f66",
@@ -22597,16 +22597,16 @@
         "zh": "发射黏性毒液豌豆子弹",
         "words": [
           [
-            "goo",
-            "黏毒豌豆"
-          ],
-          [
-            "peashooter",
-            "黏毒豌豆"
-          ],
-          [
             "shoots",
             "发射"
+          ],
+          [
+            "sticky",
+            "黏性"
+          ],
+          [
+            "poison",
+            "毒素"
           ]
         ]
       }
@@ -22673,16 +22673,16 @@
     "sentence_zh": "发射爆炸性暗能量",
     "words": [
       [
+        "launches",
+        "发射"
+      ],
+      [
+        "explosive",
+        "爆炸"
+      ],
+      [
         "dark",
-        "暗物质火龙果"
-      ],
-      [
-        "matter",
-        "暗物质火龙果"
-      ],
-      [
-        "dragonfruit",
-        "暗物质火龙果"
+        "黑暗"
       ]
     ],
     "color": "#4e9f66",
@@ -22700,16 +22700,16 @@
         "zh": "发射爆炸性暗能量",
         "words": [
           [
+            "launches",
+            "发射"
+          ],
+          [
+            "explosive",
+            "爆炸"
+          ],
+          [
             "dark",
-            "暗物质火龙果"
-          ],
-          [
-            "matter",
-            "暗物质火龙果"
-          ],
-          [
-            "dragonfruit",
-            "暗物质火龙果"
+            "黑暗"
           ]
         ]
       }
@@ -22809,16 +22809,16 @@
     "sentence_zh": "点击发射来自受伤坚果的能量",
     "words": [
       [
-        "mirror",
-        "镜面坚果"
+        "tap",
+        "点击"
       ],
       [
         "nut",
-        "镜面坚果"
+        "坚果"
       ],
       [
-        "tap",
-        "植物"
+        "fire",
+        "火"
       ]
     ],
     "color": "#4e9f66",
@@ -22836,16 +22836,16 @@
         "zh": "点击发射来自受伤坚果的能量",
         "words": [
           [
-            "mirror",
-            "镜面坚果"
+            "tap",
+            "点击"
           ],
           [
             "nut",
-            "镜面坚果"
+            "坚果"
           ],
           [
-            "tap",
-            "植物"
+            "fire",
+            "火"
           ]
         ]
       }
@@ -22934,16 +22934,16 @@
     "sentence_zh": "将僵尸扫退并灼烧",
     "words": [
       [
-        "inferno",
-        "地狱火蕨"
-      ],
-      [
         "burns",
-        "植物"
+        "焚烧"
       ],
       [
-        "and",
-        "植物"
+        "pushes",
+        "推开"
+      ],
+      [
+        "zombies",
+        "僵尸"
       ]
     ],
     "color": "#4e9f66",
@@ -22964,16 +22964,16 @@
         "zh": "将僵尸扫退并灼烧",
         "words": [
           [
-            "inferno",
-            "地狱火蕨"
-          ],
-          [
             "burns",
-            "植物"
+            "焚烧"
           ],
           [
-            "and",
-            "植物"
+            "pushes",
+            "推开"
+          ],
+          [
+            "zombies",
+            "僵尸"
           ]
         ]
       }
@@ -23041,16 +23041,16 @@
     "sentence_zh": "向全场发射 5 颗豌豆",
     "words": [
       [
-        "sling",
-        "豌豆迫击炮"
-      ],
-      [
-        "pea",
-        "豌豆迫击炮"
-      ],
-      [
         "fires",
-        "攻击"
+        "发射"
+      ],
+      [
+        "peas",
+        "豌豆"
+      ],
+      [
+        "board",
+        "滑板"
       ]
     ],
     "color": "#4e9f66",
@@ -23071,16 +23071,16 @@
         "zh": "向全场发射 5 颗豌豆",
         "words": [
           [
-            "sling",
-            "豌豆迫击炮"
-          ],
-          [
-            "pea",
-            "豌豆迫击炮"
-          ],
-          [
             "fires",
-            "攻击"
+            "发射"
+          ],
+          [
+            "peas",
+            "豌豆"
+          ],
+          [
+            "board",
+            "滑板"
           ]
         ]
       }
@@ -23144,16 +23144,16 @@
     "sentence_zh": "伤害并冻住一整行的僵尸",
     "words": [
       [
-        "chilly",
-        "寒冰辣椒"
-      ],
-      [
-        "pepper",
-        "寒冰辣椒"
-      ],
-      [
         "freezes",
-        "植物"
+        "冻结"
+      ],
+      [
+        "damages",
+        "伤害"
+      ],
+      [
+        "lane",
+        "一行"
       ]
     ],
     "color": "#4e9f66",
@@ -23174,16 +23174,16 @@
         "zh": "伤害并冻住一整行的僵尸",
         "words": [
           [
-            "chilly",
-            "寒冰辣椒"
-          ],
-          [
-            "pepper",
-            "寒冰辣椒"
-          ],
-          [
             "freezes",
-            "植物"
+            "冻结"
+          ],
+          [
+            "damages",
+            "伤害"
+          ],
+          [
+            "lane",
+            "一行"
           ]
         ]
       }
@@ -23256,16 +23256,16 @@
     "sentence_zh": "把僵尸变成小喷菇",
     "words": [
       [
-        "witch",
-        "女巫金缕梅"
-      ],
-      [
-        "hazel",
-        "女巫金缕梅"
-      ],
-      [
         "transforms",
-        "植物"
+        "变成"
+      ],
+      [
+        "zombies",
+        "僵尸"
+      ],
+      [
+        "puff-shrooms",
+        "小喷菇"
       ]
     ],
     "color": "#4e9f66",
@@ -23286,16 +23286,16 @@
         "zh": "把僵尸变成小喷菇",
         "words": [
           [
-            "witch",
-            "女巫金缕梅"
-          ],
-          [
-            "hazel",
-            "女巫金缕梅"
-          ],
-          [
             "transforms",
-            "植物"
+            "变成"
+          ],
+          [
+            "zombies",
+            "僵尸"
+          ],
+          [
+            "puff-shrooms",
+            "小喷菇"
           ]
         ]
       }

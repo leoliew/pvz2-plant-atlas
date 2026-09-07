@@ -102,18 +102,19 @@ html, body { margin:0; background:#d8c7a7; color:#352820; font-family:"Nunito","
 .meta { text-align:right; color:#76563d; font-size:6.4pt; line-height:1.32; max-width:35mm; flex:0 0 auto; }
 .meta b { color:var(--accent); }
 
-.layout { flex:1; min-height:0; display:grid; grid-template-columns:22mm minmax(0,1fr); gap:1.8mm; }
-.portrait { min-height:0; overflow:hidden; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+.layout { flex:1; min-height:0; display:flex; align-items:stretch; gap:1.8mm; }
+.portrait { flex:0 0 22mm; min-height:0; overflow:hidden; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
   padding:1.6mm 1.2mm; border:1px solid var(--accent); border-radius:2.5mm; background:linear-gradient(150deg,#fffaf0,#f1dfba); }
 .portrait img.art { width:19.5mm; height:23mm; object-fit:contain; filter:drop-shadow(0 2px 3px #6e432540); }
 .family { width:6.6mm!important; height:6.6mm!important; margin-top:1mm; }
 .portrait .family-name { color:#76563d; font-size:5.3pt; font-weight:700; text-align:center; line-height:1.1; margin-top:.4mm; }
 .portrait .range { width:100%; margin-top:1.4mm; padding-top:1.2mm; border-top:1px dashed #c5a66f; color:#76553c; font-size:5.4pt; line-height:1.2; text-align:center; }
 .portrait .range b { display:block; color:var(--accent); font-size:5.6pt; }
-.portrait .tagline { width:100%; margin-top:1.2mm; color:#76553c; font-size:5.2pt; line-height:1.2; text-align:center;
-  overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:6; }
+.tagline { flex:1; min-height:0; width:100%; margin-top:1.2mm; display:flex; align-items:center; justify-content:center; }
+.tagline span { color:#76553c; font-size:5.5pt; line-height:1.28; text-align:center;
+  overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:8; }
 
-.content { min-width:0; min-height:0; display:flex; flex-direction:column; gap:1mm; }
+.content { flex:1 1 0; min-width:0; min-height:0; display:flex; flex-direction:column; gap:1mm; }
 .section-title { flex:0 0 auto; margin:0; color:#69432f; font:800 8.6pt "Baloo 2",sans-serif; }
 .section-title span { margin-left:1mm; color:#a27a50; font:600 6.2pt "Nunito",sans-serif; }
 
@@ -126,8 +127,8 @@ html, body { margin:0; background:#d8c7a7; color:#352820; font-family:"Nunito","
 .attr .val span, .attr .val small { display:block; }
 .attr .val small { color:#9e8061; font-size:5.8pt; font-weight:600; }
 
-.copy-row { flex:1.35 1 0; min-height:0; display:grid; grid-template-columns:1fr 1fr; gap:.9mm; }
-.copy-card { min-width:0; min-height:0; overflow:hidden; padding:1.3mm 1.5mm; border-radius:1.4mm; background:#f7edda; }
+.copy-row { flex:1.35 1 0; min-height:0; display:flex; align-items:stretch; gap:.9mm; }
+.copy-card { flex:1 1 0; min-width:0; min-height:0; overflow:hidden; padding:1.3mm 1.5mm; border-radius:1.4mm; background:#f7edda; display:flex; flex-direction:column; justify-content:center; }
 .copy-card b { display:block; margin-bottom:.3mm; color:var(--accent); font-size:6.9pt; }
 .copy-card p { margin:0; color:#76553c; font-size:6.6pt; line-height:1.24; overflow-wrap:anywhere; }
 .copy-card em { display:block; margin-top:.5mm; color:#9e8061; font-style:normal; font-size:6pt; line-height:1.2; overflow-wrap:anywhere; }
@@ -156,7 +157,7 @@ def plant_card(plant):
     specials = special_block(plant)
     return f'''<article class="plant-card" style="--accent:{esc(plant.get("color", "#4e9f66"))}">
   <div class="topline"><div><div class="kicker">PVZ2 · Plant almanac · 属性图鉴</div><div class="title">{esc(plant.get("en", ""))}</div><div class="title-zh">{esc(plant.get("zh", ""))}</div></div><div class="meta"><b>{esc(plant.get("world", "Ancient Egypt"))}</b><br>Unlock: {esc(plant.get("unlock", ""))}<br>解锁：{esc(plant.get("unlock_zh", ""))}</div></div>
-  <div class="layout"><aside class="portrait"><img class="art" src="/images/{esc(plant.get("pvzg_file") or plant.get("file", ""))}" onerror="this.onerror=null;this.src='{esc(plant.get("img", ""))}'" alt="{esc(plant.get("en", ""))}"><img class="family" src="/images/families/{esc(family)}_familyicon.webp" alt="{esc(plant.get("family_zh", family))}"><div class="family-name">{esc(plant.get("family_zh", family))}<br>{esc(family)}</div><div class="range"><b>Range · 范围</b>{esc(plant.get("range", ""))} · {esc(plant.get("range_zh", ""))}</div><div class="tagline">{esc(plant.get("sentence", ""))}<br>{esc(plant.get("sentence_zh", ""))}</div></aside>
+  <div class="layout"><aside class="portrait"><img class="art" src="/images/{esc(plant.get("pvzg_file") or plant.get("file", ""))}" onerror="this.onerror=null;this.src='{esc(plant.get("img", ""))}'" alt="{esc(plant.get("en", ""))}"><img class="family" src="/images/families/{esc(family)}_familyicon.webp" alt="{esc(plant.get("family_zh", family))}"><div class="family-name">{esc(plant.get("family_zh", family))}<br>{esc(family)}</div><div class="range"><b>Range · 范围</b>{esc(plant.get("range", ""))} · {esc(plant.get("range_zh", ""))}</div><div class="tagline"><span>{esc(plant.get("sentence", ""))}<br>{esc(plant.get("sentence_zh", ""))}</span></div></aside>
     <div class="content"><h2 class="section-title">Almanac attributes <span>图鉴属性</span></h2><div class="attr-grid">{attr_block(plant)}</div>
       <div class="copy-row"><div class="copy-card"><b>Introduction · 图鉴介绍</b><p>{esc(plant.get("description", ""))}</p><em>{esc(plant.get("description_zh", ""))}</em></div><div class="copy-card"><b>Plant Food · 叶绿素</b><p>{esc(plant.get("plant_food", ""))}</p><em>{esc(plant.get("plant_food_zh", ""))}</em></div></div>
       {f'<div class="feature-row">{specials}</div>' if specials else ''}
