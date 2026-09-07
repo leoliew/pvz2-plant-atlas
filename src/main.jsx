@@ -293,7 +293,7 @@ function App() {
       <div className="brand">PVZ2 <span>PLANT BOOK</span></div>
       <label className="world-select"><span>🌍</span><select value={world} onChange={(event) => setWorld(event.target.value)} aria-label="Choose world"><option disabled value="">Choose world</option>{worldOptions.map((item) => <option key={item} value={item}>{item === ALL_WORLDS ? 'All worlds / 全部世界' : item}</option>)}</select></label>
       <label className="search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search plants / 搜索植物" /></label>
-      <div className="toolbar-actions"><button className={showGuide ? 'active' : ''} onClick={() => setShowGuide((value) => !value)}>Guide / 图例</button><a className="print-link" href="/PvZ2_Plants_Ancient_Egypt_A4_Print.html">Print layout ↗</a><a className="print-link attributes-link" href="/PvZ2_Plants_Ancient_Egypt_Attributes_Demo.html">Almanac / 属性 ↗</a><button className="print-button" onClick={() => window.print()}>Print A4 ↗</button></div>
+      <div className="toolbar-actions"><button className={showGuide ? 'active' : ''} onClick={() => setShowGuide((value) => !value)}>Guide / 图例</button><a className="print-link" href="/PvZ2_Plants_Ancient_Egypt_A4_Print.html">Print layout ↗</a><a className="print-link attributes-link" href="/PvZ2_Plants_Ancient_Egypt_Attributes.html">Almanac / 属性图鉴 ↗</a><button className="print-button" onClick={() => window.print()}>Print A4 ↗</button></div>
     </div>
     <div className="family-bar">
       <fieldset className="family-field">

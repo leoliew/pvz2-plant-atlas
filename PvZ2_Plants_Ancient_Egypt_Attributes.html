@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PvZ2 Plant Attributes · Almanac</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+@page { size: A4 portrait; margin: 0; }
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body { margin:0; background:#e3ddcd; color:#33261a; font-family:"Fredoka","PingFang SC",sans-serif; -webkit-font-smoothing:antialiased; }
+.page { width:210mm; height:297mm; margin:0 auto 7mm; padding:6mm 6mm 7mm; position:relative; overflow:hidden; background:#fffaf0; page-break-after:always; }
+.page:last-child { page-break-after: auto; }
+.plant-grid { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:3mm; height:100%; }
+.plant-card { min-width:0; min-height:0; overflow:hidden; display:flex; flex-direction:column; gap:1.3mm;
+  padding:2.6mm 2.8mm; border:.6mm solid var(--accent); border-radius:4mm; background:#fffdf5;
+  outline:.25mm dashed #cdb98c; outline-offset:1.3mm; }
+
+.head { flex:0 0 auto; display:flex; flex-direction:column; gap:.4mm; padding-bottom:1.3mm; border-bottom:.5mm solid var(--accent); }
+.head-top { display:flex; justify-content:space-between; align-items:baseline; gap:2mm; }
+.head .name { min-width:0; font:700 18.5pt/1.08 "Fredoka",sans-serif; color:var(--accent); overflow-wrap:break-word; }
+.head .name .zh { margin-left:1.5mm; font:700 11pt "PingFang SC",sans-serif; color:#5c452f; }
+.head .world { flex:0 0 auto; font:700 8pt "Fredoka",sans-serif; color:var(--accent); white-space:nowrap; }
+.head .unlock { font-size:6.8pt; line-height:1.25; color:#8a7355; font-weight:600;
+  overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; }
+
+.media-row { flex:0 0 auto; display:flex; gap:2mm; margin-top:.6mm; }
+.pic { position:relative; flex:0 0 26mm; width:26mm; height:26mm; border:.4mm solid var(--accent); border-radius:3mm;
+  display:flex; align-items:center; justify-content:center;
+  background:radial-gradient(circle at 50% 35%,#fff 0%,#fdf8ec 55%,var(--soft) 150%); overflow:hidden; }
+.pic img.art { position:relative; z-index:1; width:auto; height:auto; max-width:23mm; max-height:23mm;
+  filter:drop-shadow(0 .5mm 1mm rgba(90,58,25,.28)); }
+.pic img.fam { position:absolute; top:1mm; right:1mm; z-index:2; width:6.4mm; height:6.4mm;
+  filter:drop-shadow(0 .3mm .5mm rgba(0,0,0,.35)); }
+.chip-grid { flex:1 1 0; min-width:0; display:flex; flex-wrap:wrap; align-content:stretch; gap:1.2mm; }
+.chip { flex:1 1 40%; min-width:22mm; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  background:#fff; border:.35mm solid #e6d6ae; border-radius:2.4mm; padding:.6mm 1mm; }
+.chip b { font-size:6.6pt; font-weight:700; color:#8a7355; line-height:1.1; }
+.chip b small { display:inline; margin-left:.5mm; font-size:5.8pt; color:#b3a077; font-weight:600; }
+.chip .v { margin-top:.3mm; font:700 12.5pt "Fredoka",sans-serif; color:var(--accent); line-height:1; white-space:nowrap; }
+
+.definition { flex:2 1 0; min-height:0; overflow:hidden; margin-top:.6mm; padding-top:1.1mm; border-top:.35mm dashed #cdb98c;
+  display:flex; flex-direction:column; justify-content:flex-start; gap:.5mm; }
+.def-item { position:relative; padding-left:3.4mm; font-size:9.4pt; line-height:1.28; color:#4a3822; overflow-wrap:anywhere; }
+.def-item::before { content:"●"; position:absolute; left:0; top:.2em; color:var(--accent); font-size:.5em; }
+.def-item b { display:block; color:var(--accent); font-weight:700; font-size:.82em; }
+
+.trivia { flex:1 1 0; min-height:0; overflow:hidden; margin-top:.4mm; padding-top:1.1mm; border-top:.35mm dashed #cdb98c;
+  display:flex; flex-direction:column; justify-content:flex-start;
+  font-size:9.6pt; line-height:1.32; color:#6b5738; }
+.trivia .lines { min-height:0; }
+.trivia b { color:#b7762e; font-weight:700; }
+
+.footer { position:absolute; left:6mm; right:6mm; bottom:2.6mm; display:flex; justify-content:space-between; color:#a48663; font-size:6pt; font-weight:600; }
+.page-no { color:#69432f; font-weight:800; }
+.empty { padding:30mm; text-align:center; font-size:18pt; color:#69432f; }
+
+.print-toolbar{position:sticky;top:0;z-index:30;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px;padding:12px 16px;background:rgba(51,38,26,.94);color:#fff7e8;box-shadow:0 4px 18px rgba(0,0,0,.18)}
+.print-toolbar .brand{font:700 14px "Fredoka",sans-serif;letter-spacing:.04em;color:#f5d995;margin-right:6px}
+.print-toolbar .page-range{display:flex;align-items:center;gap:6px;font-size:13px;color:#f8e6c8;white-space:nowrap}
+.print-toolbar .page-range input{width:4.4em;padding:7px 8px;border:1px solid #fff3;border-radius:10px;background:#fff1;color:#fff7e8;font:700 14px "Fredoka",sans-serif}
+.print-toolbar .page-total{font-size:13px;color:#d7c4a4}
+.print-toolbar .export-pdf{cursor:pointer;border:1px solid #e4bd59;background:#e4bd59;color:#382617;border-radius:999px;padding:9px 18px;font:700 14px "Fredoka",sans-serif}
+.print-toolbar .export-pdf:disabled{opacity:.65;cursor:wait}
+.print-toolbar .status{font-size:13px;color:#f5d995}
+
+@media print { html,body { background:#fffaf0; } .print-toolbar { display:none !important; } .page { margin:0; } }
+</style>
+</head>
+<body>
+<div class="print-toolbar">
+  <span class="brand">Almanac / 属性图鉴</span>
+  <label class="page-range">From / 从 <input type="number" id="export-from" min="1" value="1" inputmode="numeric"></label>
+  <label class="page-range">To / 到 <input type="number" id="export-to" min="1" value="1" inputmode="numeric"></label>
+  <span class="page-total" id="export-total"></span>
+  <button type="button" class="export-pdf" id="export-pdf">Export PDF · 导出 PDF</button>
+  <span class="status" id="export-status" hidden></span>
+</div>
+<main id="book"><div class="empty">Loading plant almanac…</div></main>
+<script type="module" src="./src/attributes-book.js"></script>
+</body>
+</html>

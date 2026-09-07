@@ -12,7 +12,7 @@ export default defineConfig({
       input: {
         main: resolve(root, 'index.html'),
         print: resolve(root, 'PvZ2_Plants_Ancient_Egypt_A4_Print.html'),
-        attributes: resolve(root, 'PvZ2_Plants_Ancient_Egypt_Attributes_Demo.html'),
+        attributes: resolve(root, 'PvZ2_Plants_Ancient_Egypt_Attributes.html'),
       },
     },
   },
