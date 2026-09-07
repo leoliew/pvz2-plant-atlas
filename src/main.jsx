@@ -45,7 +45,30 @@ const DETAIL_HANDLED_KEYS = new Set([
   'unlock_zh', 'description', 'description_zh', 'plant_food', 'plant_food_zh',
   // duplicates of description/description_zh and sentence/sentence_zh/words for every plant
   'intro_en', 'intro_zh', 'learning_sentences',
+  'elements', 'special', 'properties',
 ]);
+
+const ELEMENT_LABELS = {
+  SUNCOST: ['Sun cost', '阳光消耗'], RECHARGE: ['Recharge', '冷却时间'],
+  TOUGHNESS: ['Toughness', '生命'], DAMAGE: ['Damage', '伤害'],
+  RANGE: ['Range', '索敌'], AREA: ['Area', '范围'], FAMILY: ['Family', '家族'],
+  DURATION: ['Duration', '持续时间'], ARMINGTIME: ['Arming time', '装填时间'],
+  PLANTFOOD: ['Plant Food effect', '叶绿素效果'], SUNPRODUCTION: ['Sun production', '阳光产量'],
+  GROWTIME: ['Grow time', '生长时间'], SPECIAL: ['Special', '特点'],
+};
+
+function elementLabel(key) {
+  return ELEMENT_LABELS[key] || [humanizeKey(key), '属性'];
+}
+
+function elementValue(value) {
+  if (value && typeof value === 'object' && !Array.isArray(value)) {
+    const en = value.en ?? value.EN;
+    const zh = value.zh ?? value.ZH;
+    if (en != null || zh != null) return <><span>{en ?? zh}</span>{zh != null && <small>{zh}</small>}</>;
+  }
+  return stringifyField(value);
+}
 
 function humanizeKey(key) {
   return key.replace(/_zh$/, ' (中文)').replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
@@ -147,6 +170,9 @@ function PlantDetailModal({ plant, onClose }) {
   const extra = Object.entries(plant).filter(
     ([key, value]) => !DETAIL_HANDLED_KEYS.has(key) && value != null && value !== '' && value !== '—'
   );
+  const elements = Object.entries(plant.elements || {}).filter(([, value]) => value != null && value !== '' && value !== '—');
+  const special = (plant.special || []).filter((item) => item && (item.NAME || item.DESCRIPTION));
+  const properties = Object.entries(plant.properties || {}).filter(([, value]) => value != null && value !== '' && value !== '—');
 
   return (
     <div className="detail-modal-overlay" onClick={onClose} role="presentation">
@@ -168,6 +194,14 @@ function PlantDetailModal({ plant, onClose }) {
           <div><span>◆</span>{plant.unlock}</div>
           <div>{plant.unlock_zh}</div>
         </div>
+        {elements.length > 0 && (
+          <section className="detail-attributes" aria-label="Plant attributes">
+            <div className="detail-section-title">Almanac attributes <span>图鉴属性</span></div>
+            <div className="attribute-grid">
+              {elements.map(([key, value]) => { const [en, zh] = elementLabel(key); return <div className="attribute" key={key}><b>{en}<small>{zh}</small></b><span>{elementValue(value)}</span></div>; })}
+            </div>
+          </section>
+        )}
         <div className="official-copy">
           <p><b>About<small>简介</small></b><span>{plant.description}</span><em>{plant.description_zh}</em></p>
           {hasFood && (
@@ -178,6 +212,8 @@ function PlantDetailModal({ plant, onClose }) {
             </p>
           )}
         </div>
+        {special.length > 0 && <section className="detail-special"><div className="detail-section-title">Special effects <span>特殊效果</span></div>{special.map((item, index) => { const name = item.NAME; const description = item.DESCRIPTION; return <div className="special-row" key={index}><b>{elementValue(name)}</b><span>{elementValue(description)}</span></div>; })}</section>}
+        {properties.length > 0 && <details className="detail-properties"><summary>Game properties <span>游戏参数 · {properties.length}</span></summary><div className="property-grid">{properties.map(([key, value]) => <div className="property" key={key}><b>{humanizeKey(key)}</b><span>{stringifyField(value)}</span></div>)}</div></details>}
         {extra.length > 0 && (
           <div className="detail-more">
             {extra.map(([key, value]) => (
@@ -234,7 +270,7 @@ function App() {
   const [query, setQuery] = useState('');
   const [world, setWorld] = useState(worlds[0] || DEFAULT_WORLD);
   const [family, setFamily] = useState('');
-  const [showGuide, setShowGuide] = useState(true);
+  const [showGuide, setShowGuide] = useState(false);
   const [detailPlant, setDetailPlant] = useState(null);
   const isAllWorlds = world === ALL_WORLDS;
   const worldPlants = useMemo(() => plants.filter((plant) => isAllWorlds || getWorld(plant) === world), [isAllWorlds, world]);
@@ -252,7 +288,7 @@ function App() {
       <div className="brand">PVZ2 <span>PLANT BOOK</span></div>
       <label className="world-select"><span>🌍</span><select value={world} onChange={(event) => setWorld(event.target.value)} aria-label="Choose world"><option disabled value="">Choose world</option>{worldOptions.map((item) => <option key={item} value={item}>{item === ALL_WORLDS ? 'All worlds / 全部世界' : item}</option>)}</select></label>
       <label className="search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search plants / 搜索植物" /></label>
-      <div className="toolbar-actions"><button className={showGuide ? 'active' : ''} onClick={() => setShowGuide((value) => !value)}>Guide / 图例</button><a className="print-link" href="/PvZ2_Plants_Ancient_Egypt_A4_Print.html">Print layout ↗</a><button className="print-button" onClick={() => window.print()}>Print A4 ↗</button></div>
+      <div className="toolbar-actions"><button className={showGuide ? 'active' : ''} onClick={() => setShowGuide((value) => !value)}>Guide / 图例</button><a className="print-link" href="/PvZ2_Plants_Ancient_Egypt_A4_Print.html">Print layout ↗</a><a className="print-link attributes-link" href="/PvZ2_Plants_Ancient_Egypt_Attributes_Demo.html">Almanac / 属性 ↗</a><button className="print-button" onClick={() => window.print()}>Print A4 ↗</button></div>
     </div>
     <div className="family-bar">
       <fieldset className="family-field">

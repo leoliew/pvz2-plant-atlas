@@ -90,6 +90,27 @@ def words_for(name: str, sentence: str, zh_name: str):
     return [[token, translations.get(token, zh_name if token in name_tokens else "植物")] for token in seen]
 
 
+def element_value(element: dict, props: dict, family_en: str, family_zh: str):
+    """Resolve a PlantAlmanac element using the same precedence as pvzg_site."""
+    sort_value = element.get("SORT")
+    if isinstance(sort_value, dict):
+        value = {lang: sort_value.get(lang) for lang in ("en", "zh") if sort_value.get(lang) not in (None, "", "—")}
+        if value:
+            return value
+    if element.get("VALUE") not in (None, "", "—"):
+        return element["VALUE"]
+    element_type = element.get("TYPE", "")
+    if element_type == "RECHARGE":
+        return props.get("Cooldown", "—")
+    if element_type == "SUNCOST":
+        return props.get("SunCost", "—")
+    if element_type == "TOUGHNESS":
+        return props.get("Toughness", "—")
+    if element_type == "FAMILY":
+        return {"en": family_en, "zh": family_zh}
+    return props.get(element_type) or props.get(element_type.title()) or "—"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("reference", type=Path, help="pvzg_site checkout")
@@ -122,6 +143,13 @@ def main() -> int:
         plant_food_element = elements.get("PLANTFOOD", {}).get("SORT", {})
         plant_food_en = localized(a.get("PlantFood"), "en", "") or plant_food_element.get("en") or old.get(name, {}).get("plant_food", "") or "No Plant Food effect."
         plant_food_zh = localized(a.get("PlantFood"), "zh", "") or plant_food_element.get("zh") or old.get(name, {}).get("plant_food_zh", "没有叶绿素效果。")
+        chat_en = localized(a.get("Chat"), "en", "")
+        chat_zh = localized(a.get("Chat"), "zh", "")
+        detail_elements = {
+            key: element_value(element, p, family_en, family_zh)
+            for key, element in elements.items()
+            if key and element_value(element, p, family_en, family_zh) not in (None, "", "—")
+        }
         record = {
             **old.get(name, {}), "id": origin["ID"], "codename": code, "en": name, "zh": zh_name, "file": old.get(name, {}).get("file", safe_file(code)),
             "pvzg_file": f"plants_{code}_c.webp", "img": old.get(name, {}).get("img", ""),
@@ -138,6 +166,13 @@ def main() -> int:
             "plant_food": plant_food_en, "plant_food_zh": plant_food_zh, "world": world_en,
             "obtain_world_code": origin.get("OBTAINWORLD", ""),
             "learning_sentences": [{"en": sentence_en, "zh": sentence_zh, "words": words_for(name, sentence_en, zh_name)}],
+            # Preserve every almanac attribute for the Details dialog. This is
+            # intentionally separate from the compact card stats above.
+            "elements": detail_elements,
+            "special": a.get("Special", []),
+            "chat_en": chat_en,
+            "chat_zh": chat_zh,
+            "properties": p,
         }
         records.append(record)
     args.output.write_text(json.dumps(records, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

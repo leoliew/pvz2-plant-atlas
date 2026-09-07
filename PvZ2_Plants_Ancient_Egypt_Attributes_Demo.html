@@ -1,0 +1,96 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PvZ2 Plant Attributes · Demo</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"><style>
+@page { size: A4 portrait; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin:0; background:#d8c7a7; color:#352820; font-family:"Nunito","PingFang SC",sans-serif; -webkit-font-smoothing:antialiased; }
+.page { width:210mm; height:297mm; margin:0 auto 7mm; padding:6mm 6mm 7mm; position:relative; overflow:hidden; background:#fbf2dd; page-break-after:always; }
+.plant-grid { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:2.6mm; height:100%; }
+.plant-card { min-width:0; min-height:0; overflow:hidden; display:flex; flex-direction:column; gap:1mm;
+  padding:2mm 2.2mm; border:1.3px solid var(--accent); border-radius:3.5mm; background:#fffaf0; }
+
+.topline { flex:0 0 auto; display:flex; justify-content:space-between; align-items:flex-start; gap:1.5mm;
+  border-bottom:1px dashed #c5a66f; padding-bottom:1mm; }
+.kicker { color:#9a7548; font-size:6.2pt; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+.title { margin-top:.8mm; color:var(--accent); font:800 17.5pt/1.02 "Baloo 2",sans-serif; }
+.title-zh { color:#76563d; font-size:9.4pt; font-weight:700; margin-top:.3mm; }
+.meta { text-align:right; color:#76563d; font-size:6.4pt; line-height:1.32; max-width:35mm; flex:0 0 auto; }
+.meta b { color:var(--accent); }
+
+.layout { flex:1; min-height:0; display:grid; grid-template-columns:22mm minmax(0,1fr); gap:1.8mm; }
+.portrait { min-height:0; overflow:hidden; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+  padding:1.6mm 1.2mm; border:1px solid var(--accent); border-radius:2.5mm; background:linear-gradient(150deg,#fffaf0,#f1dfba); }
+.portrait img.art { width:19.5mm; height:23mm; object-fit:contain; filter:drop-shadow(0 2px 3px #6e432540); }
+.family { width:6.6mm!important; height:6.6mm!important; margin-top:1mm; }
+.portrait .family-name { color:#76563d; font-size:5.3pt; font-weight:700; text-align:center; line-height:1.1; margin-top:.4mm; }
+.portrait .range { width:100%; margin-top:1.4mm; padding-top:1.2mm; border-top:1px dashed #c5a66f; color:#76553c; font-size:5.4pt; line-height:1.2; text-align:center; }
+.portrait .range b { display:block; color:var(--accent); font-size:5.6pt; }
+.portrait .tagline { width:100%; margin-top:1.2mm; color:#76553c; font-size:5.2pt; line-height:1.2; text-align:center;
+  overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:6; }
+
+.content { min-width:0; min-height:0; display:flex; flex-direction:column; gap:1mm; }
+.section-title { flex:0 0 auto; margin:0; color:#69432f; font:800 8.6pt "Baloo 2",sans-serif; }
+.section-title span { margin-left:1mm; color:#a27a50; font:600 6.2pt "Nunito",sans-serif; }
+
+.attr-grid { flex:1.55 1 0; min-height:0; display:flex; flex-wrap:wrap; align-content:stretch; gap:.9mm; }
+.attr { flex:1 1 31%; min-width:24mm; display:flex; flex-direction:column; justify-content:center;
+  padding:.9mm 1.3mm; border-radius:1.4mm; background:#fff; border:1px solid #e4cf9f; }
+.attr b { display:block; color:var(--accent); font-size:6.6pt; }
+.attr b small { display:block; color:#a88968; font-size:5.4pt; font-weight:600; }
+.attr .val { margin-top:.3mm; color:#76553c; font-size:7.4pt; font-weight:800; line-height:1.1; overflow-wrap:anywhere; }
+.attr .val span, .attr .val small { display:block; }
+.attr .val small { color:#9e8061; font-size:5.8pt; font-weight:600; }
+
+.copy-row { flex:1.35 1 0; min-height:0; display:grid; grid-template-columns:1fr 1fr; gap:.9mm; }
+.copy-card { min-width:0; min-height:0; overflow:hidden; padding:1.3mm 1.5mm; border-radius:1.4mm; background:#f7edda; }
+.copy-card b { display:block; margin-bottom:.3mm; color:var(--accent); font-size:6.9pt; }
+.copy-card p { margin:0; color:#76553c; font-size:6.6pt; line-height:1.24; overflow-wrap:anywhere; }
+.copy-card em { display:block; margin-top:.5mm; color:#9e8061; font-style:normal; font-size:6pt; line-height:1.2; overflow-wrap:anywhere; }
+
+.feature-row { flex:.95 1 0; min-height:0; display:flex; flex-wrap:wrap; align-content:stretch; gap:.9mm; }
+.feature { flex:1 1 46%; min-width:34mm; min-height:0; overflow:hidden; display:flex; flex-direction:column; justify-content:center;
+  padding:1mm 1.4mm; border-radius:1.4mm; background:#e5f2df; }
+.feature b { display:block; color:var(--accent); font-size:6.3pt; }
+.feature span { display:block; margin-top:.3mm; color:#76553c; font-size:6.1pt; line-height:1.2; overflow-wrap:anywhere; }
+
+.chat-card { flex:1.15 1 0; min-height:0; overflow:hidden; padding:1.3mm 1.5mm; border-radius:1.4mm; background:#fff0c9;
+  display:flex; flex-direction:column; justify-content:center; }
+.chat-card b { display:block; margin-bottom:.3mm; color:#b7762e; font-size:6.9pt; }
+.chat-card .chat-en, .chat-card em { display:-webkit-box; -webkit-box-orient:vertical; overflow:hidden; }
+.chat-card .chat-en { color:#76553c; font-size:6.3pt; line-height:1.24; -webkit-line-clamp:3; overflow-wrap:anywhere; }
+.chat-card em { margin-top:.5mm; color:#9e8061; font-style:normal; font-size:5.9pt; line-height:1.2; -webkit-line-clamp:2; overflow-wrap:anywhere; }
+
+.footer { position:absolute; left:6mm; right:6mm; bottom:2.6mm; display:flex; justify-content:space-between; color:#a48663; font-size:6pt; }
+.page-no { color:#69432f; font-weight:800; }
+@media print { html,body { background:#fbf2dd; } .page { margin:0; } }
+</style></head><body><section class="page"><div class="plant-grid"><article class="plant-card" style="--accent:#66BB6A">
+  <div class="topline"><div><div class="kicker">PVZ2 · Plant almanac · 属性图鉴</div><div class="title">Cabbage-pult</div><div class="title-zh">卷心菜投手</div></div><div class="meta"><b>Ancient Egypt</b><br>Unlock: Beating [[Player&#x27;s House - Day 4]] or 40 seed packets<br>解锁：古埃及植物</div></div>
+  <div class="layout"><aside class="portrait"><img class="art" src="/images/plants_cabbagepult_c.webp" onerror="this.onerror=null;this.src='https://static.wikia.nocookie.net/plantsvszombies/images/3/33/Healthy-looking-cabbage.jpg/revision/latest?cb=20190414203227'" alt="Cabbage-pult"><img class="family" src="/images/families/Arma-mint_familyicon.webp" alt="投掷家族"><div class="family-name">投掷家族<br>Arma-mint</div><div class="range"><b>Range · 范围</b>Lobbed · 抛物线</div><div class="tagline">Hurls cabbages over obstacles at the enemy<br>向僵尸投掷能跨越障碍物的卷心菜</div></aside>
+    <div class="content"><h2 class="section-title">Almanac attributes <span>图鉴属性</span></h2><div class="attr-grid"><div class="attr"><b>Sun cost<small>阳光消耗</small></b><div class="val">100</div></div><div class="attr"><b>Recharge<small>冷却时间</small></b><div class="val">5</div></div><div class="attr"><b>Toughness<small>生命</small></b><div class="val">300</div></div><div class="attr"><b>Damage<small>伤害</small></b><div class="val">40</div></div><div class="attr"><b>Range<small>索敌</small></b><div class="val"><span>Lobbed</span><small>抛物线</small></div></div><div class="attr"><b>Plant Food<small>叶绿素效果</small></b><div class="val"><span>Full-screen Cabbage</span><small>全屏卷心菜</small></div></div></div>
+      <div class="copy-row"><div class="copy-card"><b>Introduction · 图鉴介绍</b><p>Cabbage-pults hurl cabbages at the enemy.</p><em>卷心菜投手向敌人投掷卷心菜。</em></div><div class="copy-card"><b>Plant Food · 叶绿素</b><p>Full-screen Cabbage</p><em>全屏卷心菜</em></div></div>
+      
+      <div class="chat-card"><b>Character story · 角色趣闻</b><span class="chat-en">Cabbage-pult received his doctorate in pulting from Harvest University. He knows a thing or two about launching hit way to the top. He also makes a mean soup.</span><em>卷心菜投手在哈丰大学的投掷专业获取了博士学位。他在投掷方面可谓登峰造极。他也懂得做出美味的热汤！</em></div>
+    </div></div>
+</article><article class="plant-card" style="--accent:#4FC3F7">
+  <div class="topline"><div><div class="kicker">PVZ2 · Plant almanac · 属性图鉴</div><div class="title">Iceberg Lettuce</div><div class="title-zh">冰冻生菜</div></div><div class="meta"><b>Ancient Egypt</b><br>Unlock: Beating [[Ancient Egypt - Day 5]] or 40 seed packets<br>解锁：古埃及植物</div></div>
+  <div class="layout"><aside class="portrait"><img class="art" src="/images/plants_iceburg_c.webp" onerror="this.onerror=null;this.src='https://static.wikia.nocookie.net/plantsvszombies/images/9/91/220px-Iceberg_lettuce_in_SB.jpg/revision/latest?cb=20190414204149'" alt="Iceberg Lettuce"><img class="family" src="/images/families/Winter-mint_familyicon.webp" alt="寒冰家族"><div class="family-name">寒冰家族<br>Winter-mint</div><div class="range"><b>Range · 范围</b>On contact · 接触触发</div><div class="tagline">Freezes zombies that step on it, and extinguishes flames<br>冻结接触到的僵尸，并熄灭火炬</div></aside>
+    <div class="content"><h2 class="section-title">Almanac attributes <span>图鉴属性</span></h2><div class="attr-grid"><div class="attr"><b>Sun cost<small>阳光消耗</small></b><div class="val">0</div></div><div class="attr"><b>Recharge<small>冷却时间</small></b><div class="val">20</div></div><div class="attr"><b>Special<small>特点</small></b><div class="val"><span>Freeze</span><small>冻结</small></div></div></div>
+      <div class="copy-row"><div class="copy-card"><b>Introduction · 图鉴介绍</b><p>Iceberg Lettuces freezes a zombie when stepped on.</p><em>冰冻生菜会冻结一只踩中他的僵尸。</em></div><div class="copy-card"><b>Plant Food · 叶绿素</b><p>Freezes or chills every zombie on lawn.</p><em>—</em></div></div>
+      <div class="feature-row"><div class="feature"><b><span>Usage</span><small>用途</small></b><span><span>single use, on contact</span><small>一次性使用，接触型</small></span></div><div class="feature"><b><span>Special</span><small>特点</small></b><span><span>explodes, temporarily freezing a zombie</span><small>接触时爆裂，使一只僵尸冻结一段时间</small></span></div></div>
+      <div class="chat-card"><b>Character story · 角色趣闻</b><span class="chat-en">Don&#x27;t get lost staring into Iceberg&#x27;s adorably cute eyes. If you do, it will be your last step... but only if you&#x27;re a zombie.</span><em>不要因为盯着他过分可爱的双眼而迷失自我。不然的话你将没法迈出下一步……除非你不是一只僵尸。</em></div>
+    </div></div>
+</article><article class="plant-card" style="--accent:#43A047">
+  <div class="topline"><div><div class="kicker">PVZ2 · Plant almanac · 属性图鉴</div><div class="title">Bonk Choy</div><div class="title-zh">菜问</div></div><div class="meta"><b>Ancient Egypt</b><br>Unlock: Beating [[Ancient Egypt - Day 13]] or 40 seed packets<br>解锁：古埃及植物</div></div>
+  <div class="layout"><aside class="portrait"><img class="art" src="/images/plants_bonkchoy_c.webp" onerror="this.onerror=null;this.src='https://static.wikia.nocookie.net/plantsvszombies/images/b/b7/HD_Bonk_Choy_Endless_Edition.png/revision/latest?cb=20240506220316'" alt="Bonk Choy"><img class="family" src="/images/families/Enforce-mint_familyicon.webp" alt="健壮家族"><div class="family-name">健壮家族<br>Enforce-mint</div><div class="range"><b>Range · 范围</b>Close · 接近</div><div class="tagline">Rapidly punches enemies ahead or behind<br>快速击打身前或身后的敌人</div></aside>
+    <div class="content"><h2 class="section-title">Almanac attributes <span>图鉴属性</span></h2><div class="attr-grid"><div class="attr"><b>Sun cost<small>阳光消耗</small></b><div class="val">150</div></div><div class="attr"><b>Recharge<small>冷却时间</small></b><div class="val">5</div></div><div class="attr"><b>Toughness<small>生命</small></b><div class="val">300</div></div><div class="attr"><b>Damage<small>伤害</small></b><div class="val">15</div></div><div class="attr"><b>Range<small>索敌</small></b><div class="val"><span>Close</span><small>接近</small></div></div></div>
+      <div class="copy-row"><div class="copy-card"><b>Introduction · 图鉴介绍</b><p>Bonk Choys rapidly punch nearby enemies that are ahead or behind them.</p><em>菜问快速击打身前或身后的敌人。</em></div><div class="copy-card"><b>Plant Food · 叶绿素</b><p>Rapidly punches in a 3x3 area around it, dealing heavy damage.</p><em>—</em></div></div>
+      <div class="feature-row"><div class="feature"><b><span>Special</span><small>特点</small></b><span><span>can attack ahead or behind</span><small>能击打身前和身后的敌人</small></span></div></div>
+      <div class="chat-card"><b>Character story · 角色趣闻</b><span class="chat-en">A freelance dentist on the side, he&#x27;s offering a special this month - he&#x27;ll knock two of your teeth out of the price of one!</span><em>菜问还是一位兼职牙医，这个月他还端上了一道“特色菜”————你能用拔掉一颗牙齿的价钱，让他给你敲掉两颗牙！</em></div>
+    </div></div>
+</article><article class="plant-card" style="--accent:#9575CD">
+  <div class="topline"><div><div class="kicker">PVZ2 · Plant almanac · 属性图鉴</div><div class="title">Grave Buster</div><div class="title-zh">噬碑藤</div></div><div class="meta"><b>Ancient Egypt</b><br>Unlock: Beating [[Ancient Egypt - Day 9]] or 40 seed packets<br>解锁：古埃及植物</div></div>
+  <div class="layout"><aside class="portrait"><img class="art" src="/images/plants_gravebuster_c.webp" onerror="this.onerror=null;this.src='https://static.wikia.nocookie.net/plantsvszombies/images/c/c6/GravebusterHD.png/revision/latest?cb=20240518200907'" alt="Grave Buster"><img class="family" src="/images/families/Contain-mint_familyicon.webp" alt="滞缓家族"><div class="family-name">滞缓家族<br>Contain-mint</div><div class="range"><b>Range · 范围</b>On a gravestone · 种在墓碑上</div><div class="tagline">Plant it on a grave to remove the grave<br>种植在墓碑上并移除这块墓碑</div></aside>
+    <div class="content"><h2 class="section-title">Almanac attributes <span>图鉴属性</span></h2><div class="attr-grid"><div class="attr"><b>Sun cost<small>阳光消耗</small></b><div class="val">0</div></div><div class="attr"><b>Recharge<small>冷却时间</small></b><div class="val">10</div></div><div class="attr"><b>Toughness<small>生命</small></b><div class="val">300</div></div></div>
+      <div class="copy-row"><div class="copy-card"><b>Introduction · 图鉴介绍</b><p>Grave Busters consume graves they&#x27;re planted on.</p><em>将噬碑藤种在墓碑上，他们会啃食掉这块墓碑。</em></div><div class="copy-card"><b>Plant Food · 叶绿素</b><p>No Plant Food effect.</p><em>—</em></div></div>
+      <div class="feature-row"><div class="feature"><b><span>Usage</span><small>用途</small></b><span><span>single use, must be planted on graves</span><small>一次性使用，必须种植在墓碑上</small></span></div><div class="feature"><b><span>Special</span><small>特点</small></b><span><span>removes graves</span><small>移除墓碑</small></span></div></div>
+      <div class="chat-card"><b>Character story · 角色趣闻</b><span class="chat-en">He may appear spiky or ill-tempered, but Grave Buster just wants to give you a big hug. Unless you&#x27;re a puppy. He&#x27;s terrified of those.</span><em>他可能看上去凶巴巴坏脾气，但是噬碑藤只是想要给你一个大大的拥抱。除非你是一只小狗，他很害怕小狗！</em></div>
+    </div></div>
+</article></div><div class="footer"><span>Data: pvzg_site · Printable A4 portrait demo</span><span class="page-no">1 / 1</span></div></section></body></html>
