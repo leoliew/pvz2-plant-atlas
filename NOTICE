@@ -1,0 +1,34 @@
+# Third-party materials and trademark notice
+
+This repository contains code and documentation created for the PVZ2 Plant
+Book project, together with third-party materials. The MIT License in
+`LICENSE` applies only to rights that the project contributors can grant in
+their original code and documentation. It does not grant rights in the
+following materials.
+
+## Plants vs. Zombies intellectual property
+
+`Plants vs. Zombies`, `Plants vs. Zombies 2`, related names, characters,
+artwork, game data, and trademarks are the property of their respective
+rightsholders, including Electronic Arts and PopCap Games. They are used here
+only to identify a non-official, non-commercial fan learning project. No
+affiliation, endorsement, or permission is implied.
+
+In particular, files in `public/images/` that depict game characters or
+artwork, and third-party image URLs recorded in `plants_egypt.json`, are not
+licensed to recipients under MIT by this repository. Before redistributing,
+modifying, publishing, or using them commercially, obtain any permissions
+required from their rightsholders or replace them with assets you are entitled
+to use.
+
+## pvzg_site-derived materials
+
+Some local plant WebP files, family icons, and world backgrounds were copied
+from `Gzh0821/pvzg_site`, under
+`src/.vuepress/public/assets/image/`. That repository declares Apache License
+2.0. See `PVZGE_ATTRIBUTION.md` and `PVZGE_APACHE_LICENSE.txt` for the source,
+attribution, and license text.
+
+That upstream license applies to rights granted by that upstream project; it
+does not purport to grant rights in underlying third-party Plants vs. Zombies
+intellectual property.
