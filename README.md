@@ -47,6 +47,8 @@ npm run preview
 https://<GitHub 用户名>.github.io/<仓库名>/
 ```
 
+本项目已发布，可直接访问：[http://www.leoliew.me/pvz2-plant-atlas/](http://www.leoliew.me/pvz2-plant-atlas/)。
+
 本项目会由工作流读取 GitHub Pages 的实际基础路径，因此既支持默认的项目页子路径，也支持以后改用自定义域名。部署完成后可在 **Actions** 中查看工作流，并在 **Settings → Pages** 获得最终地址。
 
 ## 打印与导出
