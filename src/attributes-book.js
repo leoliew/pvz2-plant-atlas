@@ -1,5 +1,6 @@
 import plants from '../plants_egypt.json';
 import { bindA4PdfExport, setPageRangeInputs } from './export-a4-pdf.js';
+import { assetUrl } from './asset-url.js';
 
 const book = document.querySelector('#book');
 const fromInput = document.querySelector('#export-from');
@@ -177,7 +178,7 @@ function plantCard(plant) {
     <div class="unlock">${unlockHtml(plant, false)}</div>
   </div>
   <div class="media-row">
-    <div class="pic"><img class="art" src="/images/${esc(file)}" onerror="this.onerror=null;this.src='${esc(plant.img || '')}'" alt="${esc(plant.en)}"><img class="fam" src="/images/families/${esc(family)}_familyicon.webp" onerror="this.onerror=null;this.src='/images/families/None_familyicon.webp'" alt="${esc(plant.family_zh || family)}" title="${esc(plant.family_zh || family)} · ${esc(family)}"></div>
+    <div class="pic"><img class="art" src="${assetUrl(`images/${esc(file)}`)}" onerror="this.onerror=null;this.src='${esc(plant.img || '')}'" alt="${esc(plant.en)}"><img class="fam" src="${assetUrl(`images/families/${esc(family)}_familyicon.webp`)}" onerror="this.onerror=null;this.src='${assetUrl('images/families/None_familyicon.webp')}'" alt="${esc(plant.family_zh || family)}" title="${esc(plant.family_zh || family)} · ${esc(family)}"></div>
     <div class="chip-grid">${chipBlock(plant)}</div>
   </div>
   <div class="definition">${definitionHtml(plant, false)}</div>

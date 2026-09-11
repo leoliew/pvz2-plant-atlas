@@ -4,17 +4,18 @@ import plants from '../plants_egypt.json';
 import './styles.css';
 import { highlightSentence, WORD_COLORS } from './learning.js';
 import { resolveWorldBackgroundFile } from './world-backgrounds.js';
+import { assetUrl } from './asset-url.js';
 
 const pageSize = 4;
 const DEFAULT_WORLD = 'Ancient Egypt';
 const ALL_WORLDS = '__all__';
 
 function getWorldBackground(code) {
-  return `/images/backgrounds/${resolveWorldBackgroundFile(code)}.webp`;
+  return assetUrl(`images/backgrounds/${resolveWorldBackgroundFile(code)}.webp`);
 }
 
-const FAMILY_NONE_ICON = '/images/families/None_familyicon.webp';
-const FAMILY_ALL_ICON = '/images/families/All_familyicon.webp';
+const FAMILY_NONE_ICON = assetUrl('images/families/None_familyicon.webp');
+const FAMILY_ALL_ICON = assetUrl('images/families/All_familyicon.webp');
 
 function normalizeFamily(family) {
   if (!family || family === 'Nope' || family === 'None') return null;
@@ -22,7 +23,7 @@ function normalizeFamily(family) {
 }
 
 function getFamilyIcon(family) {
-  return `/images/families/${family}_familyicon.webp`;
+  return assetUrl(`images/families/${family}_familyicon.webp`);
 }
 
 function getWorld(plant) {
@@ -86,8 +87,8 @@ function Image({ plant, className = '' }) {
   return (
     <img
       className={className}
-      src={`/images/${primary}`}
-      data-local-fallback={plant.file !== primary ? `/images/${plant.file}` : ''}
+      src={assetUrl(`images/${primary}`)}
+      data-local-fallback={plant.file !== primary ? assetUrl(`images/${plant.file}`) : ''}
       data-remote-fallback={plant.img}
       onError={(event) => {
         const image = event.currentTarget;
@@ -293,7 +294,7 @@ function App() {
       <div className="brand">PVZ2 <span>PLANT BOOK</span></div>
       <label className="world-select"><span>🌍</span><select value={world} onChange={(event) => setWorld(event.target.value)} aria-label="Choose world"><option disabled value="">Choose world</option>{worldOptions.map((item) => <option key={item} value={item}>{item === ALL_WORLDS ? 'All worlds / 全部世界' : item}</option>)}</select></label>
       <label className="search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search plants / 搜索植物" /></label>
-      <div className="toolbar-actions"><button className={showGuide ? 'active' : ''} onClick={() => setShowGuide((value) => !value)}>Guide / 图例</button><a className="print-link" href="/PvZ2_Plants_Ancient_Egypt_A4_Print.html">Print layout ↗</a><a className="print-link attributes-link" href="/PvZ2_Plants_Ancient_Egypt_Attributes.html">Almanac / 属性图鉴 ↗</a><button className="print-button" onClick={() => window.print()}>Print A4 ↗</button></div>
+      <div className="toolbar-actions"><button className={showGuide ? 'active' : ''} onClick={() => setShowGuide((value) => !value)}>Guide / 图例</button><a className="print-link" href={assetUrl('PvZ2_Plants_Ancient_Egypt_A4_Print.html')}>Print layout ↗</a><a className="print-link attributes-link" href={assetUrl('PvZ2_Plants_Ancient_Egypt_Attributes.html')}>Almanac / 属性图鉴 ↗</a><button className="print-button" onClick={() => window.print()}>Print A4 ↗</button></div>
     </div>
     <div className="family-bar">
       <fieldset className="family-field">

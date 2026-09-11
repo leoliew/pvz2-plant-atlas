@@ -37,6 +37,18 @@ npm run preview
 
 构建结果会写入 `dist/`，该目录已被 Git 忽略。
 
+## 发布到 GitHub Pages
+
+仓库已包含 [GitHub Pages 工作流](.github/workflows/deploy-pages.yml)。它会在每次推送至 `main` 时执行 `npm ci`、构建 `dist/` 并发布；不需要提交构建产物或维护 `gh-pages` 分支。
+
+首次发布时，在 GitHub 仓库中打开 **Settings → Pages**，将 **Source** 设为 **GitHub Actions**，再推送本仓库的 `main` 分支。发布成功后，项目页地址通常为：
+
+```text
+https://<GitHub 用户名>.github.io/<仓库名>/
+```
+
+本项目会由工作流读取 GitHub Pages 的实际基础路径，因此既支持默认的项目页子路径，也支持以后改用自定义域名。部署完成后可在 **Actions** 中查看工作流，并在 **Settings → Pages** 获得最终地址。
+
 ## 打印与导出
 
 在两个 A4 页面顶部设置起止页码，点击 **Export PDF / 导出 PDF** 即可下载指定范围。也可以使用浏览器的打印功能；为获得正确比例，请选择 A4、关闭浏览器页眉页脚，并启用背景图形打印。

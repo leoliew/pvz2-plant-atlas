@@ -2,6 +2,7 @@ import plants from '../plants_egypt.json';
 import { highlightSentence, WORD_COLORS } from './learning.js';
 import { resolveWorldBackgroundFile } from './world-backgrounds.js';
 import { bindA4PdfExport, setPageRangeInputs } from './export-a4-pdf.js';
+import { assetUrl } from './asset-url.js';
 
 const book = document.querySelector('#book');
 const fromInput = document.querySelector('#export-from');
@@ -20,18 +21,18 @@ function esc(value) {
 
 function background(plant) {
   const file = resolveWorldBackgroundFile(plant.obtain_world_code);
-  return `<img class="bg" src="/images/backgrounds/${file}.webp" alt="" loading="lazy">`;
+  return `<img class="bg" src="${assetUrl(`images/backgrounds/${file}.webp`)}" alt="" loading="lazy">`;
 }
 
 function image(plant) {
   const file = plant.pvzg_file || plant.file;
-  return `<img class="art" src="/images/${esc(file)}" onerror="this.onerror=null;this.src='${esc(plant.img || '')}'" alt="${esc(plant.en)}">`;
+  return `<img class="art" src="${assetUrl(`images/${esc(file)}`)}" onerror="this.onerror=null;this.src='${esc(plant.img || '')}'" alt="${esc(plant.en)}">`;
 }
 
 function familyBadge(plant) {
   const family = plant.family;
   if (!family || family === 'Nope' || family === 'None') return '';
-  return `<img class="family-badge" src="/images/families/${esc(family)}_familyicon.webp" alt="${esc(plant.family_zh || family)}" title="${esc(plant.family_zh || family)}" loading="lazy">`;
+  return `<img class="family-badge" src="${assetUrl(`images/families/${esc(family)}_familyicon.webp`)}" alt="${esc(plant.family_zh || family)}" title="${esc(plant.family_zh || family)}" loading="lazy">`;
 }
 
 function paintedSentence(sentence, words) {
